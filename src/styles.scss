@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .container-md {
+    width: min(100%, 25rem);
+    margin-inline: auto;
+  }
+
+  .shadow-card {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+  }
+}

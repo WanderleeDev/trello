@@ -1,0 +1,17 @@
+@if (imageParams) {
+<div
+  class="relative"
+  [ngStyle]="{
+    width: imageParams.width + 'rem',
+    height: imageParams.height + 'rem'
+  }"
+  [ngClass]="imageParams.customClass"
+>
+  <img
+    [ngSrc]="imageParams.src"
+    [alt]="imageParams.alt"
+    fill
+    [priority]="imageParams.priority"
+  />
+</div>
+}

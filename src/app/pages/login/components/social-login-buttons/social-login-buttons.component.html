@@ -1,0 +1,27 @@
+<div class="flex flex-col gap-4 w-full pt-4">
+  <p class="font-medium text-center">O continua con:</p>
+  @for (icon of icons; track $index) {
+  <app-custom-btn
+    type="button"
+    [customClass]="['border text-black border-gray-400/60 hover:bg-gray-100']"
+  >
+    <app-basic-image
+      [imageParams]="{
+        src: 'assets/icons/' + icon + '.svg',
+        alt: 'logo' + icon,
+        height: 1.5,
+        width: 1.5
+      }"
+    />
+    {{ icon }}
+  </app-custom-btn>
+  }
+  <div class="text-[.9rem] px-1 border-b border-gray-400/60 py-4 text-center">
+    <a
+      href="#"
+      class="text-blue-500 hover:underline "
+    >
+      ¿Ya tienes una cuenta de Atlassian? Iniciar sesión
+    </a>
+  </div>
+</div>

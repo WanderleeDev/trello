@@ -1,0 +1,49 @@
+<nav class="text-gray-500 border-gray-200 px-6 shadow-md">
+  <div class="flex flex-wrap justify-between items-center">
+    <div class="flex items-center">
+      <a class="text-white grid trelloLogo" routerLink="/">
+        @for (logo of logos; track $index) {
+        <app-basic-image
+          [imageParams]="{
+            src: logo,
+            alt: 'logo trello',
+            height: 1,
+            width: 4.7,
+            customClass:
+              $index === 0
+                ? ['z-10 col-start-1 row-start-1']
+                : ['z-0 col-start-1 row-start-1']
+          }"
+        />
+        }
+      </a>
+      <div class="flex items-center">
+        <ul class="flex items-center space-x-2 text-sm font-medium">
+          <li>
+            <a class="block py-3 px-4 text-white">Workspaces</a>
+          </li>
+          <li>
+            <a class="block py-3 px-4 text-white">Recent</a>
+          </li>
+          <li>
+            <!-- <app-btn typeBtn="button" color="sky">Create</app-btn> -->
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex items-center">
+      <button
+        type="button"
+        class="flex rounded-full"
+        aria-expanded="false"
+        type="button"
+      >
+        <img
+          class="w-8 h-8 rounded-full"
+          src="https://api.lorem.space/image/face?w=400&h=400"
+          alt="user photo"
+        />
+      </button>
+    </div>
+  </div>
+</nav>

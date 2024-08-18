@@ -1,0 +1,22 @@
+<form
+  [formGroup]="loginForm"
+  class="flex flex-col gap-3"
+  novalidate
+  autocomplete="off"
+>
+  <p class="font-medium text-center text-black">Regístrate para continuar</p>
+  <input
+    id="email"
+    formControlName="email"
+    class="placeholder:text-sm placeholder:text-gray-400/80 border-2 border-gray-300 rounded w-full"
+    placeholder="Introduce tu correo electrónico"
+    type="email"
+  />
+  <app-terms-and-conditions />
+  <app-custom-btn
+    type="submit"
+    [customClass]="['bg-blue-600/80', 'text-white hover:bg-blue-600']"
+  >
+    registrarse
+  </app-custom-btn>
+</form>
