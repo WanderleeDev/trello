@@ -3,6 +3,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    color-scheme: dark light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --base: #1d2125;
+      --text: #b6c2cf;
+      --placeholder: #aab1be;
+      --bg-input: #4A4D51;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --base: #fff;
+      --text: #445471;
+      --placeholder: #57616B;
+      --bg-input: #fff;
+    }
+  }
+
+  body {
+    color: var(--text);
+    background-color: var(--base);
+  }
+}
+
 @layer utilities {
   .container-md {
     width: min(100%, 25rem);

@@ -4,6 +4,7 @@ import { BoardComponent } from './board.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { UiModule } from '../../shared/ui/ui.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const routes: Routes = [
   {
@@ -14,6 +15,11 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [BoardComponent, NavbarComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), UiModule],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    UiModule,
+    FontAwesomeModule,
+  ],
 })
 export default class BoardModule {}
