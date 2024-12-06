@@ -1,0 +1,15 @@
+.btn-theme {
+  display: grid;
+  place-content: center;
+  padding: 0.2rem;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+
+  &:active {
+    transform: scale(1.2);
+  }
+}

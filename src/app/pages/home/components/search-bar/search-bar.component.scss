@@ -1,0 +1,62 @@
+:host {
+  display: block;
+  position: relative;
+}
+
+.searchBar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: 2rem;
+  border: solid 1px currentColor;
+  padding-inline: 0.3rem;
+  border-radius: 0.4rem;
+
+  &:focus-within {
+    outline: 0.05rem solid currentColor;
+  }
+
+  &-icon {
+    align-self: center;
+  }
+
+  &-input {
+    font-size: 0.9rem;
+    height: 100%;
+    padding: 0.2rem 0 0 0.4rem;
+    resize: none;
+    background-color: transparent;
+    border: none;
+    overflow-y: hidden;
+    outline: none;
+    box-shadow: none;
+
+    &::placeholder {
+      color: currentColor;
+    }
+  }
+}
+
+.results {
+  width: min(25rem, 100%);
+  position: fixed;
+  max-height: 15rem;
+  overflow-y: auto;
+  background-color: var(--bg-modal);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-overlay);
+  transform: translateY(0.5rem);
+  padding: 0.5rem;
+
+  &-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+  }
+
+  &-loader {
+    display: grid;
+    place-content: center;
+    min-height: 10rem;
+  }
+}

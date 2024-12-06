@@ -1,0 +1,13 @@
+<button
+  class="btn-theme"
+  (click)="toggleTheme()"
+  type="button"
+  title="change theme"
+  aria-label="change theme"
+>
+  @if($currentTheme() === 'dark') {
+  <app-moon-icon [size]="size" />
+  }@else {
+  <app-sun-icon [size]="size" />
+  }
+</button>

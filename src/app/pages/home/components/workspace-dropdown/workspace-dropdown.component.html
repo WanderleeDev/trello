@@ -1,0 +1,39 @@
+<app-dropdown>
+  <ng-container>
+    {{ title() }}
+    <app-arrow-down-icon ngProjectAs="right" [size]="20" />
+  </ng-container>
+
+  <div class="list" ngProjectAs="dropdown">
+    @if (subTitle()) {
+    <strong class="list-title">{{ subTitle() }}</strong>
+    }
+    <ul class="list-spaces">
+      @for (data of dropdownData(); track $index) {
+      <li class="list-work">
+        <app-link-card
+          [data]="{
+            name: data.name,
+            path: data.id,
+            image: data.image,
+            description: data.description
+          }"
+          [badgeText]="data.tag"
+        >
+          <ng-content ngProjectAs="extra" />
+          <button
+            class="extra-btn"
+            type="button"
+            title="add favorite"
+            ngProjectAs="extra"
+          >
+            <app-star-icon />
+          </button>
+        </app-link-card>
+      </li>
+      }@empty {
+      <ng-content select="empty" />
+      }
+    </ul>
+  </div>
+</app-dropdown>

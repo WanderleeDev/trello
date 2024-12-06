@@ -1,0 +1,44 @@
+:host {
+  display: block;
+}
+
+.btn {
+  --hovered: var(--btn-hovered);
+  --pressed: var(--btn-pressed);
+  --background: #a1bdd914;
+  --text-clr: currentColor;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-inline: 0.625rem;
+  height: 2.28571em;
+  text-transform: capitalize;
+  background-color: var(--background);
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    background-color: var(--hovered);
+  }
+
+  &:active {
+    background-color: var(--pressed);
+    color: var(--text-clr);
+  }
+}
+
+.mixed {
+  --hovered: var(--btn-hovered);
+  --pressed: var(--bg-active);
+  --text-clr: var(--clr-active);
+}
+
+.active {
+  background-color: var(--pressed);
+  color: var(--text-clr);
+}
+
+.rounded {
+  border-radius: 0.2rem;
+}

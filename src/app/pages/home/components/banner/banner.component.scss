@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  border: solid 0.15rem var(--bg-transparent);
+  transition: opacity 0.5s ease-in-out;
+  background-color: var(--bg-active);
+
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+.banner {
+  &-description {
+    flex-grow: 1;
+  }
+
+  &-options {
+    flex-shrink: 1;
+    display: flex;
+    gap: 0.5rem;
+    text-wrap: nowrap;
+  }
+
+  &-link {
+    color: var(--clr-active);
+    text-decoration: underline;
+  }
+}

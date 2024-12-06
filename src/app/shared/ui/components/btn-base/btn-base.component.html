@@ -1,0 +1,15 @@
+<button
+  class="btn"
+  [ngClass]="{
+    primary: variant() === 'primary',
+    mixed: variant() === 'mixed',
+    active: activeStyle(),
+    rounded: rounded()
+  }"
+  [type]="btnType()"
+  [attr.aria-label]="ariaLabel()"
+>
+  <ng-content select="left" />
+  <ng-content />
+  <ng-content select="right" />
+</button>

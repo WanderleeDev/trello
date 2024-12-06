@@ -1,0 +1,45 @@
+:host {
+  display: block;
+  position: relative;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    .dropdown-body {
+      z-index: 10;
+    }
+  }
+}
+
+.dropdown-body {
+  width: max(19rem, 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(3rem);
+  max-height: 44rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0.75rem;
+  background-color: var(--bg-modal);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-overlay);
+}
+
+.extra-btn {
+  position: relative;
+  margin-left: auto;
+  z-index: 10;
+
+  &:hover {
+    color: rgb(255, 187, 0);
+  }
+}
+
+.right {
+  right: 0;
+}
+
+.left {
+  left: 0;
+}

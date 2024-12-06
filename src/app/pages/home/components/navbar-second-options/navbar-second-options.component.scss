@@ -1,0 +1,18 @@
+:host {
+  display: block;
+}
+
+.subList {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  gap: 0.2rem;
+
+  &-item:nth-child(6) {
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+
+  &-subItem {
+    align-self: center;
+  }
+}

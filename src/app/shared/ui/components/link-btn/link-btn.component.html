@@ -1,0 +1,12 @@
+<a
+  [routerLink]="href()"
+  class="link"
+  routerLinkActive="active-link"
+  [ngClass]="{
+    'link-ident': 'ident' === design().toString()
+  }"
+>
+  <ng-content select="left" />
+  <ng-content />
+  <ng-content select="right" />
+</a>

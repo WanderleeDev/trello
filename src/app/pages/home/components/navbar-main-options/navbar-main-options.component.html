@@ -1,0 +1,77 @@
+<ul class="subList">
+  <li class="subList-item">
+    <app-dots-dropdown />
+  </li>
+
+  <li class="subList-item">
+    <app-btn-base (click)="redirectHome()" [rounded]="true" ariaLabel="to home">
+      <app-trello-dynamic-icon />
+    </app-btn-base>
+  </li>
+
+  <li class="subList-item">
+    <app-workspace-dropdown
+      title="Workspaces"
+      subTitle="Your Workspaces"
+      [dropdownData]="workspace()"
+    >
+      <app-card-common
+        ngProjectAs="empty"
+        message="No items still in your workspace"
+      />
+    </app-workspace-dropdown>
+  </li>
+
+  <li class="subList-item">
+    <app-workspace-dropdown [dropdownData]="boardRecent()" title="Recent">
+      <app-card-common
+        ngProjectAs="empty"
+        message="No recently visited boards"
+      />
+      <button
+        class="extra-btn"
+        select="extra-btn"
+        type="button"
+        title="add favorite"
+      >
+        <app-star-icon />
+      </button>
+    </app-workspace-dropdown>
+  </li>
+
+  <li class="subList-item">
+    <app-workspace-dropdown
+      title="Templates"
+      subTitle="Top templates"
+      [dropdownData]="templates()"
+    >
+      <app-card-common
+        ngProjectAs="empty"
+        message="No templates available at the moment"
+      />
+
+      <div ngProjectAs="extra">data</div>
+      <button
+        class="extra-btn"
+        type="button"
+        title="add favorite"
+        ngProjectAs="extra"
+      >
+        <app-star-icon />
+      </button>
+    </app-workspace-dropdown>
+  </li>
+
+  <li class="subList-item">
+    <app-workspace-dropdown title="Starred" [dropdownData]="boardRecent()">
+      <app-card-common
+        ngProjectAs="empty"
+        message="Star important boards to access them quickly and easily"
+      />
+    </app-workspace-dropdown>
+  </li>
+
+  <li class="subList-item">
+    <app-btn-base> create </app-btn-base>
+  </li>
+</ul>

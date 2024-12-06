@@ -1,0 +1,19 @@
+<figure class="user" [class.minimal]="isMinimal()">
+  <div class="user-wrapperImage">
+    @if (dataUser().image) {
+    <img
+      class="user-image"
+      [ngSrc]="dataUser().image!"
+      [alt]="dataUser().username + ' photo'"
+      width="24"
+      height="24"
+    />
+    }@else {
+    <app-letter-gradient-icon [$letter]="dataUser().username ?? 'unknown'" />
+    }
+  </div>
+  <figcaption class="user-data">
+    <span class="user-name">{{ dataUser().username }}</span>
+    <span class="user-email">{{ dataUser().email }}</span>
+  </figcaption>
+</figure>

@@ -1,0 +1,19 @@
+.list {
+  display: flex;
+  flex-direction: column;
+
+  &-title {
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+  }
+
+  &-spaces {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.extra-btn {
+  display: block;
+}

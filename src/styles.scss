@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 @layer base {
   :root {
     color-scheme: dark light;
@@ -29,6 +30,46 @@
   body {
     color: var(--text);
     background-color: var(--base);
+=======
+.dark {
+  --bg-main: #1e2125;
+  --bg-transparent: #a1bdd914;
+  --bg-card: #22272b;
+  --text-main-clr: #b6c2cf;
+  --btn-hovered: #a6c5e229;
+  --btn-pressed: #bfdbf847;
+  --bg-active: #1c2b41;
+  --clr-active: #579dff;
+  --letter-icon-clr: #1d2125;
+  --bg-modal: #282e33;
+  --shadow-overlay: 0px 0px 0px 1px #39424a, 0px 8px 12px #0304045c,
+    0px 0px 1px 1px #03040480;
+  --dynamic-logo-filter: brightness(0) saturate(100%) invert(66%) sepia(20%)
+    saturate(225%) hue-rotate(170deg) brightness(101%) contrast(85%);
+}
+
+.light {
+  --bg-main: #fff;
+  --bg-transparent: #091e420f;
+  --bg-card: #fff;
+  --text-main-clr: #172b4d;
+  --btn-hovered: #091e4224;
+  --btn-pressed: #091e424f;
+  --bg-active: #e9f2ff;
+  --clr-active: #0c66e4;
+  --letter-icon-clr: #fff;
+  --bg-modal: #fff;
+  --shadow-overlay: 0px 8px 12px #091e4226, 0px 0px 1px #091e424f;
+  --dynamic-logo-filter: brightness(0) saturate(100%) invert(30%) sepia(53%)
+    saturate(323%) hue-rotate(179deg) brightness(91%) contrast(88%);
+}
+
+@layer base {
+  body {
+    font-size: 0.9rem;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+>>>>>>> b488a22 (feat board)
   }
 }
 

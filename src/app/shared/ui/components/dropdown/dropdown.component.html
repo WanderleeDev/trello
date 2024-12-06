@@ -1,0 +1,25 @@
+<div>
+  <app-btn-base
+    (click)="toggleDropdown($event)"
+    variant="mixed"
+    [activeStyle]="isViewDropdown()"
+    [rounded]="true"
+  >
+    <ng-content select="left" />
+    <ng-content />
+    <ng-content select="right" />
+  </app-btn-base>
+</div>
+
+@if (isViewDropdown()) {
+<div
+  class="dropdown-body"
+  [class.right]="direction() === 'right'"
+  [class.left]="direction() === 'left'"
+  tabindex="-1"
+  appOutsideClick
+  (emitter)="clickOutside()"
+>
+  <ng-content select="dropdown" />
+</div>
+}

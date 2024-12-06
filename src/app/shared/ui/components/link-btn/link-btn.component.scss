@@ -1,0 +1,45 @@
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  cursor: pointer;
+  min-height: 1.5rem;
+  margin-top: 0.25rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    background-color: var(--btn-hovered);
+  }
+
+  &:active {
+    background-color: var(--btn-pressed);
+  }
+}
+
+.link-ident {
+  padding: 0.25rem 0.5rem 0.25rem 2.5rem;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "\2BFE";
+    font-weight: 600;
+    opacity: 0;
+    right: 0;
+    transform: scale(0.9) translateX(0%);
+    transition: 0.2s transform 0.1s linear, opacity 0.2s linear;
+  }
+
+  &:hover::before {
+    transform: scale(0.9) translateX(-200%);
+    opacity: 1;
+  }
+}
+
+.active-link {
+  background-color: var(--bg-active);
+  color: var(--clr-active);
+}

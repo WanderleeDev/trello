@@ -1,0 +1,35 @@
+:host {
+  display: block;
+}
+
+.user {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+
+  &-wrapperImage {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &-image {
+    object-fit: cover;
+  }
+
+  &-data {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-name {
+  }
+
+  &-email {
+  }
+}
+
+.minimal {
+  & .user-data {
+    display: none;
+  }
+}

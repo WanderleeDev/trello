@@ -1,0 +1,26 @@
+<label tabindex="1" class="searchBar" for="search">
+  <app-search-icon class="searchBar-icon" [size]="20" />
+  <textarea
+    class="searchBar-input"
+    (click)="showResults($event)"
+    type="text"
+    placeholder="Search"
+    name="search"
+    id="search"
+  ></textarea>
+</label>
+
+@if (isViewResults()) {
+<div class="results" appOutsideClick (emitter)="clickOutside()" tabindex="-1">
+  <strong class="results-title">recent boards</strong>
+  <ul>
+    @for (result of mockup; track $index) {
+    <li>
+      <app-link-card [data]="result" />
+    </li>
+    }@empty {
+    <app-loader-icon class="results-loader" [size]="50" />
+    }
+  </ul>
+</div>
+}

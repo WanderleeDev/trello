@@ -1,0 +1,23 @@
+:host {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr;
+  background-color: inherit;
+}
+
+.board-body {
+  display: flex;
+  justify-items: center;
+  align-items: flex-start;
+  width: min(100%, 70rem);
+  margin-inline: auto;
+
+  & app-sidebar {
+    flex-shrink: 1;
+  }
+
+  & .board-projection {
+    flex-grow: 1;
+    height: 100%;
+  }
+}

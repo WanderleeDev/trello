@@ -1,0 +1,47 @@
+:host {
+  background-color: #a1bdd914;
+
+  &:hover .card-btn {
+    display: block;
+  }
+}
+
+.card {
+  &-image {
+    display: block;
+    object-fit: cover;
+    height: 2rem;
+    width: 2.5rem;
+    border-radius: 0.2rem;
+    aspect-ratio: 4 / 2;
+  }
+
+  &-text {
+    display: block;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 7.5rem;
+  }
+
+  &-badge {
+    margin-left: auto;
+  }
+
+  &-extra {
+    position: relative;
+    display: none;
+    margin-left: auto;
+    z-index: 10;
+
+    // &:hover {
+    //   color: rgb(255, 187, 0);
+    // }
+  }
+
+  &:hover .card-extra {
+    display: block;
+    align-content: center;
+  }
+}

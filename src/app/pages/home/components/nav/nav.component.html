@@ -1,0 +1,22 @@
+<nav
+  class="navbar"
+  *ngrxLet="{
+    user: user$,
+    templates: templates$
+  } as state"
+>
+  <app-navbar-main-options
+    [boardRecent]="state.user.recentBoards"
+    [boardStarred]="state.user.staredBoards"
+    [workspace]="state.user.myWorkspaces"
+    [templates]="state.templates.templates"
+  />
+
+  <app-navbar-second-options
+    [dataUser]="{
+      username: state.user.username,
+      email: state.user.email,
+      image: state.user.image
+    }"
+  />
+</nav>

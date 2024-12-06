@@ -1,0 +1,17 @@
+:host {
+  width: min(100%, 17rem);
+  padding-inline: 1rem;
+}
+
+.sidebar-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  border-bottom: solid 0.1rem var(--bg-transparent);
+  padding-bottom: 1rem;
+}
+
+.sidebar-subTitle {
+  display: block;
+  padding-block: 1rem;
+}
