@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import { DOCUMENT } from '@angular/common';
-import { Inject, Injectable } from '@angular/core';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class ThemeService {
-  #isDarkTheme: boolean;
-
-  constructor(@Inject(DOCUMENT) private document: Document) {
-    this.#isDarkTheme = this.matchTheme();
-  }
-
-  public matchTheme(): boolean {
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-  }
-
-=======
 import { isPlatformBrowser } from '@angular/common';
 import { Inject, Injectable, PLATFORM_ID, Signal, signal } from '@angular/core';
 
@@ -78,5 +59,4 @@ export class ThemeService {
   private saveTheme(theme: ThemeType): void {
     localStorage.setItem(this.LOCAL_KEY, theme);
   }
->>>>>>> b488a22 (feat board)
 }

@@ -1,0 +1,28 @@
+<section class="mb-8">
+  <div class="flex items-center justify-between mb-4">
+    <div class="flex items-center gap-2">
+      <i class="far fa-clone" [style.color]="'var(--icon-color)'"></i>
+      <h2 class="text-lg font-medium" [style.color]="'var(--text-primary)'">Most popular templates</h2>
+    </div>
+    <button [style.color]="'var(--text-secondary)'" class="text-sm hover:text-primary transition-colors">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <p class="text-sm mb-4" [style.color]="'var(--text-secondary)'">
+    Get going faster with a template from the Trello community or
+    <select class="bg-transparent border-none cursor-pointer" [style.color]="'var(--clr-active)'">
+      <option>choose a category</option>
+    </select>
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    @for (template of templates(); track template.id) {
+      <app-template-card [template]="template"></app-template-card>
+    }
+  </div>
+
+  <a href="#" class="text-sm mt-4 block hover:underline transition-all" [style.color]="'var(--clr-active)'">
+    Browse the full template gallery
+  </a>
+</section>

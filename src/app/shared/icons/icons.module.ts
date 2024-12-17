@@ -22,6 +22,8 @@ import { SearchIconComponent } from './components/search-icon.component';
 import { LoaderIconComponent } from './components/loader-icon.component';
 import { AtlasianIconComponent } from './components/atlasian-icon.component';
 import { TrelloClrIconComponent } from './components/trello-clr-icon.component';
+import { ClockSvgComponent } from './components/clock-svg.component';
+import { AddSvgComponent } from './components/add-svg.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { TrelloClrIconComponent } from './components/trello-clr-icon.component';
     LoaderIconComponent,
     AtlasianIconComponent,
     TrelloClrIconComponent,
+    ClockSvgComponent,
+    AddSvgComponent,
   ],
   imports: [],
   exports: [
@@ -73,6 +77,8 @@ import { TrelloClrIconComponent } from './components/trello-clr-icon.component';
     LoaderIconComponent,
     AtlasianIconComponent,
     TrelloClrIconComponent,
+    ClockSvgComponent,
+    AddSvgComponent,
   ],
 })
 export class IconsModule {}

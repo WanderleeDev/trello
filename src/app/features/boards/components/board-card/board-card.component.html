@@ -1,0 +1,28 @@
+<div class="relative group cursor-pointer">
+  <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden" 
+       [style.backgroundColor]="board()?.backgroundColor || 'var(--board-bg-1)'">
+    <div class="absolute inset-0">
+      <ng-container *ngIf="board()?.backgroundImage">
+        <img [src]="board()?.backgroundImage" [alt]="board()?.name" class="object-cover w-full h-full">
+      </ng-container>
+      <div class="absolute inset-0 transition-all duration-200"
+           [style.backgroundColor]="'var(--hover-overlay)'"
+           style="opacity: 0;"
+           [class.opacity-100]="'group-hover'"></div>
+    </div>
+  </div>
+  
+  <div class="absolute top-2 right-2">
+    <button 
+      [style.color]="'var(--icon-color)'"
+      class="opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+      (click)="toggleStar($event)">
+      <i class="far" [class.fa-star]="!isStarred()" [class.fas]="isStarred()"></i>
+    </button>
+  </div>
+
+  <div class="mt-2">
+    <h3 [style.color]="'var(--text-primary)'" class="font-medium">{{ board()?.name }}</h3>
+    <p [style.color]="'var(--text-secondary)'" class="text-xs">{{ board()?.workspace }}</p>
+  </div>
+</div>

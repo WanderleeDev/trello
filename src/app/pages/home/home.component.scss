@@ -10,10 +10,10 @@
   justify-items: center;
   align-items: flex-start;
   width: min(100%, 70rem);
-  margin-inline: auto;
+  margin: 2.5rem auto 0;
 
   & app-sidebar {
-    flex-shrink: 1;
+    flex-shrink: 0;
   }
 
   & .board-projection {

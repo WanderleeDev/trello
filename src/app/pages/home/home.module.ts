@@ -19,6 +19,7 @@ import { HomeComponent } from './home.component';
 import { LetDirective } from '@ngrx/component';
 import { NavbarMainOptionsComponent } from './components/navbar-main-options/navbar-main-options.component';
 import { NavbarSecondOptionsComponent } from './components/navbar-second-options/navbar-second-options.component';
+import { BoardLinkComponent } from './components/board-link/board-link.component';
 
 const routes: Routes = [
   {
@@ -34,8 +35,8 @@ const routes: Routes = [
         loadChildren: () => import('../../features/templates/templates.module'),
       },
       {
-        path: 'home',
-        loadChildren: () => import('../../features/home/home.module'),
+        path: 'entry',
+        loadChildren: () => import('../../features/entry/entry.module'),
       },
     ],
   },
@@ -57,6 +58,7 @@ const routes: Routes = [
     HomeComponent,
     NavbarMainOptionsComponent,
     NavbarSecondOptionsComponent,
+    BoardLinkComponent,
   ],
   imports: [
     CommonModule,

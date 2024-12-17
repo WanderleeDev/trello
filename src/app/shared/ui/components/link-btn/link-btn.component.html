@@ -2,6 +2,7 @@
   [routerLink]="href()"
   class="link"
   routerLinkActive="active-link"
+  [routerLinkActiveOptions]="{ exact: true }"
   [ngClass]="{
     'link-ident': 'ident' === design().toString()
   }"

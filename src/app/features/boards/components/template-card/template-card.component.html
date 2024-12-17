@@ -1,0 +1,34 @@
+<div class="relative group cursor-pointer">
+  <div
+    class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden"
+    [style.backgroundColor]="'var(--bg-card)'"
+  >
+    <div class="absolute inset-0">
+      <ng-container *ngIf="template()?.imageUrl">
+        <img
+          [src]="template()?.imageUrl"
+          [alt]="template()?.name"
+          class="object-cover w-full h-full"
+        />
+      </ng-container>
+      <div
+        class="absolute inset-0 transition-all duration-200"
+        [style.backgroundColor]="'var(--hover-overlay)'"
+        style="opacity: 0"
+        [class.opacity-100]="'group-hover'"
+      ></div>
+    </div>
+  </div>
+
+  <div class="mt-2">
+    <span
+      class="inline-block px-2 py-1 text-xs rounded mb-2"
+      [style.backgroundColor]="'var(--bg-card)'"
+      [style.color]="'var(--text-secondary)'"
+      >Template</span
+    >
+    <h3 [style.color]="'var(--text-primary)'" class="font-medium">
+      {{ template()?.name }}
+    </h3>
+  </div>
+</div>

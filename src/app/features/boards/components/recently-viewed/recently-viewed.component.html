@@ -1,0 +1,13 @@
+<section class="mb-8">
+  <div class="flex items-center gap-2 mb-4">
+    <i class="far fa-clock text-gray-200"></i>
+    <h2 class="text-lg font-medium text-gray-200">Recently viewed</h2>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <app-board-card
+      *ngFor="let board of recentBoards"
+      [board]="board">
+    </app-board-card>
+  </div>
+</section>

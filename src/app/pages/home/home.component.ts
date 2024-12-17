@@ -5,7 +5,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   template: `
     <header class="board-header">
       <app-nav />
-      <!-- <app-banner /> -->
+      <app-banner />
     </header>
 
     <main class="board-body">

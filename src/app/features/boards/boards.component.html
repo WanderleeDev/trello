@@ -1,1 +1,34 @@
-<p>boards works!</p>
+<div
+  class="min-h-screen p-6"
+  style="
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+  "
+>
+  <div class="max-w-7xl mx-auto">
+    <!-- Popular Templates Section -->
+    <app-popular-templates></app-popular-templates>
+
+    <!-- Starred Boards Section -->
+    <app-starred-boards></app-starred-boards>
+
+    <!-- Recently Viewed Section -->
+    <app-recently-viewed></app-recently-viewed>
+
+    <!-- Workspaces Section -->
+    <section class="mt-8">
+      <h2
+        class="text-lg font-medium mb-4"
+        [style.color]="'var(--text-primary)'"
+      >
+        YOUR WORKSPACES
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        @for (board of workspaceBoards(); track $index) {
+        <app-board-card [board]="board" (starToggled)="onStarToggled($event)">
+        </app-board-card>
+        }
+      </div>
+    </section>
+  </div>
+</div>

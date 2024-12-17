@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { IconsModule } from '../icons/icons.module';
 import { LinkCardComponent } from './components/link-card/link-card.component';
 import { BadgeComponent } from './components/badge/badge.component';
+import { CardInfoComponent } from './components/card-info/card-info.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { BadgeComponent } from './components/badge/badge.component';
     LinkBtnComponent,
     LinkCardComponent,
     BadgeComponent,
+    CardInfoComponent,
   ],
   imports: [
     CommonModule,
@@ -40,6 +42,7 @@ import { BadgeComponent } from './components/badge/badge.component';
     LinkBtnComponent,
     LinkCardComponent,
     BadgeComponent,
+    CardInfoComponent,
   ],
 })
 export class UiModule {}

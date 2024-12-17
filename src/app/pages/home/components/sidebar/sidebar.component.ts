@@ -17,17 +17,17 @@ export class SidebarComponent {
     {
       icon: TrelloIconComponent,
       label: 'Boards',
-      link: '/board/entry',
+      link: '/home',
     },
     {
       icon: TemplateIconComponent,
       label: 'Templates',
-      link: '/board/templates',
+      link: '/home/templates',
     },
     {
       icon: WaveIconComponent,
-      label: 'Home',
-      link: '/board/home',
+      label: 'Entry',
+      link: '/home/entry',
     },
   ];
 

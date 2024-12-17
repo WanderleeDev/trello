@@ -16,11 +16,7 @@ export class FormLoginComponent {
     private readonly store: Store
   ) {
     this.loginForm = this._fb.nonNullable.group({
-<<<<<<< HEAD
       email: ['', [Validators.email]],
-=======
-      email: ['', [Validators.required, Validators.email]],
->>>>>>> b488a22 (feat board)
     });
   }
 

@@ -3,34 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
-@layer base {
-  :root {
-    color-scheme: dark light;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --base: #1d2125;
-      --text: #b6c2cf;
-      --placeholder: #aab1be;
-      --bg-input: #4A4D51;
-    }
-  }
-
-  @media (prefers-color-scheme: light) {
-    :root {
-      --base: #fff;
-      --text: #445471;
-      --placeholder: #57616B;
-      --bg-input: #fff;
-    }
-  }
-
-  body {
-    color: var(--text);
-    background-color: var(--base);
-=======
 .dark {
   --bg-main: #1e2125;
   --bg-transparent: #a1bdd914;
@@ -46,6 +18,16 @@
     0px 0px 1px 1px #03040480;
   --dynamic-logo-filter: brightness(0) saturate(100%) invert(66%) sepia(20%)
     saturate(225%) hue-rotate(170deg) brightness(101%) contrast(85%);
+  
+  /* Board colors */
+  --board-bg-1: #2D3748;
+  --board-bg-2: #1A202C;
+  --board-bg-3: #2C5282;
+  --board-bg-4: #2D3748;
+  --text-secondary: #A0AEC0;
+  --text-primary: #F7FAFC;
+  --icon-color: #CBD5E0;
+  --hover-overlay: rgba(26, 32, 44, 0.8);
 }
 
 .light {
@@ -62,6 +44,16 @@
   --shadow-overlay: 0px 8px 12px #091e4226, 0px 0px 1px #091e424f;
   --dynamic-logo-filter: brightness(0) saturate(100%) invert(30%) sepia(53%)
     saturate(323%) hue-rotate(179deg) brightness(91%) contrast(88%);
+  
+  /* Board colors */
+  --board-bg-1: #EDF2F7;
+  --board-bg-2: #E2E8F0;
+  --board-bg-3: #BEE3F8;
+  --board-bg-4: #E2E8F0;
+  --text-secondary: #4A5568;
+  --text-primary: #1A202C;
+  --icon-color: #4A5568;
+  --hover-overlay: rgba(226, 232, 240, 0.8);
 }
 
 @layer base {
@@ -69,7 +61,8 @@
     font-size: 0.9rem;
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
->>>>>>> b488a22 (feat board)
+    background-color: var(--bg-main);
+    color: var(--text-main-clr);
   }
 }
 
