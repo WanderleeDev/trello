@@ -1,9 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  input,
-  signal,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
 
 @Component({
   selector: 'app-dropdown',
@@ -17,7 +12,7 @@ export class DropdownComponent {
 
   public toggleDropdown(e: Event): void {
     e.stopPropagation();
-    this.isViewDropdown.update((value) => !value);
+    this.isViewDropdown.update(value => !value);
   }
 
   public clickOutside(): void {

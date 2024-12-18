@@ -1,0 +1,37 @@
+<figure class="card-info">
+  <div class="card-image">
+    <img
+      priority
+      [ngSrc]="cardData().thumbnail"
+      [alt]="cardData().title"
+      class="card-image-thumbnail"
+      fill
+    />
+    <img
+      class="card-image-author"
+      [class.author-common-style]="!isCommonAuthor()"
+      [class.author-trello-style]="isCommonAuthor()"
+      [ngSrc]="cardData().author.image"
+      [alt]="cardData().author.name"
+      width="48"
+      height="48"
+    />
+  </div>
+  <div class="card-header">
+    <figcaption class="card-title truncate" [title]="cardData().title">
+      {{ cardData().title }}
+    </figcaption>
+    <p class="card-author">by {{ cardData().author.name }}</p>
+  </div>
+  <p class="card-description">{{ cardData().description | truncate: 100 : true }}</p>
+  <div class="card-stats">
+    <span class="card-views">
+      <app-eye-svg />
+      {{ cardData().views | number | quantityFormat }} {{ pluralViews() }}
+    </span>
+    <span class="card-copies">
+      <app-copy-svg />
+      {{ cardData().copies | number | quantityFormat }} {{ pluralCopies() }}
+    </span>
+  </div>
+</figure>

@@ -9,8 +9,8 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
       text-transform: capitalize;
       font-size: 0.7rem;
       background-color: var(--btn-hovered);
-      border-radius: .2rem;
-      padding: 0 .2rem;
+      border-radius: 0.2rem;
+      padding: 0 0.2rem;
     }
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,

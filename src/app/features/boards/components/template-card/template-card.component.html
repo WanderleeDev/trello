@@ -4,13 +4,13 @@
     [style.backgroundColor]="'var(--bg-card)'"
   >
     <div class="absolute inset-0">
-      <ng-container *ngIf="template()?.imageUrl">
+      @if (template().imageUrl) {
         <img
-          [src]="template()?.imageUrl"
-          [alt]="template()?.name"
+          [src]="template().imageUrl"
+          [alt]="template().name"
           class="object-cover w-full h-full"
         />
-      </ng-container>
+      }
       <div
         class="absolute inset-0 transition-all duration-200"
         [style.backgroundColor]="'var(--hover-overlay)'"
@@ -28,7 +28,7 @@
       >Template</span
     >
     <h3 [style.color]="'var(--text-primary)'" class="font-medium">
-      {{ template()?.name }}
+      {{ template().name }}
     </h3>
   </div>
 </div>

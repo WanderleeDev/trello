@@ -6,11 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports: [
-    AppModule,
-    ServerModule,
-    HttpClientModule
-  ],
+  imports: [AppModule, ServerModule, HttpClientModule],
   bootstrap: [AppComponent],
 })
 export class AppServerModule {}

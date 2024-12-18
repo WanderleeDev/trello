@@ -7,8 +7,6 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardCommonComponent {
-  readonly image = input<string>(
-    'https://trello.com/assets/cc47d0a8c646581ccd08.svg'
-  );
+  readonly image = input<string>('https://trello.com/assets/cc47d0a8c646581ccd08.svg');
   readonly message = input.required<string>();
 }

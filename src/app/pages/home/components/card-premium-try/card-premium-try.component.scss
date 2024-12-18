@@ -11,7 +11,9 @@
     font-size: 0.9rem;
     background-color: var(--bg-card);
     overflow: hidden;
-    box-shadow: 0px 0px 0px 1px #00000000, 0px 1px 1px #03040480,
+    box-shadow:
+      0px 0px 0px 1px #00000000,
+      0px 1px 1px #03040480,
       0px 0px 1px #03040480;
   }
 
@@ -42,7 +44,7 @@
     border-radius: 0.2rem;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       background-color: var(--bg-transparent);
 

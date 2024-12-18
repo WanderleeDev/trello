@@ -8,8 +8,11 @@ import { ThemeService } from './shared/services/theme.service';
     :host {
       background-color: var(--bg-main);
       color: var(--text-main-clr);
-      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    }`,
+      transition:
+        background-color 0.2s ease-in-out,
+        color 0.2s ease-in-out;
+    }
+  `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {

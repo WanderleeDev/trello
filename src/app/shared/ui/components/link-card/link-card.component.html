@@ -1,20 +1,14 @@
 <app-link-btn class="card" [href]="data().name">
-  @if(data().image) {
-  <img
-    class="card-image"
-    [ngSrc]="data().image!"
-    alt="workspace cover"
-    width="40"
-    height="32"
-  />
-  }@else {
-  <app-letter-gradient-icon [$letter]="data().name" />
+  @if (data().image) {
+    <img class="card-image" [ngSrc]="data().image!" alt="workspace cover" width="40" height="32" />
+  } @else {
+    <app-letter-gradient-icon [$letter]="data().name" />
   }
 
   <span class="card-text">{{ data().name }} </span>
 
   @if (badgeText()) {
-  <app-badge class="card-badge" [content]="badgeText()!" />
+    <app-badge class="card-badge" [content]="badgeText()!" />
   }
   <div class="card-extra">
     <ng-content />

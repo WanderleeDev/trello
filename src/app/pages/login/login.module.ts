@@ -21,11 +21,6 @@ const routes: Routes = [{ path: '', component: LoginComponent }];
     SocialLoginButtonsComponent,
     FooterLoginComponent,
   ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    ReactiveFormsModule,
-    UiModule,
-  ],
+  imports: [CommonModule, RouterModule.forChild(routes), ReactiveFormsModule, UiModule],
 })
 export default class LoginModule {}

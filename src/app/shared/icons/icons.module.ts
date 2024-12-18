@@ -24,6 +24,8 @@ import { AtlasianIconComponent } from './components/atlasian-icon.component';
 import { TrelloClrIconComponent } from './components/trello-clr-icon.component';
 import { ClockSvgComponent } from './components/clock-svg.component';
 import { AddSvgComponent } from './components/add-svg.component';
+import { CopySvgComponent } from './components/copy-svg.component';
+import { EyeSvgComponent } from './components/eye-svg.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { AddSvgComponent } from './components/add-svg.component';
     TrelloClrIconComponent,
     ClockSvgComponent,
     AddSvgComponent,
+    CopySvgComponent,
+    EyeSvgComponent,
   ],
   imports: [],
   exports: [
@@ -79,6 +83,8 @@ import { AddSvgComponent } from './components/add-svg.component';
     TrelloClrIconComponent,
     ClockSvgComponent,
     AddSvgComponent,
+    CopySvgComponent,
+    EyeSvgComponent,
   ],
 })
 export class IconsModule {}

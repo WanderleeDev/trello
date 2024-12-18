@@ -15,11 +15,6 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [BoardComponent, NavbarComponent],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    UiModule,
-    FontAwesomeModule,
-  ],
+  imports: [CommonModule, RouterModule.forChild(routes), UiModule, FontAwesomeModule],
 })
 export default class BoardModule {}

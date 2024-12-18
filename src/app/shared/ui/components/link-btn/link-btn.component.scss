@@ -25,12 +25,14 @@
 
   &::before {
     position: absolute;
-    content: "\2BFE";
+    content: '\2BFE';
     font-weight: 600;
     opacity: 0;
     right: 0;
     transform: scale(0.9) translateX(0%);
-    transition: 0.2s transform 0.1s linear, opacity 0.2s linear;
+    transition:
+      0.2s transform 0.1s linear,
+      opacity 0.2s linear;
   }
 
   &:hover::before {

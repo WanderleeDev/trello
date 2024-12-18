@@ -4,11 +4,7 @@ import { IconBaseComponent } from './icon-base/icon-base.component';
 @Component({
   selector: 'app-loader-icon',
   template: `
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      [attr.width]="size()"
-      [attr.height]="size()"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" [attr.width]="size()" [attr.height]="size()">
       <style>
         .line {
           fill: none;

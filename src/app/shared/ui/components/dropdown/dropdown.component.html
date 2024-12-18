@@ -12,14 +12,14 @@
 </div>
 
 @if (isViewDropdown()) {
-<div
-  class="dropdown-body"
-  [class.right]="direction() === 'right'"
-  [class.left]="direction() === 'left'"
-  tabindex="-1"
-  appOutsideClick
-  (emitter)="clickOutside()"
->
-  <ng-content select="dropdown" />
-</div>
+  <div
+    class="dropdown-body"
+    [class.right]="direction() === 'right'"
+    [class.left]="direction() === 'left'"
+    tabindex="-1"
+    appOutsideClick
+    (emitter)="clickOutside()"
+  >
+    <ng-content select="dropdown" />
+  </div>
 }

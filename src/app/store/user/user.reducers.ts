@@ -21,13 +21,7 @@ const initialState: UserState = {
 
 export const userReducer = createReducer(
   initialState,
-  on(
-    userActions.getUserSuccess,
-    (state, { type, ...user }): UserState => ({ ...state, ...user })
-  ),
-  on(
-    userActions.updateUser,
-    (state, { type, ...user }): UserState => ({ ...state, ...user })
-  ),
-  on(userActions.clearUser, (): UserState => initialState)
+  on(userActions.getUserSuccess, (state, { type, ...user }): UserState => ({ ...state, ...user })),
+  on(userActions.updateUser, (state, { type, ...user }): UserState => ({ ...state, ...user })),
+  on(userActions.clearUser, (): UserState => initialState),
 );

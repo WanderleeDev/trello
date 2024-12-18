@@ -4,12 +4,7 @@ import { IconBaseComponent } from './icon-base/icon-base.component';
 @Component({
   selector: 'app-bell-icon',
   template: `
-    <svg
-      [attr.width]="size()"
-      [attr.height]="size()"
-      viewBox="0 0 24 24"
-      role="presentation"
-    >
+    <svg [attr.width]="size()" [attr.height]="size()" viewBox="0 0 24 24" role="presentation">
       <path
         fill="currentcolor"
         fill-rule="evenodd"

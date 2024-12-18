@@ -1,34 +1,40 @@
-<div
-  class="min-h-screen p-6"
-  style="
-    background-color: var(--background-primary);
-    color: var(--text-primary);
-  "
->
-  <div class="max-w-7xl mx-auto">
-    <!-- Popular Templates Section -->
-    <app-popular-templates></app-popular-templates>
-
-    <!-- Starred Boards Section -->
-    <app-starred-boards></app-starred-boards>
-
-    <!-- Recently Viewed Section -->
-    <app-recently-viewed></app-recently-viewed>
-
-    <!-- Workspaces Section -->
-    <section class="mt-8">
-      <h2
-        class="text-lg font-medium mb-4"
-        [style.color]="'var(--text-primary)'"
-      >
-        YOUR WORKSPACES
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        @for (board of workspaceBoards(); track $index) {
-        <app-board-card [board]="board" (starToggled)="onStarToggled($event)">
-        </app-board-card>
+<div class="px-6">
+  <div class="max-w-7xl mx-auto flex flex-col gap-6">
+    <app-board-list-container title="Starred boards">
+      <app-star-icon ngProjectAs="icon-title" />
+      <ng-container ngProjectAs="list-content">
+        @for (item of starredBoards(); track $index) {
+          <a routerLink="/home/templates">
+            <app-board-card [data]="item">
+              <app-btn-star-favorite (click)="onStarToggled($event)" ngProjectAs="extra-2" />
+            </app-board-card>
+          </a>
         }
-      </div>
-    </section>
+      </ng-container>
+    </app-board-list-container>
+
+    <app-board-list-container title="Recent boards">
+      <app-clock-svg ngProjectAs="icon-title" />
+      <ng-container ngProjectAs="list-content">
+        @for (item of recentBoards(); track $index) {
+          <a routerLink="/home/templates">
+            <app-board-card [data]="item">
+              <app-btn-star-favorite (click)="onStarToggled($event)" ngProjectAs="extra-2" />
+            </app-board-card>
+          </a>
+        }
+      </ng-container>
+    </app-board-list-container>
+
+    <app-board-list-container title="YOUR WORKSPACES">
+      <app-letter-gradient-icon [$letter]="'t'" ngProjectAs="icon-title" />
+      <ng-container ngProjectAs="list-content">
+        @for (item of workspaceBoards(); track $index) {
+          <a routerLink="/home/templates">
+            <app-board-card [data]="item" />
+          </a>
+        }
+      </ng-container>
+    </app-board-list-container>
   </div>
 </div>

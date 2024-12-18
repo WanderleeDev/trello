@@ -3,18 +3,16 @@
     <div class="flex items-center">
       <a class="text-white grid trelloLogo" routerLink="/">
         @for (logo of logos; track $index) {
-        <app-basic-image
-          [imageParams]="{
-            src: logo,
-            alt: 'logo trello',
-            height: 1,
-            width: 4.7,
-            customClass:
-              $index === 0
-                ? ['z-10 col-start-1 row-start-1']
-                : ['z-0 col-start-1 row-start-1']
-          }"
-        />
+          <app-basic-image
+            [imageParams]="{
+              src: logo,
+              alt: 'logo trello',
+              height: 1,
+              width: 4.7,
+              customClass:
+                $index === 0 ? ['z-10 col-start-1 row-start-1'] : ['z-0 col-start-1 row-start-1'],
+            }"
+          />
         }
       </a>
       <button type="button">
@@ -35,12 +33,7 @@
       </div>
     </div>
     <div class="flex items-center">
-      <button
-        type="button"
-        class="flex rounded-full"
-        aria-expanded="false"
-        type="button"
-      >
+      <button type="button" class="flex rounded-full" aria-expanded="false" type="button">
         <img
           class="w-8 h-8 rounded-full"
           src="https://api.lorem.space/image/face?w=400&h=400"

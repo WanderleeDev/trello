@@ -26,13 +26,7 @@ import { CardInfoComponent } from './components/card-info/card-info.component';
     BadgeComponent,
     CardInfoComponent,
   ],
-  imports: [
-    CommonModule,
-    NgOptimizedImage,
-    DirectivesModule,
-    RouterModule,
-    IconsModule,
-  ],
+  imports: [CommonModule, NgOptimizedImage, DirectivesModule, RouterModule, IconsModule],
   exports: [
     BasicImageComponent,
     CustomBtnComponent,

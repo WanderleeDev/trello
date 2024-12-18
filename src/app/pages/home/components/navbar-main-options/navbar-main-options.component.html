@@ -15,48 +15,25 @@
       subTitle="Your Workspaces"
       [dropdownData]="workspace()"
     >
-      <app-card-common
-        ngProjectAs="empty"
-        message="No items still in your workspace"
-      />
+      <app-card-common ngProjectAs="empty" message="No items still in your workspace" />
     </app-workspace-dropdown>
   </li>
 
   <li class="subList-item">
     <app-workspace-dropdown [dropdownData]="boardRecent()" title="Recent">
-      <app-card-common
-        ngProjectAs="empty"
-        message="No recently visited boards"
-      />
-      <button
-        class="extra-btn"
-        select="extra-btn"
-        type="button"
-        title="add favorite"
-      >
+      <app-card-common ngProjectAs="empty" message="No recently visited boards" />
+      <button class="extra-btn" select="extra-btn" type="button" title="add favorite">
         <app-star-icon />
       </button>
     </app-workspace-dropdown>
   </li>
 
   <li class="subList-item">
-    <app-workspace-dropdown
-      title="Templates"
-      subTitle="Top templates"
-      [dropdownData]="templates()"
-    >
-      <app-card-common
-        ngProjectAs="empty"
-        message="No templates available at the moment"
-      />
+    <app-workspace-dropdown title="Templates" subTitle="Top templates" [dropdownData]="templates()">
+      <app-card-common ngProjectAs="empty" message="No templates available at the moment" />
 
       <div ngProjectAs="extra">data</div>
-      <button
-        class="extra-btn"
-        type="button"
-        title="add favorite"
-        ngProjectAs="extra"
-      >
+      <button class="extra-btn" type="button" title="add favorite" ngProjectAs="extra">
         <app-star-icon />
       </button>
     </app-workspace-dropdown>

@@ -7,6 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class CustomBtnComponent {
   @Input() customClass: string[] = [];
-  @Input({ required: true }) type: 'button' | 'menu' | 'submit' | 'reset' =
-    'button';
+  @Input({ required: true }) type: 'button' | 'menu' | 'submit' | 'reset' = 'button';
 }

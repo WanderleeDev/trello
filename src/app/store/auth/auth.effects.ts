@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 export class AuthEffects {
   constructor(
     private readonly actions$: Actions,
-    private readonly router: Router
+    private readonly router: Router,
   ) {}
 
   login$ = createEffect(() =>
@@ -23,20 +23,20 @@ export class AuthEffects {
               username: null,
               accessToken: '123',
               image: null,
-            })
+            }),
           ),
-          catchError(() => of(authActions.authError()))
-        )
-      )
-    )
+          catchError(() => of(authActions.authError())),
+        ),
+      ),
+    ),
   );
 
   loginSuccess$ = createEffect(
     () =>
       this.actions$.pipe(
         ofType(authActions.loginSuccess),
-        map(() => this.router.navigateByUrl('/home'))
+        map(() => this.router.navigateByUrl('/home')),
       ),
-    { dispatch: false }
+    { dispatch: false },
   );
 }

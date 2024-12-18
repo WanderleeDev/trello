@@ -2,7 +2,7 @@
   class="navbar"
   *ngrxLet="{
     user: user$,
-    templates: templates$
+    templates: templates$,
   } as state"
 >
   <h1 class="sr-only">Trello</h1>
@@ -17,7 +17,7 @@
     [dataUser]="{
       username: state.user.username,
       email: state.user.email,
-      image: state.user.image
+      image: state.user.image,
     }"
   />
 </nav>

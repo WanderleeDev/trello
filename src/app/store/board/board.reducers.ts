@@ -14,6 +14,6 @@ export const boardReducer = createReducer(
     (state, { templates }): BoardState => ({
       ...state,
       ...templates,
-    })
-  )
+    }),
+  ),
 );

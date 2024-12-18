@@ -7,24 +7,24 @@
   />
 
   <div class="max-w-[19rem] flex flex-col gap-8">
-    @for (item of data; track $index) { @if (item.boards.length > 0) {
-    <article>
-      <h3 class="flex items-center gap-2 mb-2 pl-4 truncate">
-        <ng-container *ngComponentOutlet="item.icon" />
-        {{ item.title | titlecase }}
-      </h3>
-      <ul>
-        @for (item of item.boards; track $index) {
-        <li>
-          <app-link-card badgeText="template" [data]="item" />
-        </li>
-        }
-      </ul>
-    </article>
-    } }
+    @for (item of data; track $index) {
+      @if (item.boards.length > 0) {
+        <article>
+          <h3 class="flex items-center gap-2 mb-2 pl-4 truncate">
+            <ng-container *ngComponentOutlet="item.icon" />
+            {{ item.title | titlecase }}
+          </h3>
+          <ul>
+            @for (item of item.boards; track $index) {
+              <li>
+                <app-link-card badgeText="template" [data]="item" />
+              </li>
+            }
+          </ul>
+        </article>
+      }
+    }
 
-    <app-btn-base class="contents" variant="primary">
-      <app-add-svg /> Create a board
-    </app-btn-base>
+    <app-btn-base class="contents" variant="primary"> <app-add-svg /> Create a board </app-btn-base>
   </div>
 </section>

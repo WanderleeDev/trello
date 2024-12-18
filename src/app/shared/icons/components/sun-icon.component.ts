@@ -32,19 +32,10 @@ import { IconBaseComponent } from './icon-base/icon-base.component';
             dur="0.15s"
             values="0;0.3"
           />
-          <animate
-            fill="freeze"
-            attributeName="stroke-dashoffset"
-            dur="0.4s"
-            values="36;0"
-          />
+          <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="36;0" />
         </path>
         <g>
-          <path
-            stroke-dasharray="2"
-            stroke-dashoffset="2"
-            d="M12 19v1M19 12h1M12 5v-1M5 12h-1"
-          >
+          <path stroke-dasharray="2" stroke-dashoffset="2" d="M12 19v1M19 12h1M12 5v-1M5 12h-1">
             <animate
               fill="freeze"
               attributeName="d"

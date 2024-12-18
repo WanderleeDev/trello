@@ -5,15 +5,17 @@ interface IImageParams {
   height: number;
   width: number;
   priority?: boolean;
-  customClass?: string[]
+  customClass?: string[];
 }
 
 @Component({
   selector: 'app-basic-image',
   templateUrl: './basic-image.component.html',
-  styles: `:host {
-    display: contents
-  }`,
+  styles: `
+    :host {
+      display: contents;
+    }
+  `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BasicImageComponent {

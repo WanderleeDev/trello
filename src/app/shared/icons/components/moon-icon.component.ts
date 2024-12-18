@@ -100,17 +100,8 @@ import { IconBaseComponent } from './icon-base/icon-base.component';
         stroke-width="2"
       >
         <g>
-          <path
-            stroke-dasharray="2"
-            stroke-dashoffset="4"
-            d="M12 21v1M21 12h1M12 3v-1M3 12h-1"
-          >
-            <animate
-              fill="freeze"
-              attributeName="stroke-dashoffset"
-              dur="0.2s"
-              values="4;2"
-            />
+          <path stroke-dasharray="2" stroke-dashoffset="4" d="M12 21v1M21 12h1M12 3v-1M3 12h-1">
+            <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="4;2" />
           </path>
           <path
             stroke-dasharray="2"
@@ -137,59 +128,17 @@ import { IconBaseComponent } from './icon-base/icon-base.component';
       <mask id="lineMdSunnyOutlineToMoonLoopTransition1">
         <circle cx="12" cy="12" r="12" fill="#fff" />
         <circle cx="12" cy="12" r="4">
-          <animate
-            fill="freeze"
-            attributeName="r"
-            begin="0.1s"
-            dur="0.4s"
-            values="4;8"
-          />
+          <animate fill="freeze" attributeName="r" begin="0.1s" dur="0.4s" values="4;8" />
         </circle>
         <circle cx="22" cy="2" r="3" fill="#fff">
-          <animate
-            fill="freeze"
-            attributeName="cx"
-            begin="0.1s"
-            dur="0.4s"
-            values="22;18"
-          />
-          <animate
-            fill="freeze"
-            attributeName="cy"
-            begin="0.1s"
-            dur="0.4s"
-            values="2;6"
-          />
-          <animate
-            fill="freeze"
-            attributeName="r"
-            begin="0.1s"
-            dur="0.4s"
-            values="3;12"
-          />
+          <animate fill="freeze" attributeName="cx" begin="0.1s" dur="0.4s" values="22;18" />
+          <animate fill="freeze" attributeName="cy" begin="0.1s" dur="0.4s" values="2;6" />
+          <animate fill="freeze" attributeName="r" begin="0.1s" dur="0.4s" values="3;12" />
         </circle>
         <circle cx="22" cy="2" r="1">
-          <animate
-            fill="freeze"
-            attributeName="cx"
-            begin="0.1s"
-            dur="0.4s"
-            values="22;18"
-          />
-          <animate
-            fill="freeze"
-            attributeName="cy"
-            begin="0.1s"
-            dur="0.4s"
-            values="2;6"
-          />
-          <animate
-            fill="freeze"
-            attributeName="r"
-            begin="0.1s"
-            dur="0.4s"
-            values="1;10"
-          />
+          <animate fill="freeze" attributeName="cx" begin="0.1s" dur="0.4s" values="22;18" />
+          <animate fill="freeze" attributeName="cy" begin="0.1s" dur="0.4s" values="2;6" />
+          <animate fill="freeze" attributeName="r" begin="0.1s" dur="0.4s" values="1;10" />
         </circle>
       </mask>
       <circle
@@ -199,13 +148,7 @@ import { IconBaseComponent } from './icon-base/icon-base.component';
         mask="url(#lineMdSunnyOutlineToMoonLoopTransition1)"
         fill="#d5c301"
       >
-        <animate
-          fill="freeze"
-          attributeName="r"
-          begin="0.1s"
-          dur="0.4s"
-          values="6;10"
-        />
+        <animate fill="freeze" attributeName="r" begin="0.1s" dur="0.4s" values="6;10" />
         <set fill="freeze" attributeName="opacity" begin="0.5s" to="0" />
       </circle>
     </svg>

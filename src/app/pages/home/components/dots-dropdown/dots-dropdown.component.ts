@@ -9,19 +9,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <div ngProjectAs="dropdown">
         <strong>Your apps</strong>
         <app-link-btn href="#">
-          <app-atlasian-icon
-            [size]="24"
-            ngProjectAs="left"
-            class="dropdown-icon"
-          />
+          <app-atlasian-icon [size]="24" ngProjectAs="left" class="dropdown-icon" />
           Atlasian
         </app-link-btn>
         <app-link-btn href="#">
-          <app-trello-clr-icon
-            [size]="24"
-            ngProjectAs="left"
-            class="dropdown-icon"
-          />
+          <app-trello-clr-icon [size]="24" ngProjectAs="left" class="dropdown-icon" />
           Trello
         </app-link-btn>
       </div>

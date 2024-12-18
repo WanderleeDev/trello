@@ -1,1 +1,20 @@
-<p>templates works!</p>,
+@for (category of templates(); track $index) {
+  <app-template-list-container [title]="category.name">
+    <img
+      class="rounded-md"
+      aria-hidden="true"
+      ngProjectAs="icon-title"
+      [ngSrc]="categoryIcons[category.category]"
+      alt="category.name"
+      width="24"
+      height="24"
+    />
+    <ng-container ngProjectAs="list-content">
+      @for (template of category.templates; track $index) {
+        <a routerLink="/">
+          <app-card-info [cardData]="template" />
+        </a>
+      }
+    </ng-container>
+  </app-template-list-container>
+}

@@ -13,7 +13,7 @@ export class NavbarComponent {
 
   constructor(@Inject(DOCUMENT) private document: Document) {
     const d = document.getRootNode();
-    d.contains(this.document.body)
+    d.contains(this.document.body);
 
     console.log(window.matchMedia('(prefers-color-scheme: dark)').matches);
   }

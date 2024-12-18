@@ -8,10 +8,9 @@ describe('TemplateCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TemplateCardComponent]
-    })
-    .compileComponents();
-    
+      declarations: [TemplateCardComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(TemplateCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

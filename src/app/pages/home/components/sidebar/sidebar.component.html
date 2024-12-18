@@ -1,12 +1,12 @@
 <nav>
   <ul class="sidebar-options">
     @for (section of sections; track $index) {
-    <li>
-      <app-link-btn [href]="section.link">
-        <ng-container *ngComponentOutlet="section.icon" ngProjectAs="left" />
-        {{ section.label }}
-      </app-link-btn>
-    </li>
+      <li>
+        <app-link-btn [href]="section.link">
+          <ng-container *ngComponentOutlet="section.icon" ngProjectAs="left" />
+          {{ section.label }}
+        </app-link-btn>
+      </li>
     }
   </ul>
 
@@ -20,15 +20,12 @@
 
     <ul ngProjectAs="body">
       @for (workspace of workspaces; track $index) {
-      <li>
-        <app-link-btn [href]="workspace.link" design="ident">
-          <ng-container
-            *ngComponentOutlet="workspace.icon"
-            ngProjectAs="left"
-          />
-          {{ workspace.label }}
-        </app-link-btn>
-      </li>
+        <li>
+          <app-link-btn [href]="workspace.link" design="ident">
+            <ng-container *ngComponentOutlet="workspace.icon" ngProjectAs="left" />
+            {{ workspace.label }}
+          </app-link-btn>
+        </li>
       }
     </ul>
 

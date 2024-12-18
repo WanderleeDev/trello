@@ -1,11 +1,5 @@
 <figure class="card">
-  <img
-    class="card-image"
-    width="280"
-    height="137"
-    [ngSrc]="image()"
-    alt="Starred board"
-  />
+  <img class="card-image" width="280" height="137" [ngSrc]="image()" alt="Starred board" />
   <figcaption class="card-title">
     <ng-content select="extra" />
     {{ message() }}

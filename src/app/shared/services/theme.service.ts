@@ -21,7 +21,7 @@ export class ThemeService {
   }
 
   public toggleTheme(): void {
-    this.$theme.update((theme) => {
+    this.$theme.update(theme => {
       const currentTheme = theme === 'light' ? 'dark' : 'light';
       this.saveTheme(currentTheme);
 
@@ -40,9 +40,7 @@ export class ThemeService {
   }
 
   private getPreferenceUser(): ThemeType {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light';
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
 
   private initTheme(): void {

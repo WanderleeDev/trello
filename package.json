@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:trello-clone": "node dist/trello-clone/server/server.mjs",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "format": "prettier --write \"src/**/*.{ts,html,css,scss}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,html,css,scss}\""
   },
   "private": true,
   "dependencies": {
@@ -55,6 +57,7 @@
     "@typescript-eslint/parser": "7.2.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
     "jasmine-core": "~5.1.2",
     "karma": "~6.4.4",
     "karma-chrome-launcher": "~3.2.0",
@@ -62,6 +65,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "postcss": "^8.4.44",
+    "prettier": "^3.4.2",
     "tailwindcss": "^3.4.10",
     "typescript": "~5.3.3"
   },

@@ -11,12 +11,12 @@ export const redirectIfAuthenticateGuard: CanActivateFn = () => {
 
   return store.select(selectIsAuthenticated).pipe(
     take(1),
-    map((isAuthenticated) => {
+    map(isAuthenticated => {
       if (isAuthenticated) {
         router.navigate(['/home']);
         return false;
       }
       return true;
-    })
+    }),
   );
 };

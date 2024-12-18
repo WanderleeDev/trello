@@ -13,7 +13,7 @@ export class FormLoginComponent {
 
   constructor(
     private readonly _fb: FormBuilder,
-    private readonly store: Store
+    private readonly store: Store,
   ) {
     this.loginForm = this._fb.nonNullable.group({
       email: ['', [Validators.email]],

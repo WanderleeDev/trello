@@ -1,13 +1,7 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 type BtnType = 'submit' | 'button' | 'reset';
-type BtnVariant =
-  | 'primary'
-  | 'secondary'
-  | 'tertiary'
-  | 'danger'
-  | 'base'
-  | 'mixed';
+type BtnVariant = 'primary' | 'secondary' | 'tertiary' | 'danger' | 'base' | 'mixed';
 
 @Component({
   selector: 'app-btn-base',

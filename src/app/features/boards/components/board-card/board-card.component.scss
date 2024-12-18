@@ -1,0 +1,42 @@
+.card {
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 6rem;
+  width: 12.5rem;
+  overflow: hidden;
+
+  &:is(:hover, :focus-within, :focus) .card-image {
+    filter: brightness(0.8);
+    transition: filter 0.15s ease;
+  }
+
+  &:is(:hover, :focus-within, :focus) .card-extra-2 {
+    display: block;
+  }
+  &-image {
+    aspect-ratio: 4 / 2;
+  }
+
+  &-title {
+    font-weight: 700;
+    z-index: 1;
+    font-size: 1rem;
+    color: white;
+  }
+
+  &-extra {
+    z-index: 1;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &-extra-2 {
+    display: none;
+  }
+}
