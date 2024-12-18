@@ -1,5 +1,15 @@
+<app-feature-categories />
+
 @for (category of templates(); track $index) {
   <app-template-list-container [title]="category.name">
+    <app-btn-base
+      class="contents"
+      title="View all templates for {{ category.category }}"
+      (click)="navigateTo(category.category)"
+      ngProjectAs="title-right"
+    >
+      More template for {{ category.category }}
+    </app-btn-base>
     <img
       class="rounded-md"
       aria-hidden="true"
@@ -11,8 +21,8 @@
     />
     <ng-container ngProjectAs="list-content">
       @for (template of category.templates; track $index) {
-        <a routerLink="#">
-          <app-card-info [cardData]="template" />
+        <a [routerLink]="[category.category, '464']">
+          <app-card-template-info [cardData]="template" />
         </a>
       }
     </ng-container>

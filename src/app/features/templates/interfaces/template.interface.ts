@@ -19,6 +19,10 @@ export interface Author {
   image: AuthorType;
 }
 
+export interface FeatureCategories extends Record<FeatureCategoriesType, string> {
+  [key: string]: string;
+}
+
 export type Category =
   | 'popular'
   | 'business'
@@ -29,6 +33,8 @@ export type Category =
   | 'project-management'
   | 'remote';
 
-type AuthorType = 'Trello Team' | 'Trello Engineering Team' | 'Atlassian' | string;
+export type FeatureCategoriesType = Exclude<Category, 'popular'>;
+
+export type AuthorType = 'Trello Team' | 'Trello Engineering Team' | 'Atlassian' | string;
 
 export type CardInfo = Exclude<Template, 'category'>;

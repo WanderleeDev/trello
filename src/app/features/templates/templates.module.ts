@@ -1,27 +1,47 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { TemplatesComponent } from './templates.component';
 import { PipesModule } from '../../shared/pipes/pipes.module';
-import { CardInfoComponent } from './components/card-info/card-info.component';
 import { TemplateListContainerComponent } from './components/template-list-container/template-list-container.component';
 import { IconsModule } from '../../shared/icons/icons.module';
+import { FeatureCategoriesComponent } from './components/feature-categories/feature-categories.component';
+import { UiModule } from '../../shared/ui/ui.module';
+import { CardTemplateInfoComponent } from './components/card-template-info/card-template-info.component';
+import { AllTemplatesForCategoryComponent } from './views/all-templates-for-category/all-templates-for-category.component';
+import { EntryPageComponent } from './views/entry-page/entry-page.component';
+import { SimpleTemplateComponent } from './views/simple-template/simple-template.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: TemplatesComponent,
+    component: EntryPageComponent,
+  },
+  {
+    path: ':category',
+    component: AllTemplatesForCategoryComponent,
+  },
+  {
+    path: ':category/:id',
+    component: SimpleTemplateComponent,
   },
 ];
 
 @NgModule({
-  declarations: [TemplatesComponent, CardInfoComponent, TemplateListContainerComponent],
+  declarations: [
+    EntryPageComponent,
+    TemplateListContainerComponent,
+    FeatureCategoriesComponent,
+    CardTemplateInfoComponent,
+    AllTemplatesForCategoryComponent,
+    SimpleTemplateComponent,
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     PipesModule,
     NgOptimizedImage,
     IconsModule,
+    UiModule,
   ],
 })
 export default class TemplatesModule {}

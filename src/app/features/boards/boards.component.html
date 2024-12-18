@@ -1,7 +1,7 @@
 <div class="px-6">
   <div class="max-w-7xl mx-auto flex flex-col gap-6">
     <app-board-list-container title="Starred boards">
-      <app-star-icon ngProjectAs="icon-title" />
+      <app-star-icon ngProjectAs="icon-title" [size]="22" />
       <ng-container ngProjectAs="list-content">
         @for (item of starredBoards(); track $index) {
           <a routerLink="#">
@@ -14,7 +14,7 @@
     </app-board-list-container>
 
     <app-board-list-container title="Recent boards">
-      <app-clock-svg ngProjectAs="icon-title" />
+      <app-clock-svg ngProjectAs="icon-title" [size]="22" />
       <ng-container ngProjectAs="list-content">
         @for (item of recentBoards(); track $index) {
           <a routerLink="#">

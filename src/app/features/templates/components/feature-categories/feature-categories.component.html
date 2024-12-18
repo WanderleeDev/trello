@@ -1,0 +1,23 @@
+<article class="features">
+  <h2 class="features-title">features categories</h2>
+
+  <div class="features-list">
+    @for (category of featureCategories | keyvalue; track $index) {
+      <a routerLink="#">
+        <figure class="features-item">
+          <img
+            class="feature-image rounded-md aspect-square"
+            aria-hidden="true"
+            [ngSrc]="featureCategories[category.key]"
+            alt="category.key"
+            width="100"
+            height="100"
+          />
+          <figcaption class="feature-title">
+            {{ category.key | searchAndReplace: '-' : ' ' }}
+          </figcaption>
+        </figure>
+      </a>
+    }
+  </div>
+</article>
