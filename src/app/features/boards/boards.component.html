@@ -4,7 +4,7 @@
       <app-star-icon ngProjectAs="icon-title" />
       <ng-container ngProjectAs="list-content">
         @for (item of starredBoards(); track $index) {
-          <a routerLink="/home/templates">
+          <a routerLink="#">
             <app-board-card [data]="item">
               <app-btn-star-favorite (click)="onStarToggled($event)" ngProjectAs="extra-2" />
             </app-board-card>
@@ -17,7 +17,7 @@
       <app-clock-svg ngProjectAs="icon-title" />
       <ng-container ngProjectAs="list-content">
         @for (item of recentBoards(); track $index) {
-          <a routerLink="/home/templates">
+          <a routerLink="#">
             <app-board-card [data]="item">
               <app-btn-star-favorite (click)="onStarToggled($event)" ngProjectAs="extra-2" />
             </app-board-card>
@@ -30,7 +30,7 @@
       <app-letter-gradient-icon [$letter]="'t'" ngProjectAs="icon-title" />
       <ng-container ngProjectAs="list-content">
         @for (item of workspaceBoards(); track $index) {
-          <a routerLink="/home/templates">
+          <a routerLink="#">
             <app-board-card [data]="item" />
           </a>
         }

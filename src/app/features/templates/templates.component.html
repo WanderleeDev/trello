@@ -11,7 +11,7 @@
     />
     <ng-container ngProjectAs="list-content">
       @for (template of category.templates; track $index) {
-        <a routerLink="/">
+        <a routerLink="#">
           <app-card-info [cardData]="template" />
         </a>
       }

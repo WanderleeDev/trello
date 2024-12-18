@@ -38,6 +38,10 @@ const routes: Routes = [
         path: 'entry',
         loadChildren: () => import('../../features/entry/entry.module'),
       },
+      {
+        path: '**',
+        loadChildren: () => import('../../pages/not-found/not-found.module'),
+      },
     ],
   },
 ];
