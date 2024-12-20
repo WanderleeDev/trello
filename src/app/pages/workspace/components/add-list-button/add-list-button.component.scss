@@ -1,0 +1,21 @@
+:host {
+  display: block;
+}
+
+.add-list-button {
+  background-color: var(--board-column-clr);
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 18.75rem;
+  min-width: 18.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:hover {
+    background-color: var(--btn-hovered);
+  }
+}

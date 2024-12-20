@@ -13,6 +13,17 @@ import { IconsModule } from '../icons/icons.module';
 import { LinkCardComponent } from './components/link-card/link-card.component';
 import { BadgeComponent } from './components/badge/badge.component';
 import { CardInfoComponent } from './components/card-info/card-info.component';
+import { NavComponent } from './components/nav/nav.component';
+import { NavbarMainOptionsComponent } from './components/nav/components/navbar-main-options/navbar-main-options.component';
+import { NavbarSecondOptionsComponent } from './components/nav/components/navbar-second-options/navbar-second-options.component';
+import { UserDropdownComponent } from './components/user-dropdown/user-dropdown.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { BtnToggleThemeComponent } from './components/btn-toggle-theme/btn-toggle-theme.component';
+import { WorkspaceDropdownComponent } from './components/workspace-dropdown/workspace-dropdown.component';
+import { DotsDropdownComponent } from './components/dots-dropdown/dots-dropdown.component';
+import { UserComponent } from './components/user/user.component';
+import { LetDirective } from '@ngrx/component';
+import { BannerBoardComponent } from './components/banner-board/banner-board.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +36,26 @@ import { CardInfoComponent } from './components/card-info/card-info.component';
     LinkCardComponent,
     BadgeComponent,
     CardInfoComponent,
+    NavComponent,
+    NavbarMainOptionsComponent,
+    NavbarSecondOptionsComponent,
+    UserDropdownComponent,
+    SearchBarComponent,
+    BtnToggleThemeComponent,
+    WorkspaceDropdownComponent,
+    DotsDropdownComponent,
+    UserComponent,
+    UserDropdownComponent,
+    BannerBoardComponent,
   ],
-  imports: [CommonModule, NgOptimizedImage, DirectivesModule, RouterModule, IconsModule],
+  imports: [
+    CommonModule,
+    NgOptimizedImage,
+    DirectivesModule,
+    RouterModule,
+    IconsModule,
+    LetDirective,
+  ],
   exports: [
     BasicImageComponent,
     CustomBtnComponent,
@@ -37,6 +66,17 @@ import { CardInfoComponent } from './components/card-info/card-info.component';
     LinkCardComponent,
     BadgeComponent,
     CardInfoComponent,
+    NavComponent,
+    NavbarMainOptionsComponent,
+    NavbarSecondOptionsComponent,
+    UserDropdownComponent,
+    SearchBarComponent,
+    BtnToggleThemeComponent,
+    WorkspaceDropdownComponent,
+    DotsDropdownComponent,
+    UserComponent,
+    UserDropdownComponent,
+    BannerBoardComponent,
   ],
 })
 export class UiModule {}

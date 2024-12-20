@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+.sidebar-board {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background-color: var(--btn-hovered);
+  }
+}

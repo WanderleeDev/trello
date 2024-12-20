@@ -10,7 +10,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         Workspace member to access it.
       </p>
       <footer>
-        <a class="text-[#0c66e4] hover:underline mt-4" routerLink="/home">Back to home</a>
+        <a class="text-[#0c66e4] hover:underline mt-4" routerLink="/dashboard">Back to home</a>
       </footer>
     </section>
   `,

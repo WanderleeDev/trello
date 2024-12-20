@@ -1,0 +1,11 @@
+<div class="board-container">
+  <app-board-header [boardName]="boardName"></app-board-header>
+
+  <div class="board-lists-container">
+    <div class="board-lists" cdkDropList>
+      <ng-content />
+
+      <ng-content select="add-list-btn" />
+    </div>
+  </div>
+</div>

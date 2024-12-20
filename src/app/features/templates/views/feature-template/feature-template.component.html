@@ -1,0 +1,26 @@
+<article class="feature">
+  <header class="feature-header">
+    <h2 class="feature-title">Coming Soon: More Templates!</h2>
+    <p class="feature-description">
+      We're working on new templates to enhance your Trello experience
+    </p>
+  </header>
+
+  <div class="feature-content">
+    <ul class="feature-list">
+      @for (feature of features; track $index) {
+        <li class="feature-item">
+          <span class="feature-item-icon">{{ feature.icon }}</span>
+          <h3 class="feature-item-title">{{ feature.title }}</h3>
+          <p class="feature-item-text">
+            {{ feature.description }}
+          </p>
+        </li>
+      }
+    </ul>
+
+    <footer class="feature-footer">
+      <a class="feature-footer-link" routerLink="/dashboard">Back to dashboard</a>
+    </footer>
+  </div>
+</article>

@@ -6,8 +6,8 @@ import { ThemeService } from './shared/services/theme.service';
   template: `<router-outlet />`,
   styles: `
     :host {
-      background-color: var(--bg-main);
       color: var(--text-main-clr);
+      background-color: var(--bg-main);
       transition:
         background-color 0.2s ease-in-out,
         color 0.2s ease-in-out;

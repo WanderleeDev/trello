@@ -1,0 +1,36 @@
+:host {
+  display: block;
+}
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--header-board-clr);
+}
+
+.board-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.board-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.board-action-btn {
+  background-color: var(--bg-transparent);
+  color: var(--text-main-clr);
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--btn-hovered);
+  }
+}

@@ -27,6 +27,8 @@
   --hover-overlay: rgba(26, 32, 44, 0.8);
   --border-inverse: #161a1d;
   --background-accent: #2c333a;
+  --board-column-clr: #1e2125;
+  --header-board-clr: #0000003d;
 }
 
 .light {
@@ -45,6 +47,8 @@
     hue-rotate(179deg) brightness(91%) contrast(88%);
   --border-inverse: #fff;
   --background-accent: #f1f2f4;
+  --board-column-clr: #f1f2f4;
+  --header-board-clr: #0000003d;
 
   /* Board colors */
   --board-bg-1: #edf2f7;
@@ -62,8 +66,6 @@
     font-size: 0.9rem;
     font-family: 'Noto Sans', sans-serif;
     font-optical-sizing: auto;
-    background-color: var(--bg-main);
-    color: var(--text-main-clr);
   }
 }
 

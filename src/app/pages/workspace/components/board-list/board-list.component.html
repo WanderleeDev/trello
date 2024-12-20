@@ -1,0 +1,18 @@
+<section class="board-list" cdkDrag>
+  <div class="list-header">
+    <header>
+      <h3>{{ list().title }}</h3>
+    </header>
+    <div class="list-actions">
+      <app-btn-base class="rounded-md overflow-hidden" ariaLabel="options">
+        <app-dots />
+      </app-btn-base>
+    </div>
+  </div>
+
+  <div class="list-cards-container">
+    <div class="list-cards" cdkDropList>
+      <ng-content select="board-card" />
+    </div>
+  </div>
+</section>

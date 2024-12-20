@@ -1,0 +1,28 @@
+<main
+  class="board-body bg-transparent min-h-dvh grid grid-rows-[auto_1fr] relative"
+  style="background-color: var(--bg-main)"
+>
+  <app-banner-board class="contents" />
+  <app-nav />
+  <div class="grid grid-cols-[auto_1fr] z-10">
+    <app-sidebar-board />
+
+    <app-board>
+      @for (li of list; track $index) {
+        <app-board-list [list]="li">
+          <ng-container ngProjectAs="board-card">
+            @for (card of li.cards; track $index) {
+              <app-board-card [card]="card" />
+            }
+            <app-btn-base class="rounded-lg overflow-hidden mt-2">
+              <app-add-svg />
+              add card
+            </app-btn-base>
+          </ng-container>
+        </app-board-list>
+      }
+
+      <app-add-list-button ngProjectAs="add-list-btn" />
+    </app-board>
+  </div>
+</main>

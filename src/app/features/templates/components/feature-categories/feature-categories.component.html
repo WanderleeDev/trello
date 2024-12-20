@@ -3,7 +3,7 @@
 
   <div class="features-list">
     @for (category of featureCategories | keyvalue; track $index) {
-      <a routerLink="#">
+      <a [routerLink]="['/dashboard/templates/features', category.key]">
         <figure class="features-item">
           <img
             class="feature-image rounded-md aspect-square"

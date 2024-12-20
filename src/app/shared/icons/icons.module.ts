@@ -26,6 +26,7 @@ import { ClockSvgComponent } from './components/clock-svg.component';
 import { AddSvgComponent } from './components/add-svg.component';
 import { CopySvgComponent } from './components/copy-svg.component';
 import { EyeSvgComponent } from './components/eye-svg.component';
+import { DotsComponent } from './components/dots.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { EyeSvgComponent } from './components/eye-svg.component';
     AddSvgComponent,
     CopySvgComponent,
     EyeSvgComponent,
+    DotsComponent,
   ],
   imports: [],
   exports: [
@@ -85,6 +87,7 @@ import { EyeSvgComponent } from './components/eye-svg.component';
     AddSvgComponent,
     CopySvgComponent,
     EyeSvgComponent,
+    DotsComponent,
   ],
 })
 export class IconsModule {}

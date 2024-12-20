@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  position: relative;
+  gap: 1rem;
+  padding: 0.5rem;
+  justify-content: space-between;
+  border-bottom: solid 0.15rem var(--bg-transparent);
+  background-color: var(--bg-main);
+
+  & .subList {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    gap: 1rem;
+
+    &-item:nth-child(6) {
+      grid-column: 4/5;
+      grid-row: 1/2;
+    }
+
+    &-subItem {
+      align-self: center;
+    }
+  }
+}

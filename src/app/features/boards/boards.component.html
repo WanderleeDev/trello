@@ -30,7 +30,7 @@
       <app-letter-gradient-icon [$letter]="'t'" ngProjectAs="icon-title" />
       <ng-container ngProjectAs="list-content">
         @for (item of workspaceBoards(); track $index) {
-          <a routerLink="#">
+          <a [routerLink]="['/workspace', 33]" [state]="{ idBoard: item.description }">
             <app-board-card [data]="item" />
           </a>
         }
