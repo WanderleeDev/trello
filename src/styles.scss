@@ -29,6 +29,9 @@
   --background-accent: #2c333a;
   --board-column-clr: #1e2125;
   --header-board-clr: #0000003d;
+  --dynamic-text-transparent: hsla(211, 18%, 68%, 0.16);
+  --dynamic-background-transparent: hsla(206, 13.7%, 10%, 0.9);
+  --ds-surface: #1d2125;
 }
 
 .light {
@@ -49,6 +52,9 @@
   --background-accent: #f1f2f4;
   --board-column-clr: #f1f2f4;
   --header-board-clr: #0000003d;
+  --dynamic-text-transparent: hsla(218, 54%, 19.6%, 0.16);
+  --dynamic-background-transparent: hsla(73, 23.5%, 80%, 0.9);
+  --ds-surface: #ffffff;
 
   /* Board colors */
   --board-bg-1: #edf2f7;

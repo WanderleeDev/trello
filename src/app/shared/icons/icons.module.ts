@@ -27,6 +27,9 @@ import { AddSvgComponent } from './components/add-svg.component';
 import { CopySvgComponent } from './components/copy-svg.component';
 import { EyeSvgComponent } from './components/eye-svg.component';
 import { DotsComponent } from './components/dots.component';
+import { RocketSvgComponent } from './components/rocket-svg.component';
+import { RaySvgComponent } from './components/ray-svg.component';
+import { FilterSvgComponent } from './components/filter-svg.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +61,9 @@ import { DotsComponent } from './components/dots.component';
     CopySvgComponent,
     EyeSvgComponent,
     DotsComponent,
+    RocketSvgComponent,
+    RaySvgComponent,
+    FilterSvgComponent,
   ],
   imports: [],
   exports: [
@@ -88,6 +94,9 @@ import { DotsComponent } from './components/dots.component';
     CopySvgComponent,
     EyeSvgComponent,
     DotsComponent,
+    RocketSvgComponent,
+    RaySvgComponent,
+    FilterSvgComponent,
   ],
 })
 export class IconsModule {}

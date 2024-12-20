@@ -1,6 +1,29 @@
-<div class="board-header">
-  <h2>{{ boardName }}</h2>
-  <app-btn-base ariaLabel="add favorite">
-    <app-star-icon />
-  </app-btn-base>
-</div>
+<header class="board-header">
+  <div class="board-header-content">
+    <h2 class="board-title">{{ boardName }}</h2>
+    <app-btn-base class="rounded-md overflow-hidden" ariaLabel="add favorite">
+      <app-star-icon />
+    </app-btn-base>
+  </div>
+
+  <div class="board-header-actions">
+    <app-btn-base class="rounded-md overflow-hidden" ariaLabel="options">
+      <app-rocket-svg />
+    </app-btn-base>
+
+    <app-btn-base class="rounded-md overflow-hidden" ariaLabel="options">
+      <app-ray-svg />
+    </app-btn-base>
+
+    <app-btn-base class="rounded-md overflow-hidden" ariaLabel="filter board">
+      <app-filter-svg />
+      Filters
+    </app-btn-base>
+
+    <app-user [dataUser]="user" [isMinimal]="true" />
+
+    <app-btn-base class="rounded-md overflow-hidden" ariaLabel="options">
+      <app-dots />
+    </app-btn-base>
+  </div>
+</header>

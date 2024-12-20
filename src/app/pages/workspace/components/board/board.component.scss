@@ -12,20 +12,19 @@
   width: 100%;
   overflow-x: auto;
   color: var(--text-main-clr);
-  padding-bottom: 1rem;
-  gap: 1rem;
 }
 
 .board-lists-container {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
-  padding-bottom: 1rem;
 }
 
 .board-lists {
   display: flex;
   gap: 1rem;
+  padding: 1rem;
+  height: 100%;
   align-items: flex-start;
 }
 

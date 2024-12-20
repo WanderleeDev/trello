@@ -1,1 +1,50 @@
-<p>sidebar-board works!</p>,
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-content">
+      <app-letter-gradient-icon [$letter]="'t'" />
+      <div class="sidebar-info">
+        <span class="sidebar-title">Trello Workspace</span>
+        <span class="sidebar-subtitle">Free</span>
+      </div>
+    </div>
+
+    <app-btn-base class="rounded-md overflow-hidden" ariaLabel="add board">
+      <app-add-svg />
+    </app-btn-base>
+  </div>
+
+  <div class="sidebar-boards">
+    <div class="sidebar-boards-title">
+      Your boards
+      <app-btn-base class="rounded-md overflow-hidden py-2 scale-90" ariaLabel="add board">
+        <app-add-svg />
+      </app-btn-base>
+    </div>
+
+    <ul class="sidebar-boards-list">
+      <li>
+        <a
+          class="flex items-center gap-2 justify-between w-full px-3 py-1 hover:bg-black/5 active:bg-black/10 focus:bg-black/10"
+          href="#"
+        >
+          <div class="flex items-center gap-2">
+            <img
+              class="rounded-sm"
+              src="https://trello-backgrounds.s3.amazonaws.com/5ea92d56642ad37917862ea4/480x322/255c5f56ccf2b7bd68aaf9f51d0dbcc5/Asset_1%404x.png"
+              alt="d"
+              width="24"
+              height="20"
+            />
+            <span class="truncate">My Trello board</span>
+          </div>
+          <app-btn-base
+            class="rounded-md hover:scale-100 transition-transform overflow-hidden scale-90"
+            ariaLabel="add favorite"
+          >
+            <app-star-icon />
+          </app-btn-base>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

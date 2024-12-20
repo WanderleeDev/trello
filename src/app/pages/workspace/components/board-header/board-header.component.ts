@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { DataUser } from '../../../../store/user/user.state';
 
 @Component({
   selector: 'app-board-header',
@@ -7,4 +8,9 @@ import { Component, Input } from '@angular/core';
 })
 export class BoardHeaderComponent {
   @Input() boardName: string = '';
+  user: DataUser = {
+    username: 'Max',
+    email: 'max@example.com',
+    image: '',
+  };
 }
