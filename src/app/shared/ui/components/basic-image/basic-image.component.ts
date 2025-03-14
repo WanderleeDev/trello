@@ -1,12 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
-interface IImageParams {
-  src: string;
-  alt: string;
-  height: number;
-  width: number;
-  priority?: boolean;
-  customClass?: string[];
-}
+import { Component, ChangeDetectionStrategy, Input, booleanAttribute } from '@angular/core';
 
 @Component({
   selector: 'app-basic-image',
@@ -19,5 +11,10 @@ interface IImageParams {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BasicImageComponent {
-  @Input({ required: true }) imageParams?: IImageParams;
+  @Input({ required: true }) src = '';
+  @Input({ required: true }) alt = 'cover image';
+  @Input({ required: true }) height = 1;
+  @Input({ required: true }) width = 1;
+  @Input({ transform: booleanAttribute }) priority?: boolean;
+  @Input() customClass?: string[];
 }

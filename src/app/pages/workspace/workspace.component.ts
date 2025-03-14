@@ -1,5 +1,7 @@
 import { Component, input } from '@angular/core';
 import { List } from './interfaces/board.model';
+import { Dialog } from '@angular/cdk/dialog';
+import { BoardModalTaskComponent } from '../../features/boards/components/board-modal-task/board-modal-task.component';
 
 @Component({
   selector: 'app-workspace',
@@ -7,6 +9,9 @@ import { List } from './interfaces/board.model';
 })
 export class WorkspaceComponent {
   idBoard = input.required<string>();
+
+  constructor(private dialog: Dialog) {}
+
   readonly list: List[] = [
     {
       id: '1',
@@ -50,5 +55,12 @@ export class WorkspaceComponent {
         },
       ],
     },
-  ]
+  ];
+
+  public openDialog() {
+    this.dialog.open(BoardModalTaskComponent, {
+      maxWidth: '500px',
+      autoFocus: false,
+    });
+  }
 }

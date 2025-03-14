@@ -6,12 +6,10 @@
       [customClass]="['border text-black border-gray-400/60 hover:bg-gray-100']"
     >
       <app-basic-image
-        [imageParams]="{
-          src: 'assets/icons/' + icon + '.svg',
-          alt: 'logo' + icon,
-          height: 1.5,
-          width: 1.5,
-        }"
+        [src]="'assets/icons/' + icon + '.svg'"
+        [alt]="'logo' + icon"
+        [height]="1.5"
+        [width]="1.5"
       />
       {{ icon }}
     </app-custom-btn>

@@ -12,7 +12,7 @@
         <app-board-list [list]="li">
           <ng-container ngProjectAs="board-card">
             @for (card of li.cards; track $index) {
-              <app-board-card [card]="card" />
+              <app-board-card [card]="card" (click)="openDialog()" />
             }
             <app-btn-base class="rounded-lg overflow-hidden mt-2">
               <app-add-svg />
