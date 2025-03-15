@@ -1,0 +1,25 @@
+<form
+  [formGroup]="registerForm"
+  errorTailor
+  (ngSubmit)="onSubmit()"
+  class="flex flex-col gap-3"
+  novalidate
+  autocomplete="off"
+>
+  <p class="font-medium text-center text-black">Sign up to continue</p>
+  <input
+    id="email"
+    formControlName="email"
+    class="placeholder:text-sm placeholder:text-gray-400/80 border-2 border-gray-300 rounded w-full"
+    placeholder="Enter your mail"
+    type="email"
+  />
+  <app-terms-and-conditions />
+  <app-custom-btn
+    [disabled]="registerForm.invalid"
+    type="submit"
+    [customClass]="['bg-blue-600/80', 'text-white hover:bg-blue-600']"
+  >
+    Continue
+  </app-custom-btn>
+</form>

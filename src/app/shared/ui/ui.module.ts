@@ -23,7 +23,6 @@ import { WorkspaceDropdownComponent } from './components/workspace-dropdown/work
 import { DotsDropdownComponent } from './components/dots-dropdown/dots-dropdown.component';
 import { UserComponent } from './components/user/user.component';
 import { LetDirective } from '@ngrx/component';
-import { BannerBoardComponent } from './components/banner-board/banner-board.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +45,6 @@ import { BannerBoardComponent } from './components/banner-board/banner-board.com
     DotsDropdownComponent,
     UserComponent,
     UserDropdownComponent,
-    BannerBoardComponent,
   ],
   imports: [
     CommonModule,
@@ -76,7 +74,6 @@ import { BannerBoardComponent } from './components/banner-board/banner-board.com
     DotsDropdownComponent,
     UserComponent,
     UserDropdownComponent,
-    BannerBoardComponent,
   ],
 })
 export class UiModule {}

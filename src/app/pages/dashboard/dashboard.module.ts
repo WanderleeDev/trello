@@ -17,19 +17,19 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('../../features/boards/boards.module'),
+        loadChildren: () => import('../../modules/boards/boards.module'),
       },
       {
         path: 'templates',
-        loadChildren: () => import('../../features/templates/templates.module'),
+        loadChildren: () => import('../../modules/templates/templates.module'),
       },
       {
         path: 'entry',
-        loadChildren: () => import('../../features/entry/entry.module'),
+        loadChildren: () => import('../../modules/entry/entry.module'),
       },
       {
         path: '**',
-        loadChildren: () => import('../../pages/not-found/not-found.module'),
+        loadChildren: () => import('../../modules/not-found/not-found.module'),
       },
     ],
   },

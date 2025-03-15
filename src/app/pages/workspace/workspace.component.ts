@@ -1,7 +1,7 @@
 import { Component, input } from '@angular/core';
 import { List } from './interfaces/board.model';
 import { Dialog } from '@angular/cdk/dialog';
-import { BoardModalTaskComponent } from '../../features/boards/components/board-modal-task/board-modal-task.component';
+import { BoardModalTaskComponent } from '../../modules/boards/components/board-modal-task/board-modal-task.component';
 
 @Component({
   selector: 'app-workspace',

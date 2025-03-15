@@ -1,7 +1,7 @@
 import { ActionReducerMap } from '@ngrx/store';
-import { AuthState } from './auth/auth.state';
-import { authReducer } from './auth/auth.reducers';
-import { AuthEffects } from './auth/auth.effects';
+import { AuthState } from '../modules/auth/store/auth.state';
+import { authReducer } from '../modules/auth/store/auth.reducers';
+import { AuthEffects } from '../modules/auth/store/auth.effects';
 import { BoardState } from './board/board.state';
 import { boardReducer } from './board/board.reducers';
 import { UserState } from './user/user.state';

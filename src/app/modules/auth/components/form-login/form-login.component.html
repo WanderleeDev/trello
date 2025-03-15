@@ -1,0 +1,28 @@
+<form
+  [formGroup]="loginForm"
+  errorTailor
+  (ngSubmit)="onSubmit()"
+  class="flex flex-col gap-3"
+  novalidate
+  autocomplete="off"
+>
+  <p class="font-medium text-center text-black">Log in to continue</p>
+  <input
+    id="email"
+    formControlName="email"
+    class="placeholder:text-sm placeholder:text-gray-400/80 border-2 border-gray-300 rounded w-full"
+    placeholder="Enter your mail"
+    type="email"
+  />
+  <div class="flex gap-2 items-center">
+    <input class="scale-75" type="checkbox" name="remember" id="remember" />
+    <label class="text-gray-600 text-xs" for="remember"> Remember me </label>
+  </div>
+  <app-custom-btn
+    [disabled]="loginForm.invalid"
+    type="submit"
+    [customClass]="['bg-blue-600/80', 'text-white hover:bg-blue-600']"
+  >
+    Continue
+  </app-custom-btn>
+</form>
