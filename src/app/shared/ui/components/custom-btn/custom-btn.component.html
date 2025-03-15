@@ -1,7 +1,8 @@
 <button
   [type]="type"
-  class="h-10 rounded flex justify-center items-center gap-3 capitalize text-sm font-medium w-full"
+  class="h-10 rounded flex justify-center items-center gap-3 capitalize text-sm font-medium w-full disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-200"
   [ngClass]="customClass"
+  [disabled]="disabled"
 >
   <ng-content></ng-content>
 </button>

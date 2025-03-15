@@ -2,7 +2,7 @@ import { inject } from '@angular/core';
 import { Router, type CanActivateFn } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../store/app.state';
-import { selectIsAuthenticated } from '../../store/auth/auth.selectors';
+import { selectIsAuthenticated } from '../../modules/auth/store/auth.selectors';
 import { map, take } from 'rxjs';
 
 export const redirectIfAuthenticateGuard: CanActivateFn = () => {

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { booleanAttribute, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-custom-btn',
@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class CustomBtnComponent {
   @Input() customClass: string[] = [];
   @Input({ required: true }) type: 'button' | 'menu' | 'submit' | 'reset' = 'button';
+  @Input({ transform: booleanAttribute }) disabled?: boolean = false;
 }
