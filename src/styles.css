@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/forms";
+
+@theme {
+  --color-background: var(--bg-main);
+  --color-foreground: var(--text-main-clr);
+  --color-card: var(--bg-card);
+  --color-modal: var(--bg-modal);
+  --color-active: var(--bg-active);
+  --color-active-fg: var(--clr-active);
+  --color-btn-hovered: var(--btn-hovered);
+  --color-btn-pressed: var(--btn-pressed);
+  --color-border-inverse: var(--border-inverse);
+  --color-accent: var(--background-accent);
+  --color-board-column: var(--board-column-clr);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-icon: var(--icon-color);
+}
+
+@layer base {
+  body {
+    font-size: 0.9rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-optical-sizing: auto;
+  }
+}
+
+@utility container-md {
+  width: min(100%, 25rem);
+  margin-inline: auto;
+}
+
+@utility shadow-card {
+  box-shadow: var(--shadow-overlay);
+}
