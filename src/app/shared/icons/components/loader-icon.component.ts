@@ -2,8 +2,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IconBaseComponent } from './icon-base/icon-base.component';
 
 @Component({
-  selector: 'app-loader-icon',
-  template: `
+    selector: 'app-loader-icon',
+    template: `
     <svg xmlns="http://www.w3.org/2000/svg" [attr.width]="size()" [attr.height]="size()">
       <style>
         .line {
@@ -46,6 +46,7 @@ import { IconBaseComponent } from './icon-base/icon-base.component';
       <line class="line animated line3" x1="46" y1="10" x2="46" y2="50" />
     </svg>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
 })
 export class LoaderIconComponent extends IconBaseComponent {}

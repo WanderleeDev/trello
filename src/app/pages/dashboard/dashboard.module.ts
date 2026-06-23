@@ -5,10 +5,10 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { CardPremiumTryComponent } from './components/card-premium-try/card-premium-try.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
-import { IconsModule } from '../../shared/icons/icons.module';
-import { DirectivesModule } from '../../shared/directives/directives.module';
+
+
 import { DashboardComponent } from './dashboard.component';
-import { UiModule } from '../../shared/ui/ui.module';
+
 
 const routes: Routes = [
   {
@@ -36,21 +36,16 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
+    imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    NgOptimizedImage,
     SidebarComponent,
     BannerComponent,
     CardPremiumTryComponent,
     AccordionComponent,
     DashboardComponent,
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    IconsModule,
-    NgOptimizedImage,
-    DirectivesModule,
-    UiModule,
-  ],
-  exports: [RouterModule],
+],
+    exports: [RouterModule],
 })
 export default class DashboardModule {}

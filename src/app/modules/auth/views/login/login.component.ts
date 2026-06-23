@@ -1,8 +1,12 @@
 import { Component } from '@angular/core';
+import { FormLoginComponent } from '../../components/form-login/form-login.component';
+import { SocialMediaAuthComponent } from '../../components/social-media-auth/social-media-auth.component';
+import { RouterLink } from '@angular/router';
+import { FooterFormComponent } from '../../components/footer-form/footer-form.component';
 
 @Component({
-  selector: 'app-login',
-  template: `
+    selector: 'app-login',
+    template: `
     <ng-container>
       <app-form-login />
       <app-social-media-auth>
@@ -27,5 +31,12 @@ import { Component } from '@angular/core';
       </app-footer-form>
     </ng-container>
   `,
+    standalone: true,
+    imports: [
+        FormLoginComponent,
+        SocialMediaAuthComponent,
+        RouterLink,
+        FooterFormComponent,
+    ],
 })
 export class LoginComponent {}

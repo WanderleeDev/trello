@@ -3,7 +3,8 @@ import { Pipe, type PipeTransform } from '@angular/core';
 type Coincidence = 'first' | 'all';
 
 @Pipe({
-  name: 'searchAndReplace',
+    name: 'searchAndReplace',
+    standalone: true,
 })
 export class SearchAndReplacePipe implements PipeTransform {
   transform(

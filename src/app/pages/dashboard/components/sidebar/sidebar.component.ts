@@ -6,11 +6,24 @@ import { HeartIconComponent } from '../../../../shared/icons/components/heart-ic
 import { ViewIconComponent } from '../../../../shared/icons/components/view-icon.component';
 import { MemberIconComponent } from '../../../../shared/icons/components/member-icon.component';
 import { SettingsIconComponent } from '../../../../shared/icons/components/settings-icon.component';
+import { LinkBtnComponent } from '../../../../shared/ui/components/link-btn/link-btn.component';
+import { NgComponentOutlet } from '@angular/common';
+import { AccordionComponent } from '../accordion/accordion.component';
+import { LetterGradientIconComponent } from '../../../../shared/icons/components/letter-gradient-icon.component';
+import { CardPremiumTryComponent } from '../card-premium-try/card-premium-try.component';
 
 @Component({
-  selector: 'app-sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.scss',
+    selector: 'app-sidebar',
+    templateUrl: './sidebar.component.html',
+    styleUrl: './sidebar.component.scss',
+    standalone: true,
+    imports: [
+        LinkBtnComponent,
+        NgComponentOutlet,
+        AccordionComponent,
+        LetterGradientIconComponent,
+        CardPremiumTryComponent,
+    ],
 })
 export class SidebarComponent {
   protected readonly sections = [

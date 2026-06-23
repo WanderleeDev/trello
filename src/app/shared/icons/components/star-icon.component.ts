@@ -2,8 +2,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IconBaseComponent } from './icon-base/icon-base.component';
 
 @Component({
-  selector: 'app-star-icon',
-  template: ` <svg
+    selector: 'app-star-icon',
+    template: ` <svg
     [attr.width]="size()"
     [attr.height]="size()"
     role="presentation"
@@ -18,6 +18,7 @@ import { IconBaseComponent } from './icon-base/icon-base.component';
       fill="currentColor"
     ></path>
   </svg>`,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
 })
 export class StarIconComponent extends IconBaseComponent {}

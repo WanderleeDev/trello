@@ -1,11 +1,22 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { LinkCard } from '../../../../shared/interfaces/LinkCard.interface';
+import { SearchIconComponent } from '../../../icons/components/search-icon.component';
+import { OutsideClickDirective } from '../../../directives/outside-click.directive';
+import { LinkCardComponent } from '../link-card/link-card.component';
+import { LoaderIconComponent } from '../../../icons/components/loader-icon.component';
 
 @Component({
-  selector: 'app-search-bar',
-  templateUrl: './search-bar.component.html',
-  styleUrl: './search-bar.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-search-bar',
+    templateUrl: './search-bar.component.html',
+    styleUrl: './search-bar.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [
+        SearchIconComponent,
+        OutsideClickDirective,
+        LinkCardComponent,
+        LoaderIconComponent,
+    ],
 })
 export class SearchBarComponent {
   mockup: LinkCard[] = [

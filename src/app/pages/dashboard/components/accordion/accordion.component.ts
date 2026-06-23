@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-accordion',
-  templateUrl: './accordion.component.html',
-  styleUrl: './accordion.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-accordion',
+    templateUrl: './accordion.component.html',
+    styleUrl: './accordion.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
 })
 export class AccordionComponent {}

@@ -1,8 +1,12 @@
 import { Component } from '@angular/core';
+import { FormRegisterComponent } from '../../components/form-register/form-register.component';
+import { SocialMediaAuthComponent } from '../../components/social-media-auth/social-media-auth.component';
+import { RouterLink } from '@angular/router';
+import { FooterFormComponent } from '../../components/footer-form/footer-form.component';
 
 @Component({
-  selector: 'app-register',
-  template: `
+    selector: 'app-register',
+    template: `
     <ng-container>
       <app-form-register />
       <app-social-media-auth>
@@ -19,5 +23,12 @@ import { Component } from '@angular/core';
       </app-footer-form>
     </ng-container>
   `,
+    standalone: true,
+    imports: [
+        FormRegisterComponent,
+        SocialMediaAuthComponent,
+        RouterLink,
+        FooterFormComponent,
+    ],
 })
 export class RegisterComponent {}

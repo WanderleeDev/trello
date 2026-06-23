@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
-  selector: 'app-badge',
-  template: `<span class="badge">{{ content() }}</span>`,
-  styles: `
+    selector: 'app-badge',
+    template: `<span class="badge">{{ content() }}</span>`,
+    styles: `
     .badge {
       display: inline-block;
       text-transform: capitalize;
@@ -13,7 +13,8 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
       padding: 0 0.2rem;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
 })
 export class BadgeComponent {
   readonly content = input.required<string>();

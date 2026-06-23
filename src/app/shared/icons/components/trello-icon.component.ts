@@ -2,8 +2,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IconBaseComponent } from './icon-base/icon-base.component';
 
 @Component({
-  selector: 'app-board-icon',
-  template: `
+    selector: 'app-board-icon',
+    template: `
     <svg
       xmlns="http://www.w3.org/2000/svg"
       [attr.width]="size()"
@@ -17,6 +17,7 @@ import { IconBaseComponent } from './icon-base/icon-base.component';
       />
     </svg>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
 })
 export class TrelloIconComponent extends IconBaseComponent {}

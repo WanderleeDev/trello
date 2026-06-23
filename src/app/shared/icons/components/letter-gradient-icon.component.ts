@@ -1,9 +1,9 @@
 import { Component, input } from '@angular/core';
 
 @Component({
-  selector: 'app-letter-gradient-icon',
-  template: `<div class="icon-gradient">{{ $letter() }}</div>`,
-  styles: `
+    selector: 'app-letter-gradient-icon',
+    template: `<div class="icon-gradient">{{ $letter() }}</div>`,
+    styles: `
     .icon-gradient {
       display: grid;
       place-content: center;
@@ -17,6 +17,7 @@ import { Component, input } from '@angular/core';
       color: var(--letter-icon-clr);
     }
   `,
+    standalone: true,
 })
 export class LetterGradientIconComponent {
   $letter = input.required<string, string>({

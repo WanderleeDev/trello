@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { UiModule } from '../../shared/ui/ui.module';
-import { IconsModule } from '../../shared/icons/icons.module';
-import { PipesModule } from '../../shared/pipes/pipes.module';
-import { DirectivesModule } from '../../shared/directives/directives.module';
+
+
+
+
 import { LetDirective } from '@ngrx/component';
 
 // Components
@@ -39,7 +39,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
+    imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    NgOptimizedImage,
+    LetDirective,
     EntryPageComponent,
     TemplateListContainerComponent,
     FeatureCategoriesComponent,
@@ -47,17 +51,7 @@ const routes: Routes = [
     AllTemplatesForCategoryComponent,
     SimpleTemplateComponent,
     FeatureTemplateComponent,
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    UiModule,
-    IconsModule,
-    NgOptimizedImage,
-    DirectivesModule,
-    PipesModule,
-    LetDirective,
-  ],
-  exports: [RouterModule],
+],
+    exports: [RouterModule],
 })
 export default class TemplatesModule {}

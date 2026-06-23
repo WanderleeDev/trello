@@ -1,7 +1,8 @@
 import { Directive, ElementRef, HostListener, output } from '@angular/core';
 
 @Directive({
-  selector: '[appOutsideClick]',
+    selector: '[appOutsideClick]',
+    standalone: true,
 })
 export class OutsideClickDirective {
   readonly emitter = output();

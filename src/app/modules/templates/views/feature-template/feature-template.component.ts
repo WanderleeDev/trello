@@ -1,4 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 interface FeatureItem {
   icon: string;
@@ -7,10 +8,12 @@ interface FeatureItem {
 }
 
 @Component({
-  selector: 'app-feature-template',
-  templateUrl: './feature-template.component.html',
-  styleUrls: ['./feature-template.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-feature-template',
+    templateUrl: './feature-template.component.html',
+    styleUrls: ['./feature-template.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [RouterLink],
 })
 export class FeatureTemplateComponent {
   features: FeatureItem[] = [

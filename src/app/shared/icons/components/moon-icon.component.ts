@@ -2,8 +2,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IconBaseComponent } from './icon-base/icon-base.component';
 
 @Component({
-  selector: 'app-moon-icon',
-  template: `
+    selector: 'app-moon-icon',
+    template: `
     <svg
       [attr.width]="size()"
       [attr.height]="size()"
@@ -153,6 +153,7 @@ import { IconBaseComponent } from './icon-base/icon-base.component';
       </circle>
     </svg>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
 })
 export class MoonIconComponent extends IconBaseComponent {}

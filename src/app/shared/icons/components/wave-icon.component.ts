@@ -2,8 +2,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IconBaseComponent } from './icon-base/icon-base.component';
 
 @Component({
-  selector: 'app-wave',
-  template: `<svg
+    selector: 'app-wave',
+    template: `<svg
     xmlns="http://www.w3.org/2000/svg"
     [attr.width]="size()"
     [attr.height]="size()"
@@ -17,6 +17,7 @@ import { IconBaseComponent } from './icon-base/icon-base.component';
       clip-rule="evenodd"
     />
   </svg>`,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
 })
 export class WaveIconComponent extends IconBaseComponent {}

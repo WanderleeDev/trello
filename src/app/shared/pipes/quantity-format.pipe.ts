@@ -1,7 +1,8 @@
 import { Pipe, type PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'quantityFormat',
+    name: 'quantityFormat',
+    standalone: true,
 })
 export class QuantityFormatPipe implements PipeTransform {
   transform(value: string | number | null): string {

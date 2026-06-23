@@ -1,9 +1,17 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { TermsAndConditionsComponent } from '../terms-and-conditions/terms-and-conditions.component';
+import { CustomBtnComponent } from '../../../../shared/ui/components/custom-btn/custom-btn.component';
 
 @Component({
-  selector: 'app-form-register',
-  templateUrl: './form-register.component.html',
+    selector: 'app-form-register',
+    templateUrl: './form-register.component.html',
+    standalone: true,
+    imports: [
+        ReactiveFormsModule,
+        TermsAndConditionsComponent,
+        CustomBtnComponent,
+    ],
 })
 export class FormRegisterComponent {
   registerForm: FormGroup;

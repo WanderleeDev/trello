@@ -1,9 +1,17 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { CustomBtnComponent } from '../../../../shared/ui/components/custom-btn/custom-btn.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-form-recovery',
-  templateUrl: './form-recovery.component.html',
+    selector: 'app-form-recovery',
+    templateUrl: './form-recovery.component.html',
+    standalone: true,
+    imports: [
+        ReactiveFormsModule,
+        CustomBtnComponent,
+        RouterLink,
+    ],
 })
 export class FormRecoveryComponent {
   recoveryForm: FormGroup;

@@ -1,12 +1,15 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { authActions } from '../../store/auth.actions';
+import { CustomBtnComponent } from '../../../../shared/ui/components/custom-btn/custom-btn.component';
 
 @Component({
-  selector: 'app-form-login',
-  templateUrl: './form-login.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-form-login',
+    templateUrl: './form-login.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [ReactiveFormsModule, CustomBtnComponent],
 })
 export class FormLoginComponent {
   loginForm: FormGroup;

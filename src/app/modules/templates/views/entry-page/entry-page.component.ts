@@ -1,12 +1,26 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { Category, FeatureCategories, TemplateCategory } from '../../interfaces/template.interface';
 import { templatesMockup } from '../../template.mockup';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { FeatureCategoriesComponent } from '../../components/feature-categories/feature-categories.component';
+import { TemplateListContainerComponent } from '../../components/template-list-container/template-list-container.component';
+import { BtnBaseComponent } from '../../../../shared/ui/components/btn-base/btn-base.component';
+import { NgOptimizedImage } from '@angular/common';
+import { CardTemplateInfoComponent } from '../../components/card-template-info/card-template-info.component';
 
 @Component({
-  selector: 'app-entry-page',
-  templateUrl: './entry-page.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-entry-page',
+    templateUrl: './entry-page.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [
+        FeatureCategoriesComponent,
+        TemplateListContainerComponent,
+        BtnBaseComponent,
+        NgOptimizedImage,
+        RouterLink,
+        CardTemplateInfoComponent,
+    ],
 })
 export class EntryPageComponent {
   readonly #router = inject(Router);

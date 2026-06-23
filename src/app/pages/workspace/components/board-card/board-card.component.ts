@@ -2,9 +2,10 @@ import { Component, Output, EventEmitter, input } from '@angular/core';
 import { Card } from '../../interfaces/board.model'; // Assuming you have a model file
 
 @Component({
-  selector: 'app-board-card',
-  templateUrl: './board-card.component.html',
-  styleUrls: ['./board-card.component.scss'],
+    selector: 'app-board-card',
+    templateUrl: './board-card.component.html',
+    styleUrls: ['./board-card.component.scss'],
+    standalone: true,
 })
 export class BoardCardComponent {
   readonly card = input.required<Card>();

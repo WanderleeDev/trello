@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NotFoundComponent } from './not-found.component';
 import { RouterModule, Routes } from '@angular/router';
-import { UiModule } from '../../shared/ui/ui.module';
+
 
 const routes: Routes = [
   {
@@ -12,7 +12,6 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [NotFoundComponent],
-  imports: [CommonModule, UiModule, RouterModule.forChild(routes)],
+    imports: [CommonModule, RouterModule.forChild(routes), NotFoundComponent],
 })
 export default class NotFoundModule {}

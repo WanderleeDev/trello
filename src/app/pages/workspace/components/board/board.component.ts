@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 
 import { List, Card } from '../../interfaces/board.model';
+import { BoardHeaderComponent } from '../board-header/board-header.component';
 
 @Component({
-  selector: 'app-board',
-  templateUrl: './board.component.html',
-  styleUrls: ['./board.component.scss'],
+    selector: 'app-board',
+    templateUrl: './board.component.html',
+    styleUrls: ['./board.component.scss'],
+    standalone: true,
+    imports: [BoardHeaderComponent],
 })
 export class BoardComponent {
   boardName = 'My Board';

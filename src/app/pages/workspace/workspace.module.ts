@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WorkspaceComponent } from './workspace.component';
 import { RouterModule, Routes } from '@angular/router';
-import { UiModule } from '../../shared/ui/ui.module';
+
 import { BoardHeaderComponent } from './components/board-header/board-header.component';
 import { BoardListComponent } from './components/board-list/board-list.component';
 import { BoardCardComponent } from './components/board-card/board-card.component';
 import { AddListButtonComponent } from './components/add-list-button/add-list-button.component';
-import { IconsModule } from '../../shared/icons/icons.module';
+
 import { BoardComponent } from './components/board/board.component';
 import { List } from './interfaces/board.model';
 import { SidebarBoardComponent } from './components/sidebar-board/sidebar-board.component';
@@ -24,16 +24,13 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    WorkspaceComponent,
+    imports: [CommonModule, RouterModule.forChild(routes), WorkspaceComponent,
     BoardHeaderComponent,
     BoardListComponent,
     BoardCardComponent,
     AddListButtonComponent,
     BoardComponent,
-    SidebarBoardComponent,
-  ],
-  imports: [CommonModule, UiModule, RouterModule.forChild(routes), IconsModule],
+    SidebarBoardComponent],
 })
 export default class WorkspaceModule {
   list: List[] = [

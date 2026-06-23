@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
 import { ThemeService } from './shared/services/theme.service';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  template: `<router-outlet />`,
-  styles: `
+    selector: 'app-root',
+    template: `<router-outlet />`,
+    styles: `
     :host {
       color: var(--text-main-clr);
       background-color: var(--bg-main);
@@ -13,7 +14,9 @@ import { ThemeService } from './shared/services/theme.service';
         color 0.2s ease-in-out;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [RouterOutlet],
 })
 export class AppComponent {
   @HostBinding('class.light')

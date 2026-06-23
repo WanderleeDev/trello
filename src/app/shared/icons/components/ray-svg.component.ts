@@ -2,8 +2,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IconBaseComponent } from './icon-base/icon-base.component';
 
 @Component({
-  selector: 'app-ray-svg',
-  template: `
+    selector: 'app-ray-svg',
+    template: `
     <svg
       [attr.width]="size()"
       [attr.height]="size()"
@@ -18,6 +18,7 @@ import { IconBaseComponent } from './icon-base/icon-base.component';
       ></path>
     </svg>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
 })
 export class RaySvgComponent extends IconBaseComponent {}

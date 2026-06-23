@@ -1,8 +1,13 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { DropdownComponent } from '../dropdown/dropdown.component';
+import { GridDotsIconComponent } from '../../../icons/components/grid-dots-icon.component';
+import { LinkBtnComponent } from '../link-btn/link-btn.component';
+import { AtlasianIconComponent } from '../../../icons/components/atlasian-icon.component';
+import { TrelloClrIconComponent } from '../../../icons/components/trello-clr-icon.component';
 
 @Component({
-  selector: 'app-dots-dropdown',
-  template: `
+    selector: 'app-dots-dropdown',
+    template: `
     <app-dropdown>
       <app-grid-dots-icon [size]="20" />
 
@@ -19,13 +24,21 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       </div>
     </app-dropdown>
   `,
-  styles: `
+    styles: `
     .dropdown-icon {
       background-color: #0152cc;
       padding: 0.2rem;
       border-radius: 0.4rem;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [
+        DropdownComponent,
+        GridDotsIconComponent,
+        LinkBtnComponent,
+        AtlasianIconComponent,
+        TrelloClrIconComponent,
+    ],
 })
 export class DotsDropdownComponent {}

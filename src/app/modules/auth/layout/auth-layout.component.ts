@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import { BannerComponent } from '../components/banner/banner.component';
+import { BasicImageComponent } from '../../../shared/ui/components/basic-image/basic-image.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-auth-layout',
-  template: `
+    selector: 'app-auth-layout',
+    template: `
     <section class="min-h-dvh bg-[#fafbfc] pt-14 content-center pb-2">
       <app-banner />
       <div
@@ -21,5 +24,11 @@ import { Component } from '@angular/core';
       </div>
     </section>
   `,
+    standalone: true,
+    imports: [
+        BannerComponent,
+        BasicImageComponent,
+        RouterOutlet,
+    ],
 })
 export class AuthLayoutComponent {}

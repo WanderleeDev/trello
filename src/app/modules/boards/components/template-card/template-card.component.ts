@@ -8,9 +8,10 @@ interface Template {
 }
 
 @Component({
-  selector: 'app-template-card',
-  templateUrl: './template-card.component.html',
-  styleUrls: ['./template-card.component.scss'],
+    selector: 'app-template-card',
+    templateUrl: './template-card.component.html',
+    styleUrls: ['./template-card.component.scss'],
+    standalone: true,
 })
 export class TemplateCardComponent {
   template = input.required<Template>();

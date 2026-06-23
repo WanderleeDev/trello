@@ -2,8 +2,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { IconBaseComponent } from './icon-base/icon-base.component';
 
 @Component({
-  selector: 'app-bell-icon',
-  template: `
+    selector: 'app-bell-icon',
+    template: `
     <svg [attr.width]="size()" [attr.height]="size()" viewBox="0 0 24 24" role="presentation">
       <path
         fill="currentcolor"
@@ -12,6 +12,7 @@ import { IconBaseComponent } from './icon-base/icon-base.component';
       ></path>
     </svg>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
 })
 export class BellIconComponent extends IconBaseComponent {}

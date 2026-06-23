@@ -1,12 +1,22 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FeatureCategories } from '../../interfaces/template.interface';
+import { RouterLink } from '@angular/router';
+import { NgOptimizedImage, KeyValuePipe } from '@angular/common';
+import { SearchAndReplacePipe } from '../../../../shared/pipes/search-and-replace.pipe';
 // import { FeatureCategories } from '../../interfaces/template.interface';
 
 @Component({
-  selector: 'app-feature-categories',
-  templateUrl: './feature-categories.component.html',
-  styleUrl: './feature-categories.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-feature-categories',
+    templateUrl: './feature-categories.component.html',
+    styleUrl: './feature-categories.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [
+        RouterLink,
+        NgOptimizedImage,
+        KeyValuePipe,
+        SearchAndReplacePipe,
+    ],
 })
 export class FeatureCategoriesComponent {
   protected readonly featureCategories: FeatureCategories = {

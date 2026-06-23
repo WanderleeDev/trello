@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
-  selector: 'app-simple-template',
-  templateUrl: './simple-template.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-simple-template',
+    templateUrl: './simple-template.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
 })
 export class SimpleTemplateComponent {
   readonly category = input.required<string>();

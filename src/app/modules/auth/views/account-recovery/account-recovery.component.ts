@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { FormRecoveryComponent } from '../../components/form-recovery/form-recovery.component';
+import { FooterFormComponent } from '../../components/footer-form/footer-form.component';
 
 @Component({
-  selector: 'app-account-recovery',
-  template: `
+    selector: 'app-account-recovery',
+    template: `
     <ng-container>
       <app-form-recovery />
       <app-footer-form>
@@ -14,5 +16,7 @@ import { Component } from '@angular/core';
       </app-footer-form>
     </ng-container>
   `,
+    standalone: true,
+    imports: [FormRecoveryComponent, FooterFormComponent],
 })
 export class AccountRecoveryComponent {}

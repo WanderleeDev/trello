@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
-  selector: 'app-board-list-container',
-  template: `
+    selector: 'app-board-list-container',
+    template: `
     <section class="mb-8">
       <header class="flex items-center gap-2 mb-4">
         <ng-content select="icon-title" />
@@ -14,7 +14,8 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
       </div>
     </section>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
 })
 export class BoardListContainerComponent {
   title = input.required<string>();

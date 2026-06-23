@@ -2,10 +2,29 @@ import { Component, input } from '@angular/core';
 import { List } from './interfaces/board.model';
 import { Dialog } from '@angular/cdk/dialog';
 import { BoardModalTaskComponent } from '../../modules/boards/components/board-modal-task/board-modal-task.component';
+import { NavComponent } from '../../shared/ui/components/nav/nav.component';
+import { SidebarBoardComponent } from './components/sidebar-board/sidebar-board.component';
+import { BoardComponent } from './components/board/board.component';
+import { BoardListComponent } from './components/board-list/board-list.component';
+import { BoardCardComponent } from './components/board-card/board-card.component';
+import { BtnBaseComponent } from '../../shared/ui/components/btn-base/btn-base.component';
+import { AddSvgComponent } from '../../shared/icons/components/add-svg.component';
+import { AddListButtonComponent } from './components/add-list-button/add-list-button.component';
 
 @Component({
-  selector: 'app-workspace',
-  templateUrl: './workspace.component.html',
+    selector: 'app-workspace',
+    templateUrl: './workspace.component.html',
+    standalone: true,
+    imports: [
+        NavComponent,
+        SidebarBoardComponent,
+        BoardComponent,
+        BoardListComponent,
+        BoardCardComponent,
+        BtnBaseComponent,
+        AddSvgComponent,
+        AddListButtonComponent,
+    ],
 })
 export class WorkspaceComponent {
   idBoard = input.required<string>();
