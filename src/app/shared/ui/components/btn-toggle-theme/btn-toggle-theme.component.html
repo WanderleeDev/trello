@@ -1,13 +1,15 @@
 <button
   class="btn-theme"
-  (click)="toggleTheme()"
+  (click)="theme.toggle()"
   type="button"
   title="change theme"
   aria-label="change theme"
 >
-  @if ($currentTheme() === 'dark') {
-    <app-moon-icon [size]="size" />
-  } @else {
-    <app-sun-icon [size]="size" />
+  @if (theme.isHydrated()) {
+    @if (theme.isDark()) {
+      <app-moon-icon [size]="size" />
+    } @else {
+      <app-sun-icon [size]="size" />
+    }
   }
 </button>
