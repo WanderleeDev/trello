@@ -1,10 +1,8 @@
 <div
   class="relative"
-  [ngStyle]="{
-    width: width + 'rem',
-    height: height + 'rem',
-  }"
-  [ngClass]="customClass"
+  [style.width]="width + 'rem'"
+  [style.height]="height + 'rem'"
+  [class]="customClass"
 >
   <img [ngSrc]="src" [alt]="alt" fill [priority]="priority" />
 </div>

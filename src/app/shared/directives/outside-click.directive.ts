@@ -1,16 +1,16 @@
-import { Directive, ElementRef, HostListener, output } from '@angular/core';
+import { Directive, ElementRef, HostListener, inject, output } from '@angular/core';
 
 @Directive({
-    selector: '[appOutsideClick]',
-    standalone: true,
+  selector: '[appOutsideClick]',
+  standalone: true,
 })
 export class OutsideClickDirective {
+  private readonly elementRef = inject(ElementRef);
+
   readonly emitter = output();
 
-  constructor(private readonly elementRef: ElementRef) {}
-
   @HostListener('document:click', ['$event.target'])
-  public onClick(targetElement: HTMLElement): void {
+  public onClick(targetElement: EventTarget | null): void {
     const clickedInside = this.elementRef.nativeElement.contains(targetElement);
 
     if (!clickedInside) {

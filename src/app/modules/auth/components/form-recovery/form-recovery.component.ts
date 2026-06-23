@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CustomBtnComponent } from '../../../../shared/ui/components/custom-btn/custom-btn.component';
 import { RouterLink } from '@angular/router';
@@ -14,20 +14,18 @@ import { RouterLink } from '@angular/router';
     ],
 })
 export class FormRecoveryComponent {
-  recoveryForm: FormGroup;
+  private readonly _fb = inject(FormBuilder);
 
-  constructor(private readonly _fb: FormBuilder) {
-    this.recoveryForm = this._fb.nonNullable.group({
-      email: [
-        '',
-        [
-          Validators.required,
-          Validators.email,
-          Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/),
-        ],
+  recoveryForm: FormGroup = this._fb.nonNullable.group({
+    email: [
+      '',
+      [
+        Validators.required,
+        Validators.email,
+        Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/),
       ],
-    });
-  }
+    ],
+  });
 
   public onSubmit(): void {
     if (this.recoveryForm.invalid) return;

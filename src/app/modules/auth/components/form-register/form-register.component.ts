@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { TermsAndConditionsComponent } from '../terms-and-conditions/terms-and-conditions.component';
 import { CustomBtnComponent } from '../../../../shared/ui/components/custom-btn/custom-btn.component';
@@ -14,20 +14,18 @@ import { CustomBtnComponent } from '../../../../shared/ui/components/custom-btn/
     ],
 })
 export class FormRegisterComponent {
-  registerForm: FormGroup;
+  private readonly _fb = inject(FormBuilder);
 
-  constructor(private readonly _fb: FormBuilder) {
-    this.registerForm = this._fb.nonNullable.group({
-      email: [
-        '',
-        [
-          Validators.required,
-          Validators.email,
-          Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/),
-        ],
+  registerForm: FormGroup = this._fb.nonNullable.group({
+    email: [
+      '',
+      [
+        Validators.required,
+        Validators.email,
+        Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/),
       ],
-    });
-  }
+    ],
+  });
 
   public onSubmit(): void {
     if (this.registerForm.invalid) return;

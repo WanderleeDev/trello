@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input, booleanAttribute } from '@angular/core';
-import { NgStyle, NgClass, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'app-basic-image',
@@ -11,11 +11,7 @@ import { NgStyle, NgClass, NgOptimizedImage } from '@angular/common';
   `,
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
-    imports: [
-        NgStyle,
-        NgClass,
-        NgOptimizedImage,
-    ],
+    imports: [NgOptimizedImage],
 })
 export class BasicImageComponent {
   @Input({ required: true }) src = '';

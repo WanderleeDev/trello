@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { BasicImageComponent } from '../../shared/ui/components/basic-image/basic-image.component';
 
 @Component({
@@ -19,8 +19,9 @@ import { BasicImageComponent } from '../../shared/ui/components/basic-image/basi
     imports: [BasicImageComponent],
 })
 export class NotFoundComponent {
+  private readonly location = inject(Location);
+
   protected readonly img = 'https://trello.com/assets/3aa994dc53c056c6f419.png';
-  constructor(private location: Location) {}
 
   goBack() {
     this.location.back();

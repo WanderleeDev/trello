@@ -1,23 +1,18 @@
-<nav
-  class="navbar"
-  *ngrxLet="{
-    user: user$,
-    templates: templates$,
-  } as state"
->
+<nav class="navbar">
   <h1 class="sr-only">Trello</h1>
+  <app-menu-core />
   <app-navbar-main-options
-    [boardRecent]="state.user.recentBoards"
-    [boardStarred]="state.user.staredBoards"
-    [workspace]="state.user.myWorkspaces"
-    [templates]="state.templates.templates"
+    [boardRecent]="userStore.recentBoards()"
+    [boardStarred]="userStore.staredBoards()"
+    [workspace]="userStore.myWorkspaces()"
+    [templates]="boardStore.templates()"
   />
 
   <app-navbar-second-options
     [dataUser]="{
-      username: state.user.username,
-      email: state.user.email,
-      image: state.user.image,
+      username: userStore.username(),
+      email: userStore.email(),
+      image: userStore.image(),
     }"
   />
 </nav>

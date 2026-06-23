@@ -1,5 +1,5 @@
 import { Dialog } from '@angular/cdk/dialog';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 
 @Component({
     selector: 'app-board-modal-task',
@@ -8,7 +8,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     standalone: true,
 })
 export class BoardModalTaskComponent {
-  constructor(private dialog: Dialog) {}
+  private readonly dialog = inject(Dialog);
 
   public dialogClose() {
     this.dialog.closeAll();

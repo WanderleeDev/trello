@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { UiModule } from '../../../../shared/ui/ui.module';
+import { BasicImageComponent } from '../../../../shared/ui/components/basic-image/basic-image.component';
 
 @Component({
   selector: 'app-board-error',
   standalone: true,
-  imports: [UiModule],
+  imports: [BasicImageComponent],
   templateUrl: './board-error.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

@@ -3,9 +3,7 @@
   class="link"
   routerLinkActive="active-link"
   [routerLinkActiveOptions]="{ exact: true }"
-  [ngClass]="{
-    'link-ident': 'ident' === design().toString(),
-  }"
+  [class.link-ident]="design() === 'ident'"
 >
   <ng-content select="left" />
   <ng-content />

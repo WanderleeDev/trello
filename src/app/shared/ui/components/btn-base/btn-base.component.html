@@ -1,11 +1,9 @@
 <button
   class="btn"
-  [ngClass]="{
-    primary: variant() === 'primary',
-    mixed: variant() === 'mixed',
-    active: activeStyle(),
-    rounded: rounded(),
-  }"
+  [class.primary]="variant() === 'primary'"
+  [class.mixed]="variant() === 'mixed'"
+  [class.active]="activeStyle()"
+  [class.rounded]="rounded()"
   [type]="btnType()"
   [attr.aria-label]="ariaLabel()"
 >

@@ -1,22 +1,14 @@
 import { inject } from '@angular/core';
 import { Router, type CanActivateFn } from '@angular/router';
-import { Store } from '@ngrx/store';
-import { AppState } from '../../store/app.state';
-import { selectIsAuthenticated } from '../../modules/auth/store/auth.selectors';
-import { map, take } from 'rxjs';
+import { AuthStore } from '../../store/auth/auth.store';
 
 export const redirectIfAuthenticateGuard: CanActivateFn = () => {
-  const store: Store = inject(Store<AppState>);
+  const authStore = inject(AuthStore);
   const router = inject(Router);
 
-  return store.select(selectIsAuthenticated).pipe(
-    take(1),
-    map(isAuthenticated => {
-      if (isAuthenticated) {
-        router.navigate(['/home']);
-        return false;
-      }
-      return true;
-    }),
-  );
+  if (authStore.isAuthenticated()) {
+    router.navigate(['/home']);
+    return false;
+  }
+  return true;
 };
