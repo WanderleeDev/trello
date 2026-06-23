@@ -6,7 +6,6 @@ import { StoreModule } from '@ngrx/store';
 import { ALL_EFFECTS, ROOT_REDUCERS } from './store/app.state';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
-import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +16,7 @@ import { CookieService } from 'ngx-cookie-service';
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
     EffectsModule.forRoot(ALL_EFFECTS),
   ],
-  providers: [provideClientHydration(), CookieService],
+  providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
