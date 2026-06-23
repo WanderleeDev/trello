@@ -6,7 +6,7 @@ import { NgComponentOutlet } from '@angular/common';
 @Component({
     selector: 'app-banner',
     templateUrl: './banner.component.html',
-    styleUrl: './banner.component.scss',
+    styleUrl: './banner.component.css',
     standalone: true,
     imports: [BtnBaseComponent, NgComponentOutlet],
 })

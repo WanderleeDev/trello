@@ -8,7 +8,7 @@ import { SearchAndReplacePipe } from '../../../../shared/pipes/search-and-replac
 @Component({
     selector: 'app-feature-categories',
     templateUrl: './feature-categories.component.html',
-    styleUrl: './feature-categories.component.scss',
+    styleUrl: './feature-categories.component.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [

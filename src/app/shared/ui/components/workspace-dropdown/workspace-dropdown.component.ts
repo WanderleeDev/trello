@@ -8,7 +8,7 @@ import { StarIconComponent } from '../../../icons/components/star-icon.component
 @Component({
     selector: 'app-workspace-dropdown',
     templateUrl: './workspace-dropdown.component.html',
-    styleUrl: './workspace-dropdown.component.scss',
+    styleUrl: './workspace-dropdown.component.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [

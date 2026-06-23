@@ -5,10 +5,7 @@
 .board-card {
   background-color: var(--bg-card);
   border-radius: 0.8rem;
-  box-shadow:
-    #091e4240,
-    0px 1px 1px #091e4240,
-    0px 0px 1px #091e424f;
+  box-shadow: var(--shadow-overlay);
   padding: 0.75rem;
   display: flex;
   flex-direction: column;

@@ -6,21 +6,21 @@
   width: 100%;
   overflow-x: hidden;
 
-  &-title {
+  .features-title {
     text-transform: capitalize;
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 1rem;
   }
 
-  &-list {
+  .features-list {
     display: flex;
     gap: 1rem;
     text-transform: capitalize;
     text-align: center;
   }
 
-  &-item {
+  .features-item {
     width: 100px;
   }
 }

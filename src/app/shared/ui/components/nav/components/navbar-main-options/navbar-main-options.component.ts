@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { Router } from '@angular/router';
 import { BoardTemplate } from '../../../../../mockup/templates';
 import { DotsDropdownComponent } from '../../../dots-dropdown/dots-dropdown.component';
@@ -11,7 +11,7 @@ import { StarIconComponent } from '../../../../../icons/components/star-icon.com
 @Component({
     selector: 'app-navbar-main-options',
     templateUrl: './navbar-main-options.component.html',
-    styleUrl: './navbar-main-options.component.scss',
+    styleUrl: './navbar-main-options.component.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [
@@ -24,12 +24,12 @@ import { StarIconComponent } from '../../../../../icons/components/star-icon.com
     ],
 })
 export class NavbarMainOptionsComponent {
+  private readonly router = inject(Router);
+
   readonly workspace = input.required<BoardTemplate[]>();
   readonly boardRecent = input.required<BoardTemplate[]>();
   readonly boardStarred = input.required<BoardTemplate[]>();
   readonly templates = input.required<BoardTemplate[]>();
-
-  constructor(private readonly router: Router) {}
 
   public redirectHome(): void {
     this.router.navigate(['/']);

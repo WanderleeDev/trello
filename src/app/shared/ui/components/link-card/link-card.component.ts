@@ -8,7 +8,7 @@ import { BadgeComponent } from '../badge/badge.component';
 @Component({
     selector: 'app-link-card',
     templateUrl: './link-card.component.html',
-    styleUrls: ['./link-card.component.scss'],
+    styleUrls: ['./link-card.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [

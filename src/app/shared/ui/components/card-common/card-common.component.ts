@@ -4,7 +4,7 @@ import { NgOptimizedImage } from '@angular/common';
 @Component({
     selector: 'app-card-common',
     templateUrl: './card-common.component.html',
-    styleUrl: './card-common.component.scss',
+    styleUrl: './card-common.component.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [NgOptimizedImage],

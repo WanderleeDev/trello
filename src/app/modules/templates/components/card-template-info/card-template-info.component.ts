@@ -9,7 +9,7 @@ import { QuantityFormatPipe } from '../../../../shared/pipes/quantity-format.pip
 @Component({
     selector: 'app-card-template-info',
     templateUrl: './card-template-info.component.html',
-    styleUrl: './card-template-info.component.scss',
+    styleUrl: './card-template-info.component.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [

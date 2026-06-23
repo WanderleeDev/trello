@@ -1,23 +1,17 @@
-import { ChangeDetectionStrategy, Component, computed } from '@angular/core';
-import { ThemeService } from '../../../../shared/services/theme.service';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ThemeToggleService } from 'ngx-theme-stack';
 import { MoonIconComponent } from '../../../icons/components/moon-icon.component';
 import { SunIconComponent } from '../../../icons/components/sun-icon.component';
 
 @Component({
     selector: 'app-btn-toggle-theme',
     templateUrl: './btn-toggle-theme.component.html',
-    styleUrl: './btn-toggle-theme.component.scss',
+    styleUrl: './btn-toggle-theme.component.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [MoonIconComponent, SunIconComponent],
 })
 export class BtnToggleThemeComponent {
-  $currentTheme = computed(() => this.themeSvc.getTheme()());
+  protected readonly theme = inject(ThemeToggleService);
   protected readonly size = 28;
-
-  constructor(private readonly themeSvc: ThemeService) {}
-
-  public toggleTheme(): void {
-    this.themeSvc.toggleTheme();
-  }
 }

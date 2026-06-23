@@ -4,7 +4,7 @@ import { Card } from '../../interfaces/board.model'; // Assuming you have a mode
 @Component({
     selector: 'app-board-card',
     templateUrl: './board-card.component.html',
-    styleUrls: ['./board-card.component.scss'],
+    styleUrls: ['./board-card.component.css'],
     standalone: true,
 })
 export class BoardCardComponent {

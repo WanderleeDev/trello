@@ -7,24 +7,24 @@
   gap: 0.2rem;
   align-items: center;
 
-  &-wrapperImage {
+  .user-wrapperImage {
     border-radius: 50%;
     overflow: hidden;
   }
 
-  &-image {
+  .user-image {
     object-fit: cover;
   }
 
-  &-data {
+  .user-data {
     display: flex;
     flex-direction: column;
   }
 
-  &-name {
+  .user-name {
   }
 
-  &-email {
+  .user-email {
   }
 }
 

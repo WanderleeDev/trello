@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DataUser } from '../../../../store/user/user.state';
+import { DataUser } from '../../../../store/user/user.store';
 import { BtnBaseComponent } from '../../../../shared/ui/components/btn-base/btn-base.component';
 import { StarIconComponent } from '../../../../shared/icons/components/star-icon.component';
 import { RocketSvgComponent } from '../../../../shared/icons/components/rocket-svg.component';
@@ -11,7 +11,7 @@ import { DotsComponent } from '../../../../shared/icons/components/dots.componen
 @Component({
     selector: 'app-board-header',
     templateUrl: './board-header.component.html',
-    styleUrls: ['./board-header.component.scss'],
+    styleUrls: ['./board-header.component.css'],
     standalone: true,
     imports: [BtnBaseComponent, StarIconComponent, RocketSvgComponent, RaySvgComponent, FilterSvgComponent, UserComponent, DotsComponent]
 })

@@ -6,7 +6,7 @@ import { DotsComponent } from '../../../../shared/icons/components/dots.componen
 @Component({
     selector: 'app-board-list',
     templateUrl: './board-list.component.html',
-    styleUrls: ['./board-list.component.scss'],
+    styleUrls: ['./board-list.component.css'],
     standalone: true,
     imports: [BtnBaseComponent, DotsComponent],
 })

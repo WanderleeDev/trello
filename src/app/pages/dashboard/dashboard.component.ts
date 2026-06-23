@@ -19,7 +19,7 @@ import { RouterOutlet } from '@angular/router';
       </div>
     </main>
   `,
-    styleUrls: ['./dashboard.component.scss'],
+    styleUrls: ['./dashboard.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [

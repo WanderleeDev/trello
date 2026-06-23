@@ -14,18 +14,18 @@
 }
 
 .banner {
-  &-description {
+  .banner-description {
     flex-grow: 1;
   }
 
-  &-options {
+  .banner-options {
     flex-shrink: 1;
     display: flex;
     gap: 0.5rem;
     text-wrap: nowrap;
   }
 
-  &-link {
+  .banner-link {
     color: var(--clr-active);
     text-decoration: underline;
   }

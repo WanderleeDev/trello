@@ -5,7 +5,7 @@
 .btn {
   --hovered: var(--btn-hovered);
   --pressed: var(--btn-pressed);
-  --background: #a1bdd914;
+  --background: var(--bg-transparent);
   --text-clr: currentColor;
 
   display: flex;

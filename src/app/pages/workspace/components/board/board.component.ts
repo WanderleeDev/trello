@@ -6,7 +6,7 @@ import { BoardHeaderComponent } from '../board-header/board-header.component';
 @Component({
     selector: 'app-board',
     templateUrl: './board.component.html',
-    styleUrls: ['./board.component.scss'],
+    styleUrls: ['./board.component.css'],
     standalone: true,
     imports: [BoardHeaderComponent],
 })

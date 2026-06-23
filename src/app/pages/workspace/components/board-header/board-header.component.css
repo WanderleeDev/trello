@@ -7,11 +7,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 0.75rem;
-  background-color: #ffffff3d;
+  background-color: var(--header-bg-glass);
   backdrop-filter: blur(0.5rem);
   gap: 0.5rem;
   height: 3.75rem;
-  color: #172b4d;
+  color: var(--text-main-clr);
 }
 
 .board-header-content {

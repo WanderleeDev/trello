@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
 
-  &-title {
+  .list-title {
     text-wrap: nowrap;
     text-overflow: ellipsis;
     text-transform: capitalize;
   }
 
-  &-spaces {
+  .list-spaces {
     display: flex;
     flex-direction: column;
   }

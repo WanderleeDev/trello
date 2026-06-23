@@ -15,7 +15,7 @@ import { CardPremiumTryComponent } from '../card-premium-try/card-premium-try.co
 @Component({
     selector: 'app-sidebar',
     templateUrl: './sidebar.component.html',
-    styleUrl: './sidebar.component.scss',
+    styleUrl: './sidebar.component.css',
     standalone: true,
     imports: [
         LinkBtnComponent,

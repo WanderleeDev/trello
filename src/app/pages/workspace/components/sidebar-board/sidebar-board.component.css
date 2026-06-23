@@ -9,40 +9,39 @@
   backdrop-filter: blur(0.5rem);
   background-color: var(--dynamic-background-transparent, var(--ds-surface, #ffffff));
 
-  &-header {
+  .sidebar-header {
     padding: 0.5rem 0.75rem;
     height: 3.75rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     border-bottom: 1px solid var(--dynamic-text-transparent, #dfe1e6);
   }
 
-  &-content {
+  .sidebar-content {
     display: flex;
     gap: 0.5rem;
     align-items: center;
   }
 
-  &-title {
+  .sidebar-title {
     font-weight: 600;
   }
 
-  &-info {
+  .sidebar-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
   }
 
-  &-subtitle {
+  .sidebar-subtitle {
   }
 
-  &-boards {
+  .sidebar-boards {
   }
 
-  &-boards-title {
+  .sidebar-boards-title {
     font-weight: 600;
     display: flex;
     justify-content: space-between;
@@ -50,7 +49,7 @@
     padding-left: 0.75rem;
   }
 
-  &-boards-list {
+  .sidebar-boards-list {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;

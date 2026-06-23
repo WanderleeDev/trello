@@ -17,18 +17,19 @@
   &:is(:hover, :focus-within, :focus) .card-extra-2 {
     display: block;
   }
-  &-image {
+
+  .card-image {
     aspect-ratio: 4 / 2;
   }
 
-  &-title {
+  .card-title {
     font-weight: 700;
     z-index: 1;
     font-size: 1rem;
     color: white;
   }
 
-  &-extra {
+  .card-extra {
     z-index: 1;
     display: flex;
     gap: 0.5rem;
@@ -36,7 +37,7 @@
     align-items: baseline;
   }
 
-  &-extra-2 {
+  .card-extra-2 {
     display: none;
   }
 }

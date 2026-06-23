@@ -1,5 +1,5 @@
 :host {
-  background-color: #a1bdd914;
+  background-color: var(--bg-transparent);
 
   &:hover .card-btn {
     display: block;
@@ -7,7 +7,7 @@
 }
 
 .card {
-  &-image {
+  .card-image {
     display: block;
     object-fit: cover;
     height: 2rem;
@@ -16,7 +16,7 @@
     aspect-ratio: 4 / 2;
   }
 
-  &-text {
+  .card-text {
     display: block;
     text-wrap: nowrap;
     text-overflow: ellipsis;
@@ -25,19 +25,15 @@
     min-width: 7.5rem;
   }
 
-  &-badge {
+  .card-badge {
     margin-left: auto;
   }
 
-  &-extra {
+  .card-extra {
     position: relative;
     display: none;
     margin-left: auto;
     z-index: 10;
-
-    // &:hover {
-    //   color: rgb(255, 187, 0);
-    // }
   }
 
   &:hover .card-extra {

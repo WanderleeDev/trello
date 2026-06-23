@@ -12,12 +12,12 @@
     grid-template-columns: repeat(7, auto);
     gap: 1rem;
 
-    &-item:nth-child(6) {
+    .subList-item:nth-child(6) {
       grid-column: 4/5;
       grid-row: 1/2;
     }
 
-    &-subItem {
+    .subList-subItem {
       align-self: center;
     }
   }

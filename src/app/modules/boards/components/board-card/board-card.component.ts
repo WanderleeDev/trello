@@ -5,7 +5,7 @@ import { NgOptimizedImage } from '@angular/common';
 @Component({
     selector: 'app-board-card',
     templateUrl: './board-card.component.html',
-    styleUrls: ['./board-card.component.scss'],
+    styleUrls: ['./board-card.component.css'],
     standalone: true,
     imports: [NgOptimizedImage],
 })

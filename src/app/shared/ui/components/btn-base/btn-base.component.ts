@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { NgClass } from '@angular/common';
 
 type BtnType = 'submit' | 'button' | 'reset';
 type BtnVariant = 'primary' | 'secondary' | 'tertiary' | 'danger' | 'base' | 'mixed';
@@ -7,10 +6,9 @@ type BtnVariant = 'primary' | 'secondary' | 'tertiary' | 'danger' | 'base' | 'mi
 @Component({
     selector: 'app-btn-base',
     templateUrl: './btn-base.component.html',
-    styleUrl: './btn-base.component.scss',
+    styleUrl: './btn-base.component.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
-    imports: [NgClass],
 })
 export class BtnBaseComponent {
   activeStyle = input<boolean>(false);
