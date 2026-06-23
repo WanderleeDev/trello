@@ -34,7 +34,6 @@
     "@ngrx/store": "^18.1.1",
     "@ngrx/store-devtools": "^18.1.1",
     "express": "^4.22.2",
-    "ngx-cookie-service": "^19.1.2",
     "rxjs": "~7.8.2",
     "tslib": "^2.8.1",
     "zone.js": "~0.14.10"
