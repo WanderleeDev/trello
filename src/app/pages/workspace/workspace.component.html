@@ -7,13 +7,17 @@
     <app-sidebar-board />
 
     <app-board>
-      @for (li of list; track $index) {
-        <app-board-list [list]="li">
+      @for (li of list; track li.id) {
+        <app-board-list
+          [list]="li"
+          (addCardEvent)="addCard($event)"
+          (deleteListEvent)="deleteList($event)"
+        >
           <ng-container ngProjectAs="board-card">
-            @for (card of li.cards; track $index) {
-              <app-board-card [card]="card" (click)="openDialog()" />
+            @for (card of li.cards; track card.id) {
+              <app-board-card [card]="card" (click)="openDialog(card)" />
             }
-            <app-btn-base class="rounded-lg overflow-hidden mt-2">
+            <app-btn-base class="rounded-lg overflow-hidden mt-2" (click)="addCard(li)">
               <span class="material-symbols-outlined" style="font-size: 20px">add</span>
               add card
             </app-btn-base>

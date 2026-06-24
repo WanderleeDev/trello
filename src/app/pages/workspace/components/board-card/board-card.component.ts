@@ -1,10 +1,12 @@
 import { Component, Output, EventEmitter, input } from '@angular/core';
-import { Card } from '../../interfaces/board.model'; // Assuming you have a model file
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { Card } from '../../interfaces/board.model';
 
 @Component({
     selector: 'app-board-card',
          templateUrl: './board-card.component.html',
     standalone: true,
+    imports: [DragDropModule],
 })
 export class BoardCardComponent {
   readonly card = input.required<Card>();

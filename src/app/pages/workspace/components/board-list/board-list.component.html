@@ -4,8 +4,8 @@
       <h3>{{ list().title }}</h3>
     </header>
     <div class="flex gap-2">
-      <app-btn-base ariaLabel="options">
-        <span class="material-symbols-outlined" style="font-size: 20px">more_horiz</span>
+      <app-btn-base ariaLabel="options" (click)="deleteList()">
+        <span class="material-symbols-outlined" style="font-size: 20px">delete</span>
       </app-btn-base>
     </div>
   </div>

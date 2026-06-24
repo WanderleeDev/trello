@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter, input } from '@angular/core';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { List, Card } from '../../interfaces/board.model';
 import { BtnBaseComponent } from '../../../../shared/ui/components/btn-base/btn-base.component';
 
@@ -6,7 +7,7 @@ import { BtnBaseComponent } from '../../../../shared/ui/components/btn-base/btn-
     selector: 'app-board-list',
          templateUrl: './board-list.component.html',
     standalone: true,
-     imports: [BtnBaseComponent],
+     imports: [BtnBaseComponent, DragDropModule],
 })
 export class BoardListComponent {
   readonly list = input.required<List>();

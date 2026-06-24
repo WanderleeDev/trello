@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { List, Card } from '../../interfaces/board.model';
 import { BoardHeaderComponent } from '../board-header/board-header.component';
@@ -8,7 +9,7 @@ import { BoardHeaderComponent } from '../board-header/board-header.component';
     templateUrl: './board.component.html',
     styleUrls: ['./board.component.css'],
     standalone: true,
-    imports: [BoardHeaderComponent],
+    imports: [BoardHeaderComponent, DragDropModule],
 })
 export class BoardComponent {
   boardName = 'My Board';
