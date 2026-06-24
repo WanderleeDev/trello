@@ -1,3 +1,9 @@
+:host {
+  overflow-x: hidden;
+  padding-right: 1rem;
+  height: 100%;
+}
+
 /* CDK drag-and-drop (cannot be Tailwind) */
 .cdk-drag-preview {
   box-sizing: border-box;
