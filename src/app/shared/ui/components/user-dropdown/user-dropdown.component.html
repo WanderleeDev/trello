@@ -1,5 +1,24 @@
-<app-dropdown direction="right">
-  <ng-container>
-    <app-user [dataUser]="dataUser()" [isMinimal]="true" />
+<app-menu-core label="" direction="right">
+  <app-user [dataUser]="dataUser()" [isMinimal]="true" ngProjectAs="trigger-left" />
+
+  <ng-container ngProjectAs="menu-content">
+    <div class="px-2 py-1 text-xs font-semibold text-foreground/60">Account</div>
+
+    <div ngMenuItem value="profile" class="flex items-center gap-2 p-2 rounded cursor-pointer text-sm hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg">
+      <span class="material-symbols-outlined text-base opacity-75" translate="no" aria-hidden="true">person</span>
+      <span class="flex-1">Profile</span>
+    </div>
+
+    <div ngMenuItem value="settings" class="flex items-center gap-2 p-2 rounded cursor-pointer text-sm hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg">
+      <span class="material-symbols-outlined text-base opacity-75" translate="no" aria-hidden="true">settings</span>
+      <span class="flex-1">Settings</span>
+    </div>
+
+    <div class="my-1 border-t border-border-inverse opacity-25"></div>
+
+    <div ngMenuItem value="logout" class="flex items-center gap-2 p-2 rounded cursor-pointer text-sm hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg">
+      <span class="material-symbols-outlined text-base opacity-75" translate="no" aria-hidden="true">logout</span>
+      <span class="flex-1">Log out</span>
+    </div>
   </ng-container>
-</app-dropdown>
+</app-menu-core>

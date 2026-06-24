@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { DataUser } from '../../../../store/user/user.store';
-import { DropdownComponent } from '../dropdown/dropdown.component';
+import { MenuCore } from '../menu-core/menu-core';
 import { UserComponent } from '../user/user.component';
+import { MenuItem } from '@angular/aria/menu';
 
 @Component({
     selector: 'app-user-dropdown',
@@ -9,7 +10,7 @@ import { UserComponent } from '../user/user.component';
     styleUrl: './user-dropdown.component.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
-    imports: [DropdownComponent, UserComponent],
+    imports: [MenuCore, UserComponent, MenuItem],
 })
 export class UserDropdownComponent {
   dataUser = input.required<DataUser>();
