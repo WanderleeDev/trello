@@ -1,0 +1,21 @@
+<app-menu-core label="">
+  <app-grid-dots-icon [size]="20" ngProjectAs="trigger-left" />
+
+  <ng-container ngProjectAs="menu-content">
+    <span class="px-2 py-1 text-xs font-semibold text-foreground/60">Your apps</span>
+
+    <div ngMenuItem value="atlassian" class="flex items-center gap-2 p-2 rounded cursor-pointer text-sm hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg">
+      <span class="bg-[#0152cc] p-0.5 rounded">
+        <app-atlasian-icon [size]="24" />
+      </span>
+      <span class="flex-1">Atlassian</span>
+    </div>
+
+    <div ngMenuItem value="trello" class="flex items-center gap-2 p-2 rounded cursor-pointer text-sm hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg">
+      <span class="bg-[#0152cc] p-0.5 rounded">
+        <app-trello-clr-icon [size]="24" />
+      </span>
+      <span class="flex-1">Trello</span>
+    </div>
+  </ng-container>
+</app-menu-core>

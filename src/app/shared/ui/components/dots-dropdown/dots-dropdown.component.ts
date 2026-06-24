@@ -1,44 +1,20 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { DropdownComponent } from '../dropdown/dropdown.component';
+import { MenuItem } from '@angular/aria/menu';
+import { MenuCore } from '../menu-core/menu-core';
 import { GridDotsIconComponent } from '../../../icons/components/grid-dots-icon.component';
-import { LinkBtnComponent } from '../link-btn/link-btn.component';
 import { AtlasianIconComponent } from '../../../icons/components/atlasian-icon.component';
 import { TrelloClrIconComponent } from '../../../icons/components/trello-clr-icon.component';
 
 @Component({
-    selector: 'app-dots-dropdown',
-    template: `
-    <app-dropdown>
-      <app-grid-dots-icon [size]="20" />
-
-      <div ngProjectAs="dropdown">
-        <strong>Your apps</strong>
-        <app-link-btn href="#">
-          <app-atlasian-icon [size]="24" ngProjectAs="left" class="dropdown-icon" />
-          Atlasian
-        </app-link-btn>
-        <app-link-btn href="#">
-          <app-trello-clr-icon [size]="24" ngProjectAs="left" class="dropdown-icon" />
-          Trello
-        </app-link-btn>
-      </div>
-    </app-dropdown>
-  `,
-    styles: `
-    .dropdown-icon {
-      background-color: #0152cc;
-      padding: 0.2rem;
-      border-radius: 0.4rem;
-    }
-  `,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-        DropdownComponent,
-        GridDotsIconComponent,
-        LinkBtnComponent,
-        AtlasianIconComponent,
-        TrelloClrIconComponent,
-    ],
+  selector: 'app-dots-dropdown',
+  templateUrl: './dots-dropdown.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    MenuCore,
+    MenuItem,
+    GridDotsIconComponent,
+    AtlasianIconComponent,
+    TrelloClrIconComponent,
+  ],
 })
 export class DotsDropdownComponent {}
