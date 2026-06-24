@@ -1,9 +1,9 @@
 <nav
-  class="flex relative gap-4 p-2 justify-between border-b-[0.15rem] border-b-transparent bg-main"
+  class="flex relative gap-2 p-2 justify-between border-b-[0.15rem] border-b-transparent bg-main md:gap-4"
 >
   <h1 class="sr-only">Trello</h1>
 
-  <ul class="grid grid-cols-[repeat(7,auto)] gap-2">
+  <ul class="flex items-center gap-1 md:gap-2">
     <li>
       <app-dots-dropdown />
     </li>
@@ -14,19 +14,19 @@
       </app-btn-base>
     </li>
 
-    <li>
+    <li class="hidden sm:block">
       <app-workspace-dropdown />
     </li>
 
-    <li>
+    <li class="hidden md:block">
       <app-recent-dropdown [dropdownData]="userStore.recentBoards()" />
     </li>
 
-    <li>
+    <li class="hidden lg:block">
       <app-templates-dropdown [dropdownData]="boardStore.templates()" />
     </li>
 
-    <li>
+    <li class="hidden lg:block">
       <app-starred-dropdown [dropdownData]="userStore.staredBoards()" />
     </li>
 
@@ -35,24 +35,24 @@
     </li>
   </ul>
 
-  <ul class="grid grid-cols-[repeat(7,auto)] gap-0.5">
-    <li class="self-center">
+  <ul class="flex items-center gap-1 md:gap-2">
+    <li class="hidden md:block">
       <app-search-bar />
     </li>
-    <li class="self-center">
+    <li>
       <app-btn-base>
         <app-bell-icon [size]="20" />
       </app-btn-base>
     </li>
-    <li class="self-center">
+    <li class="hidden sm:block">
       <app-btn-base>
         <app-help-icon [size]="20" />
       </app-btn-base>
     </li>
-    <li class="self-center">
+    <li>
       <app-btn-toggle-theme />
     </li>
-    <li class="self-center">
+    <li>
       <app-user-dropdown />
     </li>
   </ul>

@@ -4,11 +4,9 @@ import { BtnBaseComponent } from '../../../../shared/ui/components/btn-base/btn-
 import { NgComponentOutlet } from '@angular/common';
 
 @Component({
-    selector: 'app-banner',
-    templateUrl: './banner.component.html',
-    styleUrl: './banner.component.css',
-    standalone: true,
-    imports: [BtnBaseComponent, NgComponentOutlet],
+  selector: 'app-banner',
+  templateUrl: './banner.component.html',
+  imports: [BtnBaseComponent, NgComponentOutlet],
 })
 export class BannerComponent {
   protected readonly bannerOptions = [
