@@ -1,17 +1,59 @@
-<nav class="navbar">
+<nav
+  class="flex relative gap-4 p-2 justify-between border-b-[0.15rem] border-b-transparent bg-main"
+>
   <h1 class="sr-only">Trello</h1>
-  <app-navbar-main-options
-    [boardRecent]="userStore.recentBoards()"
-    [boardStarred]="userStore.staredBoards()"
-    [workspace]="userStore.myWorkspaces()"
-    [templates]="boardStore.templates()"
-  />
 
-  <!-- <app-navbar-second-options
-    [dataUser]="{
-      username: userStore.username(),
-      email: userStore.email(),
-      image: userStore.image(),
-    }"
-  /> -->
+  <ul class="grid grid-cols-[repeat(7,auto)] gap-2">
+    <li>
+      <app-dots-dropdown />
+    </li>
+
+    <li>
+      <app-btn-base (click)="redirectHome()" [rounded]="true" ariaLabel="to home">
+        <app-trello-dynamic-icon />
+      </app-btn-base>
+    </li>
+
+    <li>
+      <app-workspace-dropdown />
+    </li>
+
+    <li>
+      <app-recent-dropdown [dropdownData]="userStore.recentBoards()" />
+    </li>
+
+    <li>
+      <app-templates-dropdown [dropdownData]="boardStore.templates()" />
+    </li>
+
+    <li>
+      <app-starred-dropdown [dropdownData]="userStore.staredBoards()" />
+    </li>
+
+    <li>
+      <app-btn-base> create </app-btn-base>
+    </li>
+  </ul>
+
+  <ul class="grid grid-cols-[repeat(7,auto)] gap-0.5">
+    <li class="self-center">
+      <app-search-bar />
+    </li>
+    <li class="self-center">
+      <app-btn-base>
+        <app-bell-icon [size]="20" />
+      </app-btn-base>
+    </li>
+    <li class="self-center">
+      <app-btn-base>
+        <app-help-icon [size]="20" />
+      </app-btn-base>
+    </li>
+    <li class="self-center">
+      <app-btn-toggle-theme />
+    </li>
+    <li class="self-center">
+      <app-user-dropdown />
+    </li>
+  </ul>
 </nav>
