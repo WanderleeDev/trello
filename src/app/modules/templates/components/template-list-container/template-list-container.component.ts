@@ -12,7 +12,7 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
         <ng-content select="title-right" />
       </header>
 
-      <div class="flex gap-4 flex-wrap justify-between">
+      <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <ng-content select="list-content" />
       </div>
     </section>
