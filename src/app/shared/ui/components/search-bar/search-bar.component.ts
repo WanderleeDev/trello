@@ -6,17 +6,12 @@ import { LinkCardComponent } from '../link-card/link-card.component';
 import { LoaderIconComponent } from '../../../icons/components/loader-icon.component';
 
 @Component({
-    selector: 'app-search-bar',
-    templateUrl: './search-bar.component.html',
-    styleUrl: './search-bar.component.css',
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-        SearchIconComponent,
-        OutsideClickDirective,
-        LinkCardComponent,
-        LoaderIconComponent,
-    ],
+  selector: 'app-search-bar',
+  templateUrl: './search-bar.component.html',
+  styleUrl: './search-bar.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [SearchIconComponent, OutsideClickDirective, LoaderIconComponent],
 })
 export class SearchBarComponent {
   mockup: LinkCard[] = [

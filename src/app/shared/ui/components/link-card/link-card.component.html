@@ -1,11 +1,11 @@
-<app-link-btn class="card" [href]="data().name">
-  @if (data().image) {
-    <img class="card-image" [ngSrc]="data().image!" alt="workspace cover" width="40" height="32" />
+<app-link-btn class="card" [href]="path()">
+  @if (image()) {
+    <img class="card-image" [ngSrc]="image()!" alt="workspace cover" width="40" height="32" />
   } @else {
-    <app-letter-gradient-icon [$letter]="data().name" />
+    <app-letter-gradient-icon [$letter]="name()" />
   }
 
-  <span class="card-text">{{ data().name }} </span>
+  <span class="card-text">{{ name() }} </span>
 
   @if (badgeText()) {
     <app-badge class="card-badge" [content]="badgeText()!" />
