@@ -1,30 +1,43 @@
-import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input, viewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { MenuItem } from '@angular/aria/menu';
-import { MenuCore } from '../menu-core/menu-core';
+import { Menu, MenuContent, MenuItem, MenuTrigger } from '@angular/aria/menu';
 import { CardCommonComponent } from '../card-common/card-common.component';
 import { BoardTemplate } from '../../../mockup/templates';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-workspace-dropdown',
   templateUrl: './workspace-dropdown.component.html',
-  styleUrl: './workspace-dropdown.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
-  imports: [MenuCore, MenuItem, CardCommonComponent],
+  imports: [
+    Menu,
+    MenuTrigger,
+    MenuItem,
+    MenuContent,
+    OverlayModule,
+    CardCommonComponent,
+    CardCommonComponent,
+  ],
 })
 export class WorkspaceDropdownComponent {
   private readonly router = inject(Router);
-
-  readonly title = input.required<string>();
-  readonly dropdownData = input.required<BoardTemplate[]>();
-
-  onSelect(boardId: string): void {
-    this.router.navigate(['/board', boardId]);
-  }
-
-  toggleFavorite(event: Event, boardId: string): void {
-    event.stopPropagation();
-    console.log('Toggle favorite:', boardId);
-  }
+  protected formatMenu = viewChild<Menu<string>>('formatMenu');
+  readonly dropdownData = input<BoardTemplate[]>([
+    {
+      id: '1',
+      name: 'Sample Board 1',
+      description: 'This is a sample board description.',
+      image: 'https://trello.com/assets/cc47d0a8c646581ccd08.svg',
+      isFavorite: false,
+      tag: 'Sample Tag 1',
+    },
+    {
+      id: '2',
+      name: 'Sample Board 2',
+      description: 'This is another sample board description.',
+      image: 'https://trello.com/assets/cc47d0a8c646581ccd08.svg',
+      isFavorite: true,
+      tag: 'Sample Tag 2',
+    },
+  ]);
 }
