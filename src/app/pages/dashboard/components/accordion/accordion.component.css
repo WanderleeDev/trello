@@ -1,18 +1,1 @@
-:host {
-  display: block;
-}
-
-.accordion {
-  .accordion-header {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .accordion-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
+/* All styles are now Tailwind inline */
