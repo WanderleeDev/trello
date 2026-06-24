@@ -1,6 +1,12 @@
 @import 'tailwindcss';
 @plugin "@tailwindcss/forms";
 
+/* Fix Material Symbols alignment next to text in flex containers */
+.material-symbols-outlined {
+  line-height: 1;
+  vertical-align: middle;
+}
+
 @theme {
   --color-background: var(--bg-main);
   --color-foreground: var(--text-main-clr);
