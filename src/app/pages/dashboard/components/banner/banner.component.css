@@ -12,21 +12,3 @@
     opacity: 0;
   }
 }
-
-.banner {
-  .banner-description {
-    flex-grow: 1;
-  }
-
-  .banner-options {
-    flex-shrink: 1;
-    display: flex;
-    gap: 0.5rem;
-    text-wrap: nowrap;
-  }
-
-  .banner-link {
-    color: var(--clr-active);
-    text-decoration: underline;
-  }
-}

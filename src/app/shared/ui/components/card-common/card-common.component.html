@@ -1,6 +1,12 @@
-<figure class="card">
-  <img class="card-image" width="280" height="137" [ngSrc]="image()" alt="Starred board" />
-  <figcaption class="card-title">
+<figure class="flex flex-col gap-4 p-2">
+  <img
+    class="w-full object-cover block"
+    width="280"
+    height="137"
+    [ngSrc]="image()"
+    alt="Starred board"
+  />
+  <figcaption class="text-center text-sm">
     <ng-content select="extra" />
     {{ message() }}
   </figcaption>

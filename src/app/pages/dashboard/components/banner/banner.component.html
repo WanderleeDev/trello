@@ -1,13 +1,13 @@
 <ng-container>
-  <p class="banner-description">
+  <p class="flex-1">
     Atlassian uses cookies to improve your browsing experience, perform analytics and research, and
     conduct advertising. Accept all cookies to indicate that you agree to our use of cookies on your
     device.
-    <a class="banner-link" href="#" target="_blank" rel="noopener noreferrer">
+    <a class="text-active-fg underline" href="#" target="_blank" rel="noopener noreferrer">
       Atlassian cookies and tracking notice
     </a>
   </p>
-  <div class="banner-options">
+  <div class="shrink-1 flex gap-2 whitespace-nowrap">
     @for (option of bannerOptions; track $index) {
       <app-btn-base>
         @if (option.icon) {
