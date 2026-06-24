@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter, input } from '@angular/core';
-import { DragDropModule } from '@angular/cdk/drag-drop';
+import { DragDropModule, CdkDragDrop } from '@angular/cdk/drag-drop';
 import { List, Card } from '../../interfaces/board.model';
 import { BtnBaseComponent } from '../../../../shared/ui/components/btn-base/btn-base.component';
 
@@ -15,6 +15,7 @@ export class BoardListComponent {
   @Output() deleteListEvent = new EventEmitter<List>();
   @Output() editCardEvent = new EventEmitter<Card>();
   @Output() deleteCardEvent = new EventEmitter<{ list: List; card: Card }>();
+  @Output() cardDropped = new EventEmitter<CdkDragDrop<Card[]>>();
 
   addCard() {
     this.addCardEvent.emit(this.list());
@@ -30,5 +31,9 @@ export class BoardListComponent {
 
   onDeleteCard(card: Card) {
     this.deleteCardEvent.emit({ list: this.list(), card });
+  }
+
+  onCardDropped(event: CdkDragDrop<Card[]>) {
+    this.cardDropped.emit(event);
   }
 }

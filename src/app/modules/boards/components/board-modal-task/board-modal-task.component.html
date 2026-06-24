@@ -1,7 +1,49 @@
-<article class="bg-black/20 backdrop-blur-sm fixed inset-0 z-50 content-center p-4">
-  <div class="bg-white rounded-lg p-4 max-w-3xl w-full mx-auto h-3/4">
-    <button type="button" (click)="dialogClose()">X</button>
-    <h3 class="text-lg font-semibold mb-4">Add a card</h3>
-    <input type="text" placeholder="Enter a title for this card" />
+<div class="bg-modal rounded-xl shadow-card p-6 max-w-lg w-full mx-auto">
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-lg font-bold">{{ card ? 'Edit card' : 'New card' }}</h2>
+    <button
+      class="flex items-center justify-center w-8 h-8 rounded hover:bg-btn-hovered transition-colors"
+      (click)="cancel()"
+      aria-label="close"
+    >
+      <span class="material-symbols-outlined" style="font-size: 20px">close</span>
+    </button>
   </div>
-</article>
+
+  <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-1.5">
+      <label class="text-xs font-semibold text-foreground/60 uppercase tracking-wider" for="card-title">Title</label>
+      <input
+        id="card-title"
+        class="w-full px-3 py-2 rounded bg-background border border-current/10 text-sm focus:outline-2 focus:outline-active-fg"
+        [(ngModel)]="title"
+        placeholder="Card title"
+      />
+    </div>
+
+    <div class="flex flex-col gap-1.5">
+      <label class="text-xs font-semibold text-foreground/60 uppercase tracking-wider" for="card-description">Description</label>
+      <textarea
+        id="card-description"
+        class="w-full px-3 py-2 rounded bg-background border border-current/10 text-sm resize-none h-24 focus:outline-2 focus:outline-active-fg"
+        [(ngModel)]="description"
+        placeholder="Add a description"
+      ></textarea>
+    </div>
+
+    <div class="flex justify-end gap-2 pt-2">
+      <button
+        class="px-4 py-2 rounded font-semibold text-sm bg-btn-hovered hover:bg-btn-pressed transition-colors"
+        (click)="cancel()"
+      >
+        Cancel
+      </button>
+      <button
+        class="px-4 py-2 rounded font-semibold text-sm bg-btn-primary text-btn-primary-text hover:bg-btn-primary-hover transition-colors"
+        (click)="save()"
+      >
+        Save
+      </button>
+    </div>
+  </div>
+</div>

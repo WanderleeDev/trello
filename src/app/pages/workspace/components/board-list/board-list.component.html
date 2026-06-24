@@ -4,14 +4,19 @@
       <h3>{{ list().title }}</h3>
     </header>
     <div class="flex gap-2">
-      <app-btn-base ariaLabel="options" (click)="deleteList()">
+      <app-btn-base (click)="deleteList()" ariaLabel="delete list">
         <span class="material-symbols-outlined" style="font-size: 20px">delete</span>
       </app-btn-base>
     </div>
   </div>
 
   <div class="p-4 flex-1 overflow-y-auto [scrollbar-width:thin] [scrollbar-color:var(--border-inverse)_transparent]">
-    <div class="flex flex-col gap-2" cdkDropList>
+    <div
+      class="flex flex-col gap-2 min-h-[4px]"
+      cdkDropList
+      [cdkDropListData]="list().cards"
+      (cdkDropListDropped)="onCardDropped($event)"
+    >
       <ng-content select="board-card" />
     </div>
   </div>

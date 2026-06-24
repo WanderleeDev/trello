@@ -1,4 +1,5 @@
 import { Component, inject, input } from '@angular/core';
+import { DragDropModule, CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { List, Card } from './interfaces/board.model';
 import { BoardModalTaskComponent } from '../../modules/boards/components/board-modal-task/board-modal-task.component';
 import { NavComponent } from '../../shared/ui/components/nav/nav.component';
@@ -23,6 +24,7 @@ import { Dialog, DialogModule } from '@angular/cdk/dialog';
     BtnBaseComponent,
     AddListButtonComponent,
     DialogModule,
+    DragDropModule,
   ],
 })
 export class WorkspaceComponent {
@@ -52,6 +54,7 @@ export class WorkspaceComponent {
   ];
 
   private nextCardId = 7;
+  private nextListId = 3;
 
   addCard(list: List) {
     const newCard: Card = {
@@ -68,11 +71,55 @@ export class WorkspaceComponent {
     this.list = this.list.filter(l => l.id !== list.id);
   }
 
+  addList() {
+    const newList: List = {
+      id: String(this.nextListId++),
+      title: `List ${this.nextListId - 1}`,
+      cards: [],
+    };
+    this.list = [...this.list, newList];
+  }
+
+  onCardDropped(event: CdkDragDrop<Card[]>) {
+    const targetList = this.list.find(l => l.cards === event.container.data);
+    const sourceList = this.list.find(l => l.cards === event.previousContainer.data);
+    if (!targetList || !sourceList) return;
+
+    if (event.previousContainer === event.container) {
+      moveItemInArray(targetList.cards, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(
+        sourceList.cards,
+        targetList.cards,
+        event.previousIndex,
+        event.currentIndex,
+      );
+    }
+
+    this.list = this.list.map(l => ({ ...l }));
+  }
+
+  onListDropped(event: CdkDragDrop<List[]>) {
+    moveItemInArray(this.list, event.previousIndex, event.currentIndex);
+    this.list = [...this.list];
+  }
+
   openDialog(card?: Card) {
-    this.dialog.open(BoardModalTaskComponent, {
+    const dialogRef = this.dialog.open<Card | null>(BoardModalTaskComponent, {
       maxWidth: '500px',
       autoFocus: false,
       data: card,
+    });
+
+    dialogRef.closed.subscribe(result => {
+      if (!result) return;
+
+      this.list = this.list.map(l => ({
+        ...l,
+        cards: l.cards.map(c =>
+          c.id === result.id ? { ...result } : c,
+        ),
+      }));
     });
   }
 }

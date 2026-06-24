@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 
 @Component({
     selector: 'app-add-list-button',
     templateUrl: './add-list-button.component.html',
     standalone: true,
-    imports: []
+    imports: [],
 })
-export class AddListButtonComponent {}
+export class AddListButtonComponent {
+  readonly addList = output<void>();
+}
