@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     selector: 'app-trello-dynamic-icon',
     template: `
     <div class="relative w-[4.7rem] h-4 py-2 group"
-      [style.filter]="'var(--dynamic-logo-filter)'">
+      style="filter: var(--dynamic-logo-filter)">
       <img
         class="block group-hover:hidden w-full h-full object-contain"
         src="https://trello.com/assets/d947df93bc055849898e.gif"

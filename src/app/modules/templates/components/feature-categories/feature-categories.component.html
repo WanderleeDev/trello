@@ -3,7 +3,7 @@
 
   <div class="flex gap-4 capitalize text-center overflow-x-auto pb-2">
     @for (category of featureCategories | keyvalue; track $index) {
-      <a [routerLink]="['/dashboard/templates/features', category.key]" class="flex-shrink-0">
+      <a [routerLink]="['/dashboard/templates/features', category.key]" class="shrink-0">
         <figure class="w-25">
           <img
             class="rounded-md aspect-square"
