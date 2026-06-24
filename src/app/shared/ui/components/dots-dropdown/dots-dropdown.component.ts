@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { MenuItem } from '@angular/aria/menu';
-import { MenuCore } from '../menu-core/menu-core';
+import { ChangeDetectionStrategy, Component, viewChild } from '@angular/core';
+import { Menu, MenuContent, MenuItem, MenuTrigger } from '@angular/aria/menu';
+import { OverlayModule } from '@angular/cdk/overlay';
 import { GridDotsIconComponent } from '../../../icons/components/grid-dots-icon.component';
 import { AtlasianIconComponent } from '../../../icons/components/atlasian-icon.component';
 import { TrelloClrIconComponent } from '../../../icons/components/trello-clr-icon.component';
@@ -10,11 +10,16 @@ import { TrelloClrIconComponent } from '../../../icons/components/trello-clr-ico
   templateUrl: './dots-dropdown.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    MenuCore,
+    Menu,
+    MenuTrigger,
     MenuItem,
+    MenuContent,
+    OverlayModule,
     GridDotsIconComponent,
     AtlasianIconComponent,
     TrelloClrIconComponent,
   ],
 })
-export class DotsDropdownComponent {}
+export class DotsDropdownComponent {
+  protected formatMenu = viewChild<Menu<string>>('formatMenu');
+}
