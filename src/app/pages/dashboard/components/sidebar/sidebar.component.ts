@@ -13,17 +13,17 @@ import { LetterGradientIconComponent } from '../../../../shared/icons/components
 import { CardPremiumTryComponent } from '../card-premium-try/card-premium-try.component';
 
 @Component({
-    selector: 'app-sidebar',
-    templateUrl: './sidebar.component.html',
-    styleUrl: './sidebar.component.css',
-    standalone: true,
-    imports: [
-        LinkBtnComponent,
-        NgComponentOutlet,
-        AccordionComponent,
-        LetterGradientIconComponent,
-        CardPremiumTryComponent,
-    ],
+  selector: 'app-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrl: './sidebar.component.css',
+  standalone: true,
+  imports: [
+    LinkBtnComponent,
+    NgComponentOutlet,
+    AccordionComponent,
+    LetterGradientIconComponent,
+    CardPremiumTryComponent,
+  ],
 })
 export class SidebarComponent {
   protected readonly sections = [
@@ -48,27 +48,27 @@ export class SidebarComponent {
     {
       icon: TrelloIconComponent,
       label: 'Boards',
-      link: '/board/entry',
+      link: '/dashboard/boards',
     },
     {
       icon: HeartIconComponent,
       label: 'Highlights',
-      link: '/board/templates',
+      link: '/dashboard/highlights',
     },
     {
       icon: ViewIconComponent,
       label: 'Views',
-      link: '/board/home',
+      link: '/dashboard/home',
     },
     {
       icon: MemberIconComponent,
       label: 'Members',
-      link: '/board/entry',
+      link: '/dashboard/members',
     },
     {
       icon: SettingsIconComponent,
       label: 'Settings',
-      link: '/board/templates',
+      link: '/dashboard/settings',
     },
   ];
 }
