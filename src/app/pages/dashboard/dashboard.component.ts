@@ -12,9 +12,9 @@ import { RouterOutlet } from '@angular/router';
       <app-banner />
     </header>
 
-    <main class="flex justify-center items-start w-[min(100%,70rem)] mx-auto mt-10">
-      <app-sidebar />
-      <div class="flex-1 h-full">
+    <main class="flex justify-center items-start w-full mx-auto mt-10 lg:w-[min(100%,70rem)]">
+      <app-sidebar class="hidden lg:block" />
+      <div class="flex-1 h-full px-4 lg:px-0">
         <router-outlet />
       </div>
     </main>

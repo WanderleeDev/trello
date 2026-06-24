@@ -1,7 +1,7 @@
 <article class="w-full overflow-x-hidden">
   <h2 class="text-xl font-semibold mb-4 capitalize">features categories</h2>
 
-  <div class="flex gap-4 capitalize text-center">
+  <div class="flex gap-4 capitalize text-center overflow-x-auto pb-2 flex-wrap md:flex-nowrap">
     @for (category of featureCategories | keyvalue; track $index) {
       <a [routerLink]="['/dashboard/templates/features', category.key]">
         <figure class="w-25">
