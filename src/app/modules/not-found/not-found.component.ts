@@ -8,10 +8,10 @@ import { BasicImageComponent } from '../../shared/ui/components/basic-image/basi
     <div class="flex flex-col items-center justify-center gap-6">
       <app-basic-image [src]="img" [alt]="'cover image'" [height]="12" [width]="12" />
       <div class="flex flex-col gap-2 text-center">
-        <p>Se ha producido un error en esta página</p>
-        <p>Nuestro equipo ha sido notificado.</p>
+        <p>Something went wrong on this page</p>
+        <p>Our team has been notified.</p>
       </div>
-      <a routerLink="/" class="text-blue-500 underline">Go Back Dashboard</a>
+      <a routerLink="/dashboard" class="text-blue-500 underline">Go to Dashboard</a>
     </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
