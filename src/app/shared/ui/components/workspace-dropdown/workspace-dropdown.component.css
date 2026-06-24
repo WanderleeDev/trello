@@ -1,19 +1,4 @@
-.list {
-  display: flex;
-  flex-direction: column;
-
-  .list-title {
-    text-wrap: nowrap;
-    text-overflow: ellipsis;
-    text-transform: capitalize;
-  }
-
-  .list-spaces {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.extra-btn {
+:host {
   display: block;
+  position: relative;
 }

@@ -1,25 +1,30 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { BoardTemplate } from '../../../../shared/mockup/templates';
-import { DropdownComponent } from '../dropdown/dropdown.component';
-import { ArrowDownIconComponent } from '../../../icons/components/arrow-down-icon.component';
-import { LinkCardComponent } from '../link-card/link-card.component';
-import { StarIconComponent } from '../../../icons/components/star-icon.component';
+import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
+import { Router } from '@angular/router';
+import { MenuItem } from '@angular/aria/menu';
+import { MenuCore } from '../menu-core/menu-core';
+import { CardCommonComponent } from '../card-common/card-common.component';
+import { BoardTemplate } from '../../../mockup/templates';
 
 @Component({
-    selector: 'app-workspace-dropdown',
-    templateUrl: './workspace-dropdown.component.html',
-    styleUrl: './workspace-dropdown.component.css',
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-        DropdownComponent,
-        ArrowDownIconComponent,
-        LinkCardComponent,
-        StarIconComponent,
-    ],
+  selector: 'app-workspace-dropdown',
+  templateUrl: './workspace-dropdown.component.html',
+  styleUrl: './workspace-dropdown.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [MenuCore, MenuItem, CardCommonComponent],
 })
 export class WorkspaceDropdownComponent {
+  private readonly router = inject(Router);
+
   readonly title = input.required<string>();
   readonly dropdownData = input.required<BoardTemplate[]>();
-  readonly subTitle = input<string>();
+
+  onSelect(boardId: string): void {
+    this.router.navigate(['/board', boardId]);
+  }
+
+  toggleFavorite(event: Event, boardId: string): void {
+    event.stopPropagation();
+    console.log('Toggle favorite:', boardId);
+  }
 }

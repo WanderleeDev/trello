@@ -5,22 +5,18 @@ import { DotsDropdownComponent } from '../../../dots-dropdown/dots-dropdown.comp
 import { BtnBaseComponent } from '../../../btn-base/btn-base.component';
 import { TrelloDynamicIconComponent } from '../../../../../icons/components/trello-dynamic-icon/trello-dynamic-icon.component';
 import { WorkspaceDropdownComponent } from '../../../workspace-dropdown/workspace-dropdown.component';
-import { CardCommonComponent } from '../../../card-common/card-common.component';
-import { StarIconComponent } from '../../../../../icons/components/star-icon.component';
 
 @Component({
-    selector: 'app-navbar-main-options',
-    templateUrl: './navbar-main-options.component.html',
-    styleUrl: './navbar-main-options.component.css',
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
+  selector: 'app-navbar-main-options',
+  templateUrl: './navbar-main-options.component.html',
+  styleUrl: './navbar-main-options.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
     imports: [
         DotsDropdownComponent,
         BtnBaseComponent,
         TrelloDynamicIconComponent,
         WorkspaceDropdownComponent,
-        CardCommonComponent,
-        StarIconComponent,
     ],
 })
 export class NavbarMainOptionsComponent {

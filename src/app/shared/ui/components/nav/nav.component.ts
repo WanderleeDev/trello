@@ -4,14 +4,13 @@ import { BoardStore } from '../../../../store/board/board.store';
 import { UserStore } from '../../../../store/user/user.store';
 import { NavbarMainOptionsComponent } from './components/navbar-main-options/navbar-main-options.component';
 import { NavbarSecondOptionsComponent } from './components/navbar-second-options/navbar-second-options.component';
-import { MenuCore } from '../menu-core/menu-core';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css',
   standalone: true,
-  imports: [NavbarMainOptionsComponent, NavbarSecondOptionsComponent, MenuCore],
+  imports: [NavbarMainOptionsComponent, NavbarSecondOptionsComponent],
 })
 export class NavComponent {
   private readonly router = inject(Router);
