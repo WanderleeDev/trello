@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
 import { BoardStore } from '../../../../store/board/board.store';
 import { UserStore } from '../../../../store/user/user.store';
 import { BellIconComponent } from '../../../icons/components/bell-icon.component';
@@ -34,11 +33,6 @@ import { WorkspaceDropdownComponent } from '../workspace-dropdown/workspace-drop
   ],
 })
 export class NavComponent {
-  private readonly router = inject(Router);
   protected readonly boardStore = inject(BoardStore);
   protected readonly userStore = inject(UserStore);
-
-  public redirectHome(): void {
-    this.router.navigate(['/']);
-  }
 }

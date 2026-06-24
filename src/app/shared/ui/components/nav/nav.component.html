@@ -9,9 +9,13 @@
     </li>
 
     <li>
-      <app-btn-base (click)="redirectHome()" [rounded]="true" ariaLabel="to home">
+      <a
+        routerLink="/"
+        class="flex items-center justify-center p-1 rounded hover:bg-[var(--ds-background-hovered,#091e421f)] transition-colors"
+        aria-label="to home"
+      >
         <app-trello-dynamic-icon />
-      </app-btn-base>
+      </a>
     </li>
 
     <li class="hidden sm:block">
@@ -30,7 +34,7 @@
       <app-starred-dropdown [dropdownData]="userStore.staredBoards()" />
     </li>
 
-    <li>
+    <li class="hidden sm:block">
       <app-btn-base> create </app-btn-base>
     </li>
   </ul>
@@ -39,7 +43,7 @@
     <li class="hidden md:block">
       <app-search-bar />
     </li>
-    <li>
+    <li class="hidden sm:block">
       <app-btn-base>
         <app-bell-icon [size]="20" />
       </app-btn-base>
