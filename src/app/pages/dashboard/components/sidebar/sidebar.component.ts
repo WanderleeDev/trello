@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
-import { TrelloIconComponent } from '../../../../shared/icons/components/trello-icon.component';
-import { TemplateIconComponent } from '../../../../shared/icons/components/template-icon.component';
-import { WaveIconComponent } from '../../../../shared/icons/components/wave-icon.component';
-import { HeartIconComponent } from '../../../../shared/icons/components/heart-icon.component';
-import { ViewIconComponent } from '../../../../shared/icons/components/view-icon.component';
-import { MemberIconComponent } from '../../../../shared/icons/components/member-icon.component';
-import { SettingsIconComponent } from '../../../../shared/icons/components/settings-icon.component';
+import { MatIconComponent } from '../../../../shared/ui/components/mat-icon/mat-icon.component';
 import { LinkBtnComponent } from '../../../../shared/ui/components/link-btn/link-btn.component';
-import { NgComponentOutlet } from '@angular/common';
 import { AccordionComponent } from '../accordion/accordion.component';
 import { LetterGradientIconComponent } from '../../../../shared/icons/components/letter-gradient-icon.component';
 import { CardPremiumTryComponent } from '../card-premium-try/card-premium-try.component';
@@ -18,7 +11,7 @@ import { CardPremiumTryComponent } from '../card-premium-try/card-premium-try.co
    standalone: true,
   imports: [
     LinkBtnComponent,
-    NgComponentOutlet,
+    MatIconComponent,
     AccordionComponent,
     LetterGradientIconComponent,
     CardPremiumTryComponent,
@@ -27,17 +20,17 @@ import { CardPremiumTryComponent } from '../card-premium-try/card-premium-try.co
 export class SidebarComponent {
   protected readonly sections = [
     {
-      icon: TrelloIconComponent,
+      icon: 'view_column',
       label: 'Boards',
       link: '/dashboard',
     },
     {
-      icon: TemplateIconComponent,
+      icon: 'dashboard_customize',
       label: 'Templates',
       link: '/dashboard/templates',
     },
     {
-      icon: WaveIconComponent,
+      icon: 'trending_up',
       label: 'Entry',
       link: '/dashboard/entry',
     },
@@ -45,27 +38,27 @@ export class SidebarComponent {
 
   protected readonly workspaces = [
     {
-      icon: TrelloIconComponent,
+      icon: 'view_column',
       label: 'Boards',
       link: '/dashboard/boards',
     },
     {
-      icon: HeartIconComponent,
+      icon: 'favorite',
       label: 'Highlights',
       link: '/dashboard/highlights',
     },
     {
-      icon: ViewIconComponent,
+      icon: 'grid_view',
       label: 'Views',
       link: '/dashboard/home',
     },
     {
-      icon: MemberIconComponent,
+      icon: 'group',
       label: 'Members',
       link: '/dashboard/members',
     },
     {
-      icon: SettingsIconComponent,
+      icon: 'settings',
       label: 'Settings',
       link: '/dashboard/settings',
     },

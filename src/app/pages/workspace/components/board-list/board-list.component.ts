@@ -1,13 +1,12 @@
 import { Component, Output, EventEmitter, input } from '@angular/core';
 import { List, Card } from '../../interfaces/board.model';
 import { BtnBaseComponent } from '../../../../shared/ui/components/btn-base/btn-base.component';
-import { DotsComponent } from '../../../../shared/icons/components/dots.component'; // Assuming you have a model file
 
 @Component({
     selector: 'app-board-list',
          templateUrl: './board-list.component.html',
     standalone: true,
-    imports: [BtnBaseComponent, DotsComponent],
+     imports: [BtnBaseComponent],
 })
 export class BoardListComponent {
   readonly list = input.required<List>();

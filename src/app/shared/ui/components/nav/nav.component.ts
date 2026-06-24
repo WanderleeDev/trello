@@ -1,8 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { BoardStore } from '../../../../store/board/board.store';
 import { UserStore } from '../../../../store/user/user.store';
-import { BellIconComponent } from '../../../icons/components/bell-icon.component';
-import { HelpIconComponent } from '../../../icons/components/help-icon.component';
 import { TrelloDynamicIconComponent } from '../../../icons/components/trello-dynamic-icon/trello-dynamic-icon.component';
 import { BtnBaseComponent } from '../btn-base/btn-base.component';
 import { BtnToggleThemeComponent } from '../btn-toggle-theme/btn-toggle-theme.component';
@@ -26,8 +24,6 @@ import { WorkspaceDropdownComponent } from '../workspace-dropdown/workspace-drop
     TemplatesDropdownComponent,
     StarredDropdownComponent,
     SearchBarComponent,
-    BellIconComponent,
-    HelpIconComponent,
     BtnToggleThemeComponent,
     UserDropdownComponent,
   ],

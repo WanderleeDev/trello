@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { CheckIconComponent } from '../../../../shared/icons/components/check-icon.component';
+import { MatIconComponent } from '../../../../shared/ui/components/mat-icon/mat-icon.component';
 import { BtnBaseComponent } from '../../../../shared/ui/components/btn-base/btn-base.component';
-import { NgComponentOutlet } from '@angular/common';
 
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
-  imports: [BtnBaseComponent, NgComponentOutlet],
+  imports: [BtnBaseComponent, MatIconComponent],
 })
 export class BannerComponent {
   protected readonly bannerOptions = [
@@ -18,7 +17,7 @@ export class BannerComponent {
     },
     {
       label: 'Accept all',
-      icon: CheckIconComponent,
+      icon: 'check',
     },
   ];
 }

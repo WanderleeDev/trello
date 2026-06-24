@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { LinkCard } from '../../../../shared/interfaces/LinkCard.interface';
-import { SearchIconComponent } from '../../../icons/components/search-icon.component';
 import { OutsideClickDirective } from '../../../directives/outside-click.directive';
 import { LinkCardComponent } from '../link-card/link-card.component';
 import { LoaderIconComponent } from '../../../icons/components/loader-icon.component';
@@ -10,7 +9,7 @@ import { LoaderIconComponent } from '../../../icons/components/loader-icon.compo
      templateUrl: './search-bar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [SearchIconComponent, OutsideClickDirective, LoaderIconComponent],
+  imports: [OutsideClickDirective, LoaderIconComponent],
 })
 export class SearchBarComponent {
   mockup: LinkCard[] = [

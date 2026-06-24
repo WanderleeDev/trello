@@ -11,7 +11,7 @@
       @if (item.boards.length > 0) {
         <article>
           <h3 class="flex items-center gap-2 mb-2 pl-4 truncate">
-            <ng-container *ngComponentOutlet="item.icon" />
+            <app-mat-icon [name]="item.icon" [size]="20" />
             {{ item.title | titlecase }}
           </h3>
           <ul>
@@ -25,6 +25,6 @@
       }
     }
 
-    <app-btn-base class="contents" variant="primary"> <app-add-svg /> Create a board </app-btn-base>
+    <app-btn-base class="contents" variant="primary"> <span class="material-symbols-outlined" style="font-size: 20px">add</span> Create a board </app-btn-base>
   </div>
 </section>

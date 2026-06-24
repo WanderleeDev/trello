@@ -7,7 +7,6 @@ import { BoardComponent } from './components/board/board.component';
 import { BoardListComponent } from './components/board-list/board-list.component';
 import { BoardCardComponent } from './components/board-card/board-card.component';
 import { BtnBaseComponent } from '../../shared/ui/components/btn-base/btn-base.component';
-import { AddSvgComponent } from '../../shared/icons/components/add-svg.component';
 import { AddListButtonComponent } from './components/add-list-button/add-list-button.component';
 import { Dialog, DialogModule } from '@angular/cdk/dialog';
 
@@ -22,7 +21,6 @@ import { Dialog, DialogModule } from '@angular/cdk/dialog';
     BoardListComponent,
     BoardCardComponent,
     BtnBaseComponent,
-    AddSvgComponent,
     AddListButtonComponent,
     DialogModule,
   ],

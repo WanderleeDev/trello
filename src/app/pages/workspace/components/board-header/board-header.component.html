@@ -5,28 +5,28 @@
   <div class="flex items-center gap-4">
     <h2 class="text-xl font-bold">{{ boardName }}</h2>
     <app-btn-base ariaLabel="add favorite">
-      <app-star-icon />
+      <span class="material-symbols-outlined" style="font-size: 20px">star</span>
     </app-btn-base>
   </div>
 
   <div class="flex gap-2">
     <app-btn-base ariaLabel="options">
-      <app-rocket-svg />
+      <span class="material-symbols-outlined" style="font-size: 20px">rocket_launch</span>
     </app-btn-base>
 
     <app-btn-base ariaLabel="options">
-      <app-ray-svg />
+      <span class="material-symbols-outlined" style="font-size: 20px">bolt</span>
     </app-btn-base>
 
     <app-btn-base ariaLabel="filter board">
-      <app-filter-svg />
+      <span class="material-symbols-outlined" style="font-size: 20px">filter_list</span>
       Filters
     </app-btn-base>
 
     <app-user [dataUser]="user" [isMinimal]="true" />
 
     <app-btn-base ariaLabel="options">
-      <app-dots />
+      <span class="material-symbols-outlined" style="font-size: 20px">more_horiz</span>
     </app-btn-base>
   </div>
 </header>

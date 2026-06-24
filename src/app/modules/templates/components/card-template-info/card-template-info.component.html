@@ -26,11 +26,11 @@
   <p class="text-xs my-2 leading-5 opacity-90">{{ cardData().description | truncate: 100 : true }}</p>
   <div class="flex gap-4 text-xs opacity-70 mt-2">
     <span class="flex gap-1">
-      <app-eye-svg />
+      <span class="material-symbols-outlined" style="font-size: 20px">visibility</span>
       {{ cardData().views | number | quantityFormat }} {{ pluralViews() }}
     </span>
     <span class="flex gap-1">
-      <app-copy-svg />
+      <span class="material-symbols-outlined" style="font-size: 20px">content_copy</span>
       {{ cardData().copies | number | quantityFormat }} {{ pluralCopies() }}
     </span>
   </div>

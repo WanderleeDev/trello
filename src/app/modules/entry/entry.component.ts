@@ -1,17 +1,13 @@
 import { Component } from '@angular/core';
-import { StarIconComponent } from '../../shared/icons/components/star-icon.component';
-import { ClockSvgComponent } from '../../shared/icons/components/clock-svg.component';
 import { LinkCard } from '../../shared/interfaces/LinkCard.interface';
 import { CardInfoComponent } from '../../shared/ui/components/card-info/card-info.component';
-import { NgComponentOutlet, TitleCasePipe } from '@angular/common';
-import { LinkCardComponent } from '../../shared/ui/components/link-card/link-card.component';
+import { TitleCasePipe } from '@angular/common';
 import { BtnBaseComponent } from '../../shared/ui/components/btn-base/btn-base.component';
-import { AddSvgComponent } from '../../shared/icons/components/add-svg.component';
+import { MatIconComponent } from '../../shared/ui/components/mat-icon/mat-icon.component';
 
 export interface Board {
   title: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  icon: any;
+  icon: string;
   boards: LinkCard[];
 }
 
@@ -21,10 +17,8 @@ export interface Board {
     standalone: true,
     imports: [
         CardInfoComponent,
-        NgComponentOutlet,
-        LinkCardComponent,
+        MatIconComponent,
         BtnBaseComponent,
-        AddSvgComponent,
         TitleCasePipe,
     ],
 })
@@ -33,7 +27,7 @@ export class EntryComponent {
   protected readonly data: Board[] = [
     {
       title: 'favorites',
-      icon: StarIconComponent,
+      icon: 'star',
       boards: [
         {
           name: 'Encriptador de texto - Alura Challenges ONE',
@@ -45,7 +39,7 @@ export class EntryComponent {
     },
     {
       title: 'recently viewed',
-      icon: ClockSvgComponent,
+      icon: 'schedule',
       boards: [
         {
           name: 'Encriptador de texto - Alura Challenges ONE',

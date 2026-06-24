@@ -2,16 +2,15 @@ import { Component, ChangeDetectionStrategy, Input, booleanAttribute } from '@an
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
-    selector: 'app-basic-image',
-    templateUrl: './basic-image.component.html',
-    styles: `
+  selector: 'app-basic-image',
+  templateUrl: './basic-image.component.html',
+  styles: `
     :host {
       display: contents;
     }
   `,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [NgOptimizedImage],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [NgOptimizedImage],
 })
 export class BasicImageComponent {
   @Input({ required: true }) src = '';

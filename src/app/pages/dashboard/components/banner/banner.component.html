@@ -13,7 +13,7 @@
     @for (option of bannerOptions; track $index) {
       <app-btn-base>
         @if (option.icon) {
-          <ng-container *ngComponentOutlet="option.icon" ngProjectAs="left" />
+          <app-mat-icon [name]="option.icon" [size]="20" ngProjectAs="left" />
         }
         {{ option.label }}
       </app-btn-base>

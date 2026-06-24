@@ -3,7 +3,7 @@
     @for (section of sections; track $index) {
       <li>
         <app-link-btn [href]="section.link">
-          <ng-container *ngComponentOutlet="section.icon" ngProjectAs="left" />
+          <app-mat-icon [name]="section.icon" [size]="20" ngProjectAs="left" />
           {{ section.label }}
         </app-link-btn>
       </li>
@@ -22,7 +22,7 @@
       @for (workspace of workspaces; track $index) {
         <li>
           <app-link-btn [href]="workspace.link" design="ident">
-            <ng-container *ngComponentOutlet="workspace.icon" ngProjectAs="left" />
+            <app-mat-icon [name]="workspace.icon" [size]="20" ngProjectAs="left" />
             {{ workspace.label }}
           </app-link-btn>
         </li>
