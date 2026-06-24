@@ -11,7 +11,7 @@
   </p>
   <div class="shrink flex flex-wrap gap-2 whitespace-nowrap">
     @for (option of bannerOptions; track $index) {
-      <app-btn-base>
+      <app-btn-base [variant]="option.primary ? 'primary' : null">
         @if (option.icon) {
           <app-mat-icon [name]="option.icon" [size]="20" ngProjectAs="left" />
         }

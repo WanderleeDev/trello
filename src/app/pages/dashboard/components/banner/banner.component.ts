@@ -8,7 +8,7 @@ import { BtnBaseComponent } from '../../../../shared/ui/components/btn-base/btn-
   imports: [BtnBaseComponent, MatIconComponent],
 })
 export class BannerComponent {
-  protected readonly bannerOptions = [
+  protected readonly bannerOptions: { label: string; icon?: string; primary?: boolean }[] = [
     {
       label: 'Preferences',
     },
@@ -18,6 +18,7 @@ export class BannerComponent {
     {
       label: 'Accept all',
       icon: 'check',
+      primary: true,
     },
   ];
 }
