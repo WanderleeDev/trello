@@ -7,7 +7,7 @@
     <app-sidebar-board class="hidden lg:block" />
 
     <app-board [lists]="list" (listDropped)="onListDropped($event)">
-      <div cdkDropListGroup>
+      <div cdkDropListGroup class="flex gap-4">
         @for (li of list; track li.id) {
           <app-board-list
             [list]="li"
