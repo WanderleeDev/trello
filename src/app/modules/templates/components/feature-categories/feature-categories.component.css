@@ -1,26 +1,3 @@
 :host {
   display: block;
 }
-
-.features {
-  width: 100%;
-  overflow-x: hidden;
-
-  .features-title {
-    text-transform: capitalize;
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-
-  .features-list {
-    display: flex;
-    gap: 1rem;
-    text-transform: capitalize;
-    text-align: center;
-  }
-
-  .features-item {
-    width: 100px;
-  }
-}

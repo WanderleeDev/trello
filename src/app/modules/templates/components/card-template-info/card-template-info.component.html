@@ -1,35 +1,35 @@
-<figure class="card-info">
-  <div class="card-image">
+<figure class="w-64">
+  <div class="relative w-full h-33 mb-3">
     <img
       priority
       [ngSrc]="cardData().thumbnail"
       [alt]="cardData().title"
-      class="card-image-thumbnail"
+      class="rounded object-cover aspect-[4/2]"
       fill
     />
     <img
-      class="card-image-author"
-      [class.author-common-style]="!isCommonAuthor()"
-      [class.author-trello-style]="isCommonAuthor()"
+      class="absolute left-2 bottom-0 -translate-y-2.5 w-12 h-12 object-cover border-2 border-border-inverse bg-accent z-10 shadow-card"
+      [class.rounded-full]="!isCommonAuthor()"
+      [class.rounded]="isCommonAuthor()"
       [ngSrc]="cardData().author.image"
       [alt]="cardData().author.name"
       width="48"
       height="48"
     />
   </div>
-  <div class="card-header">
-    <figcaption class="card-title truncate" [title]="cardData().title">
+  <div class="mb-2 pt-2">
+    <figcaption class="text-base font-semibold leading-6 truncate m-0" [title]="cardData().title">
       {{ cardData().title }}
     </figcaption>
-    <p class="card-author">by {{ cardData().author.name }}</p>
+    <p class="text-xs my-1 opacity-80">by {{ cardData().author.name }}</p>
   </div>
-  <p class="card-description">{{ cardData().description | truncate: 100 : true }}</p>
-  <div class="card-stats">
-    <span class="card-views">
+  <p class="text-xs my-2 leading-5 opacity-90">{{ cardData().description | truncate: 100 : true }}</p>
+  <div class="flex gap-4 text-xs opacity-70 mt-2">
+    <span class="flex gap-1">
       <app-eye-svg />
       {{ cardData().views | number | quantityFormat }} {{ pluralViews() }}
     </span>
-    <span class="card-copies">
+    <span class="flex gap-1">
       <app-copy-svg />
       {{ cardData().copies | number | quantityFormat }} {{ pluralCopies() }}
     </span>

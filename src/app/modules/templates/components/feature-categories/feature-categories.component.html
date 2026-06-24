@@ -1,19 +1,19 @@
-<article class="features">
-  <h2 class="features-title">features categories</h2>
+<article class="w-full overflow-x-hidden">
+  <h2 class="text-xl font-semibold mb-4 capitalize">features categories</h2>
 
-  <div class="features-list">
+  <div class="flex gap-4 capitalize text-center">
     @for (category of featureCategories | keyvalue; track $index) {
       <a [routerLink]="['/dashboard/templates/features', category.key]">
-        <figure class="features-item">
+        <figure class="w-25">
           <img
-            class="feature-image rounded-md aspect-square"
+            class="rounded-md aspect-square"
             aria-hidden="true"
             [ngSrc]="featureCategories[category.key]"
             alt="category.key"
             width="100"
             height="100"
           />
-          <figcaption class="feature-title">
+          <figcaption class="mt-1">
             {{ category.key | searchAndReplace: '-' : ' ' }}
           </figcaption>
         </figure>
