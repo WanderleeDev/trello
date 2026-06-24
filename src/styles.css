@@ -34,3 +34,48 @@
 @utility shadow-card {
   box-shadow: var(--shadow-overlay);
 }
+
+/* Workspace dropdown menu (rendered in CDK overlay container) */
+.menu-panel {
+  min-width: 15rem;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-modal);
+  box-shadow: var(--shadow-overlay);
+}
+
+.menu-panel[data-visible='false'] {
+  display: none;
+}
+
+.dropdown-item {
+  outline: none;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+}
+
+.dropdown-item:not([aria-disabled='true']):hover,
+.dropdown-item:not([aria-disabled='true']):focus {
+  background: var(--btn-hovered);
+}
+
+.dropdown-item:focus {
+  outline: 2px solid var(--clr-active);
+}
+
+.extra-btn {
+  position: relative;
+  margin-left: auto;
+  z-index: 10;
+  padding: 0.25rem;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(255, 187, 0);
+  }
+}
