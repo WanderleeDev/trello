@@ -4,6 +4,7 @@
   #trigger="ngMenuTrigger"
   [menu]="formatMenu()"
   cdkOverlayOrigin
+  [class.bg-btn-hovered]="trigger.expanded()"
   class="flex items-center gap-1 px-2.5 py-1.5 rounded text-sm font-semibold bg-background text-foreground hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg capitalize"
 >
   <ng-content select="trigger-left" />
@@ -19,7 +20,11 @@
   [cdkConnectedOverlayOrigin]="origin"
   [cdkConnectedOverlayPositions]="overlayPositions()"
 >
-  <div ngMenu #formatMenu="ngMenu" class="min-w-60 p-1 rounded-lg bg-modal shadow-card">
+  <div
+    ngMenu
+    #formatMenu="ngMenu"
+    class="min-w-60 p-1 rounded-lg bg-modal shadow-card not-motion-reduce:starting:opacity-0 not-motion-reduce:transition-opacity not-motion-reduce:duration-200"
+  >
     <ng-template ngMenuContent>
       <ng-content select="menu-content">
         <app-card-common
