@@ -15,7 +15,7 @@
   [cdkConnectedOverlayOpen]="trigger.expanded()"
   [cdkConnectedOverlayOrigin]="origin"
   [cdkConnectedOverlayPositions]="[
-    { originX: 'start', originY: 'bottom', overlayX: 'start', overlayY: 'top', offsetY: 4 },
+    { originX: 'end', originY: 'bottom', overlayX: 'end', overlayY: 'top', offsetY: 4 },
   ]"
 >
   <div
@@ -27,7 +27,12 @@
       <span class="px-2 py-1 text-xs font-semibold text-foreground/60">Notifications</span>
 
       <div class="flex flex-col items-center gap-2 py-6 text-sm text-foreground/60">
-        <span class="material-symbols-outlined text-3xl opacity-30" translate="no" aria-hidden="true">notifications_off</span>
+        <span
+          class="material-symbols-outlined text-3xl opacity-30"
+          translate="no"
+          aria-hidden="true"
+          >notifications_off</span
+        >
         <span>No new notifications</span>
       </div>
     </ng-template>

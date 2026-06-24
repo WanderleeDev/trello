@@ -37,6 +37,11 @@
     font-family: 'Noto Sans', sans-serif;
     font-optical-sizing: auto;
   }
+
+  a,
+  button {
+    cursor: pointer;
+  }
 }
 
 /* Button variants for app-btn-base */
