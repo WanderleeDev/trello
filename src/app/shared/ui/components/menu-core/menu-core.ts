@@ -1,88 +1,26 @@
-import { Component, viewChild } from '@angular/core';
-import { Menu, MenuContent, MenuItem, MenuTrigger } from '@angular/aria/menu';
-import { OverlayModule } from '@angular/cdk/overlay';
+import { Component, computed, input, viewChild } from '@angular/core';
+import { ConnectedPosition, OverlayModule } from '@angular/cdk/overlay';
+import { Menu, MenuContent, MenuTrigger } from '@angular/aria/menu';
+import { CardCommonComponent } from '../card-common/card-common.component';
 
 @Component({
   selector: 'app-menu-core',
-  imports: [Menu, MenuTrigger, MenuContent, MenuItem, OverlayModule],
+  imports: [Menu, MenuTrigger, MenuContent, OverlayModule, CardCommonComponent],
   templateUrl: './menu-core.html',
-  styles: `
-    :host {
-      display: block;
-    }
-
-    :host {
-      display: flex;
-      justify-content: center;
-      font-family: var(--inter-font);
-      --border-color: color-mix(in srgb, var(--full-contrast) 20%, var(--page-background));
-    }
-    [ngMenuTrigger] {
-      display: flex;
-      cursor: pointer;
-      align-items: center;
-      padding: 0.6rem 2rem;
-      border-radius: 0.5rem;
-      color: var(--primary-contrast);
-      border: 1px solid var(--border-color);
-      background-color: var(--page-background);
-    }
-    [ngMenuTrigger] .icon {
-      font-size: 1.5rem;
-      opacity: 0.875;
-    }
-    [ngMenu] {
-      margin: 0;
-      width: 15rem;
-      padding: 0.25rem;
-      border-radius: 0.5rem;
-      border: 1px solid var(--border-color);
-      background-color: var(--page-background);
-    }
-    [ngMenu][data-visible='false'] {
-      display: none;
-    }
-    [ngMenuItem] {
-      outline: none;
-      display: flex;
-      cursor: pointer;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem;
-      font-size: 0.875rem;
-      border-radius: 0.25rem;
-    }
-    [ngMenuTrigger]:not([disabled]):hover,
-    [ngMenuTrigger][aria-expanded='true'],
-    [ngMenuItem]:not([aria-disabled='true']):hover,
-    [ngMenuItem]:not([aria-disabled='true']):focus,
-    [ngMenuItem][aria-expanded='true'] {
-      background: color-mix(in srgb, var(--border-color) 10%, transparent);
-    }
-    [ngMenuItem]:focus,
-    [ngMenuTrigger]:focus {
-      outline: 2px solid var(--vivid-pink);
-    }
-    [ngMenuItem] .icon {
-      opacity: 0.875;
-      font-size: 1.25rem;
-    }
-    [ngMenuItem] .label {
-      flex: 1;
-      opacity: 0.875;
-      font-size: 0.875rem;
-    }
-    [ngMenuItem]:not([aria-expanded='true']) .arrow {
-      opacity: 0.5;
-    }
-    [ngMenu] .separator {
-      border-top: 1px solid var(--border-color);
-      margin: 0.25rem 0;
-      opacity: 0.25;
-    }
-  `,
 })
 export class MenuCore {
+  label = input.required<string>();
+  direction = input<'left' | 'right'>('left');
   formatMenu = viewChild<Menu<string>>('formatMenu');
-  categorizeMenu = viewChild<Menu<string>>('categorizeMenu');
+
+  readonly overlayPositions = computed<ConnectedPosition[]>(() => {
+    if (this.direction() === 'right') {
+      return [
+        { originX: 'end', originY: 'bottom', overlayX: 'end', overlayY: 'top', offsetY: 4 },
+      ];
+    }
+    return [
+      { originX: 'start', originY: 'bottom', overlayX: 'start', overlayY: 'top', offsetY: 4 },
+    ];
+  });
 }
