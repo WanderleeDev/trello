@@ -1,0 +1,66 @@
+<button
+  ngMenuTrigger
+  #origin="cdkOverlayOrigin"
+  #trigger="ngMenuTrigger"
+  [menu]="formatMenu()"
+  cdkOverlayOrigin
+  [class.bg-btn-hovered]="trigger.expanded()"
+  class="flex items-center gap-1 px-2.5 py-1.5 rounded text-sm font-semibold bg-background text-foreground hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg capitalize"
+>
+  starred
+  <span
+    class="material-symbols-outlined text-sm"
+    translate="no"
+    aria-hidden="true"
+    ngProjectAs="trigger-right"
+    >expand_more</span
+  >
+</button>
+
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOpen]="trigger.expanded()"
+  [cdkConnectedOverlayOrigin]="origin"
+  [cdkConnectedOverlayPositions]="[
+    { originX: 'start', originY: 'bottom', overlayX: 'start', overlayY: 'top', offsetY: 4 },
+  ]"
+>
+  <div
+    ngMenu
+    #formatMenu="ngMenu"
+    class="min-w-60 p-1 rounded-lg bg-modal shadow-card not-motion-reduce:starting:opacity-0 not-motion-reduce:transition-opacity not-motion-reduce:duration-200"
+  >
+    <ng-template ngMenuContent>
+      @for (item of dropdownData(); track item.id) {
+        <div
+          ngMenuItem
+          [value]="item.name"
+          class="flex items-center gap-2 p-2 rounded cursor-pointer text-sm hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg"
+        >
+          @if (item.image) {
+            <img class="w-10 h-8 rounded object-cover aspect-4/2" [src]="item.image" alt="" />
+          } @else {
+            <span
+              class="material-symbols-outlined text-lg opacity-75"
+              translate="no"
+              aria-hidden="true"
+              >dashboard</span
+            >
+          }
+
+          <span class="flex-1 truncate">{{ item.name }}</span>
+
+          @if (item.tag) {
+            <span
+              class="ml-auto rounded-full bg-active px-2 py-0.5 text-xs font-medium text-active-fg"
+            >
+              {{ item.tag }}
+            </span>
+          }
+        </div>
+      } @empty {
+        <app-card-common message="No items available" />
+      }
+    </ng-template>
+  </div>
+</ng-template>
