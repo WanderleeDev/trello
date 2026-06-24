@@ -7,9 +7,9 @@
 >
   @if (theme.isHydrated()) {
     @if (theme.isDark()) {
-      <span class="material-symbols-outlined" [style.font-size.px]="size">dark_mode</span>
+      <app-moon-icon [size]="size" />
     } @else {
-      <span class="material-symbols-outlined" [style.font-size.px]="size">light_mode</span>
+      <app-sun-icon [size]="size" />
     }
   } @else {
     <span class="w-7 h-7 rounded-full bg-foreground/10 animate-pulse"></span>
