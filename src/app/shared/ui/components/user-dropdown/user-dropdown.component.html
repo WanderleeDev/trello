@@ -1,24 +1,54 @@
-<app-menu-core label="" direction="right">
-  <app-user [dataUser]="dataUser()" [isMinimal]="true" ngProjectAs="trigger-left" />
+<button
+  ngMenuTrigger
+  #origin="cdkOverlayOrigin"
+  #trigger="ngMenuTrigger"
+  [menu]="formatMenu()"
+  cdkOverlayOrigin
+  [class.bg-btn-hovered]="trigger.expanded()"
+  class="flex items-center gap-1 px-2.5 py-1.5 rounded text-sm font-semibold bg-background text-foreground hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg capitalize"
+>
+  <app-user
+    [dataUser]="{
+      username: userStore.username(),
+      email: userStore.email(),
+      image: userStore.image(),
+    }"
+    [isMinimal]="true"
+  />
+</button>
 
-  <ng-container ngProjectAs="menu-content">
-    <div class="px-2 py-1 text-xs font-semibold text-foreground/60">Account</div>
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOpen]="trigger.expanded()"
+  [cdkConnectedOverlayOrigin]="origin"
+  [cdkConnectedOverlayPositions]="[
+    { originX: 'end', originY: 'bottom', overlayX: 'end', overlayY: 'top', offsetY: 4 },
+  ]"
+>
+  <div
+    ngMenu
+    #formatMenu="ngMenu"
+    class="min-w-60 p-1 rounded-lg bg-modal shadow-card not-motion-reduce:starting:opacity-0 not-motion-reduce:transition-opacity not-motion-reduce:duration-200"
+  >
+    <ng-template ngMenuContent>
+      <div class="px-2 py-1 text-xs font-semibold text-foreground/60">Account</div>
 
-    <div ngMenuItem value="profile" class="flex items-center gap-2 p-2 rounded cursor-pointer text-sm hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg">
-      <span class="material-symbols-outlined text-base opacity-75" translate="no" aria-hidden="true">person</span>
-      <span class="flex-1">Profile</span>
-    </div>
+      <div ngMenuItem value="profile" class="flex items-center gap-2 p-2 rounded cursor-pointer text-sm hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg">
+        <span class="material-symbols-outlined text-base opacity-75" translate="no" aria-hidden="true">person</span>
+        <span class="flex-1">Profile</span>
+      </div>
 
-    <div ngMenuItem value="settings" class="flex items-center gap-2 p-2 rounded cursor-pointer text-sm hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg">
-      <span class="material-symbols-outlined text-base opacity-75" translate="no" aria-hidden="true">settings</span>
-      <span class="flex-1">Settings</span>
-    </div>
+      <div ngMenuItem value="settings" class="flex items-center gap-2 p-2 rounded cursor-pointer text-sm hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg">
+        <span class="material-symbols-outlined text-base opacity-75" translate="no" aria-hidden="true">settings</span>
+        <span class="flex-1">Settings</span>
+      </div>
 
-    <div class="my-1 border-t border-border-inverse opacity-25"></div>
+      <div class="my-1 border-t border-border-inverse opacity-25"></div>
 
-    <div ngMenuItem value="logout" class="flex items-center gap-2 p-2 rounded cursor-pointer text-sm hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg">
-      <span class="material-symbols-outlined text-base opacity-75" translate="no" aria-hidden="true">logout</span>
-      <span class="flex-1">Log out</span>
-    </div>
-  </ng-container>
-</app-menu-core>
+      <div ngMenuItem value="logout" class="flex items-center gap-2 p-2 rounded cursor-pointer text-sm hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg">
+        <span class="material-symbols-outlined text-base opacity-75" translate="no" aria-hidden="true">logout</span>
+        <span class="flex-1">Log out</span>
+      </div>
+    </ng-template>
+  </div>
+</ng-template>

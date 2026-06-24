@@ -1,17 +1,18 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { DataUser } from '../../../../store/user/user.store';
-import { MenuCore } from '../menu-core/menu-core';
+import { ChangeDetectionStrategy, Component, inject, viewChild } from '@angular/core';
+import { Menu, MenuContent, MenuItem, MenuTrigger } from '@angular/aria/menu';
+import { OverlayModule } from '@angular/cdk/overlay';
 import { UserComponent } from '../user/user.component';
-import { MenuItem } from '@angular/aria/menu';
+import { UserStore } from '../../../../store/user/user.store';
 
 @Component({
-    selector: 'app-user-dropdown',
-    templateUrl: './user-dropdown.component.html',
-    styleUrl: './user-dropdown.component.css',
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [MenuCore, UserComponent, MenuItem],
+  selector: 'app-user-dropdown',
+  templateUrl: './user-dropdown.component.html',
+  styleUrl: './user-dropdown.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [Menu, MenuTrigger, MenuItem, MenuContent, OverlayModule, UserComponent],
 })
 export class UserDropdownComponent {
-  dataUser = input.required<DataUser>();
+  protected readonly userStore = inject(UserStore);
+  protected formatMenu = viewChild<Menu<string>>('formatMenu');
 }

@@ -1,8 +1,8 @@
-<figure class="user" [class.minimal]="isMinimal()">
-  <div class="user-wrapperImage">
+<figure class="flex items-center gap-0.5" [class]="isMinimal() ? 'minimal' : ''">
+  <div class="rounded-full overflow-hidden">
     @if (dataUser().image) {
       <img
-        class="user-image"
+        class="object-cover"
         [ngSrc]="dataUser().image!"
         [alt]="dataUser().username + ' photo'"
         width="24"
@@ -12,8 +12,10 @@
       <app-letter-gradient-icon [$letter]="dataUser().username ?? 'unknown'" />
     }
   </div>
-  <figcaption class="user-data">
-    <span class="user-name">{{ dataUser().username }}</span>
-    <span class="user-email">{{ dataUser().email }}</span>
-  </figcaption>
+  @if (!isMinimal()) {
+    <figcaption class="flex flex-col">
+      <span>{{ dataUser().username }}</span>
+      <span>{{ dataUser().email }}</span>
+    </figcaption>
+  }
 </figure>
