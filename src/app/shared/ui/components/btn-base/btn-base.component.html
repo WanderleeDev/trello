@@ -1,10 +1,9 @@
 <button
-  class="flex items-center gap-2 px-[0.625rem] h-[2.28571em] capitalize w-full"
+  class="flex items-center gap-2 px-[0.625rem] h-[2.28571em] capitalize w-full rounded"
   [class.btn-variant-default]="variant() !== 'primary' && variant() !== 'mixed'"
   [class.btn-variant-primary]="variant() === 'primary'"
   [class.btn-variant-mixed]="variant() === 'mixed'"
   [class.btn-active]="activeStyle() && variant() === 'mixed'"
-  [class.rounded-[0.2rem]]="rounded()"
   [type]="btnType()"
   [attr.aria-label]="ariaLabel()"
 >
