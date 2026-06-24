@@ -5,6 +5,8 @@ import { TrelloDynamicIconComponent } from '../../../icons/components/trello-dyn
 import { BtnBaseComponent } from '../btn-base/btn-base.component';
 import { BtnToggleThemeComponent } from '../btn-toggle-theme/btn-toggle-theme.component';
 import { DotsDropdownComponent } from '../dots-dropdown/dots-dropdown.component';
+import { HelpDropdownComponent } from '../help-dropdown/help-dropdown.component';
+import { NotificationsDropdownComponent } from '../notifications-dropdown/notifications-dropdown.component';
 import { RecentDropdownComponent } from '../recent-dropdown/recent-dropdown.component';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
 import { StarredDropdownComponent } from '../starred-dropdown/starred-dropdown.component';
@@ -26,6 +28,8 @@ import { WorkspaceDropdownComponent } from '../workspace-dropdown/workspace-drop
     SearchBarComponent,
     BtnToggleThemeComponent,
     UserDropdownComponent,
+    NotificationsDropdownComponent,
+    HelpDropdownComponent,
   ],
 })
 export class NavComponent {
