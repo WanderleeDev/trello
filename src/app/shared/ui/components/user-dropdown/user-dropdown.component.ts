@@ -7,7 +7,6 @@ import { UserStore } from '../../../../store/user/user.store';
 @Component({
   selector: 'app-user-dropdown',
   templateUrl: './user-dropdown.component.html',
-  styleUrl: './user-dropdown.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [Menu, MenuTrigger, MenuItem, MenuContent, OverlayModule, UserComponent],
