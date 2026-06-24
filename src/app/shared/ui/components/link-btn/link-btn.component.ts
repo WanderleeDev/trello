@@ -5,8 +5,7 @@ type DesignType = 'basic' | 'ident';
 
 @Component({
     selector: 'app-link-btn',
-    templateUrl: './link-btn.component.html',
-    styleUrl: './link-btn.component.css',
+     templateUrl: './link-btn.component.html',
     standalone: true,
     imports: [
         RouterLinkActive,

@@ -5,8 +5,7 @@ import { LetterGradientIconComponent } from '../../../icons/components/letter-gr
 
 @Component({
     selector: 'app-user',
-    templateUrl: './user.component.html',
-    styleUrl: './user.component.css',
+         templateUrl: './user.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [NgOptimizedImage, LetterGradientIconComponent],
