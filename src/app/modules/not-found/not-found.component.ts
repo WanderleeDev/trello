@@ -1,5 +1,5 @@
-import { Location } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { BasicImageComponent } from '../../shared/ui/components/basic-image/basic-image.component';
 
 @Component({
@@ -11,18 +11,12 @@ import { BasicImageComponent } from '../../shared/ui/components/basic-image/basi
         <p>Se ha producido un error en esta página</p>
         <p>Nuestro equipo ha sido notificado.</p>
       </div>
-      <button class="text-blue-500 underline" (click)="goBack()">Go Back Dashboard</button>
+      <a routerLink="/" class="text-blue-500 underline">Go Back Dashboard</a>
     </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [BasicImageComponent],
+  imports: [BasicImageComponent, RouterLink],
 })
 export class NotFoundComponent {
-  private readonly location = inject(Location);
-
   protected readonly img = 'https://trello.com/assets/3aa994dc53c056c6f419.png';
-
-  goBack() {
-    this.location.back();
-  }
 }
