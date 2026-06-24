@@ -35,6 +35,9 @@
   --card-cover: #38291e;
   --premium-accent: #9f8fef;
   --auth-bg: #fafbfc;
+  --btn-primary: #0c66e4;
+  --btn-primary-hover: #0055cc;
+  --btn-primary-text: #ffffff;
 }
 
 .dark {
@@ -67,6 +70,9 @@
   --premium-accent: #9f8fef;
   --auth-bg: #1a1d21;
   --board-column-clr: #1e2125;
+  --btn-primary: #579dff;
+  --btn-primary-hover: #85b8ff;
+  --btn-primary-text: #1d2125;
   --header-board-clr: #0000003d;
   --dynamic-text-transparent: hsla(211, 18%, 68%, 0.16);
   --dynamic-background-transparent: hsla(206, 13.7%, 10%, 0.9);

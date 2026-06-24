@@ -26,6 +26,9 @@
   --color-card-cover: var(--card-cover);
   --color-premium-accent: var(--premium-accent);
   --color-auth-bg: var(--auth-bg);
+  --color-btn-primary: var(--btn-primary);
+  --color-btn-primary-hover: var(--btn-primary-hover);
+  --color-btn-primary-text: var(--btn-primary-text);
 }
 
 @layer base {
@@ -34,6 +37,46 @@
     font-family: 'Noto Sans', sans-serif;
     font-optical-sizing: auto;
   }
+}
+
+/* Button variants for app-btn-base */
+.btn-variant-default {
+  background-color: transparent;
+  &:hover,
+  &:focus-visible {
+    background-color: var(--btn-hovered);
+  }
+  &:active {
+    background-color: var(--btn-pressed);
+    color: currentColor;
+  }
+}
+
+.btn-variant-primary {
+  background-color: var(--btn-primary);
+  color: var(--btn-primary-text);
+  &:hover,
+  &:focus-visible,
+  &:active {
+    background-color: var(--btn-primary-hover);
+  }
+}
+
+.btn-variant-mixed {
+  background-color: transparent;
+  &:hover,
+  &:focus-visible {
+    background-color: var(--btn-hovered);
+  }
+  &:active {
+    background-color: var(--bg-active);
+    color: var(--clr-active);
+  }
+}
+
+.btn-variant-mixed.btn-active {
+  background-color: var(--bg-active);
+  color: var(--clr-active);
 }
 
 @utility container-md {
