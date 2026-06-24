@@ -6,7 +6,7 @@ import { RouterOutlet } from '@angular/router';
 @Component({
     selector: 'app-auth-layout',
     template: `
-    <section class="min-h-dvh bg-[#fafbfc] pt-14 content-center pb-2">
+    <section class="min-h-dvh bg-auth-bg pt-14 content-center pb-2">
       <app-banner />
       <div
         class="container-md flex flex-col justify-center items-center h-full px-10 py-8 relative z-10 shadow-[rgba(0,0,0,0.1)_0px_0px_10px]"

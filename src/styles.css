@@ -16,6 +16,10 @@
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-icon: var(--icon-color);
+  --color-badge-new: var(--badge-new);
+  --color-card-cover: var(--card-cover);
+  --color-premium-accent: var(--premium-accent);
+  --color-auth-bg: var(--auth-bg);
 }
 
 @layer base {
