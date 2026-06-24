@@ -1,5 +1,5 @@
 <button
-  class="btn-theme"
+  class="grid place-content-center p-0.5 rounded-full transition-transform duration-200 ease-in-out hover:scale-90 active:scale-110"
   (click)="theme.toggle()"
   type="button"
   title="change theme"
@@ -11,5 +11,7 @@
     } @else {
       <app-sun-icon [size]="size" />
     }
+  } @else {
+    <span class="w-7 h-7 rounded-full bg-foreground/10 animate-pulse"></span>
   }
 </button>
