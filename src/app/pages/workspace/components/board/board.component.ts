@@ -2,13 +2,14 @@ import { Component, output, input } from '@angular/core';
 import { DragDropModule, CdkDragDrop } from '@angular/cdk/drag-drop';
 import { List } from '../../interfaces/board.model';
 import { BoardHeaderComponent } from '../board-header/board-header.component';
+import { GrabScrollDirective } from '../../../../shared/directives/grab-scroll.directive';
 
 @Component({
     selector: 'app-board',
     templateUrl: './board.component.html',
     styleUrls: ['./board.component.css'],
     standalone: true,
-    imports: [BoardHeaderComponent, DragDropModule],
+    imports: [BoardHeaderComponent, DragDropModule, GrabScrollDirective],
 })
 export class BoardComponent {
   readonly boardName = input<string>('My Board');

@@ -4,6 +4,10 @@
   height: 100%;
 }
 
+.scroll-container {
+  cursor: grab;
+}
+
 /* CDK drag-and-drop (cannot be Tailwind) */
 .cdk-drag-preview {
   box-sizing: border-box;
