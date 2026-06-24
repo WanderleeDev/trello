@@ -4,7 +4,6 @@ import { BriefcaseComponent } from '../../../../shared/icons/components/briefcas
 @Component({
     selector: 'app-card-premium-try',
     templateUrl: './card-premium-try.component.html',
-    styleUrl: './card-premium-try.component.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [BriefcaseComponent],

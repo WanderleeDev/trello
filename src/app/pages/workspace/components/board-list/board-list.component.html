@@ -1,17 +1,17 @@
-<section class="board-list" cdkDrag>
-  <div class="list-header">
+<section class="bg-board-column rounded-2xl w-60 min-w-60 max-h-[calc(100vh-200px)] flex flex-col" cdkDrag>
+  <div class="flex font-bold justify-between items-center px-3 py-3">
     <header>
       <h3>{{ list().title }}</h3>
     </header>
-    <div class="list-actions">
-      <app-btn-base class="rounded-md overflow-hidden" ariaLabel="options">
+    <div class="flex gap-2">
+      <app-btn-base ariaLabel="options">
         <app-dots />
       </app-btn-base>
     </div>
   </div>
 
-  <div class="list-cards-container">
-    <div class="list-cards" cdkDropList>
+  <div class="p-4 flex-1 overflow-y-auto [scrollbar-width:thin] [scrollbar-color:var(--border-inverse)_transparent]">
+    <div class="flex flex-col gap-2" cdkDropList>
       <ng-content select="board-card" />
     </div>
   </div>

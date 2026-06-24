@@ -1,5 +1,5 @@
-<nav>
-  <ul class="sidebar-options">
+<nav class="w-[min(100%,17rem)] px-4">
+  <ul class="flex flex-col gap-[0.2rem] border-b border-b-transparent pb-4">
     @for (section of sections; track $index) {
       <li>
         <app-link-btn [href]="section.link">
@@ -10,7 +10,7 @@
     }
   </ul>
 
-  <strong class="sidebar-subTitle">Workspaces</strong>
+  <strong class="block py-4">Workspaces</strong>
 
   <app-accordion>
     <ng-container ngProjectAs="header">

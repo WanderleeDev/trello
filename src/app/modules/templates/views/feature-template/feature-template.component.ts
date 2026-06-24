@@ -10,7 +10,6 @@ interface FeatureItem {
 @Component({
     selector: 'app-feature-template',
     templateUrl: './feature-template.component.html',
-    styleUrls: ['./feature-template.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [RouterLink],

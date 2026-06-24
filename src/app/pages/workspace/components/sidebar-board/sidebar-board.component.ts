@@ -7,7 +7,6 @@ import { StarIconComponent } from '../../../../shared/icons/components/star-icon
 @Component({
     selector: 'app-sidebar-board',
     templateUrl: './sidebar-board.component.html',
-    styleUrl: './sidebar-board.component.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [

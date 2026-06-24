@@ -7,8 +7,7 @@ import { LoaderIconComponent } from '../../../icons/components/loader-icon.compo
 
 @Component({
   selector: 'app-search-bar',
-  templateUrl: './search-bar.component.html',
-  styleUrl: './search-bar.component.css',
+     templateUrl: './search-bar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [SearchIconComponent, OutsideClickDirective, LoaderIconComponent],

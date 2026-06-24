@@ -1,16 +1,16 @@
-<app-link-btn class="card" [href]="path()">
+<app-link-btn class="hover:[&>.card-extra]:block" [href]="path()">
   @if (image()) {
-    <img class="card-image" [ngSrc]="image()!" alt="workspace cover" width="40" height="32" />
+    <img class="block object-cover h-8 w-10 rounded aspect-4/2" [ngSrc]="image()!" alt="workspace cover" width="40" height="32" />
   } @else {
     <app-letter-gradient-icon [$letter]="name()" />
   }
 
-  <span class="card-text">{{ name() }} </span>
+  <span class="block truncate min-w-30 text-nowrap text-ellipsis overflow-hidden">{{ name() }} </span>
 
   @if (badgeText()) {
-    <app-badge class="card-badge" [content]="badgeText()!" />
+    <app-badge class="ml-auto" [content]="badgeText()!" />
   }
-  <div class="card-extra">
+  <div class="card-extra relative hidden ml-auto z-10 group-hover:block content-center">
     <ng-content />
   </div>
 </app-link-btn>

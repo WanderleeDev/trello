@@ -1,27 +1,30 @@
-<nav class="sidebar">
-  <div class="sidebar-header">
-    <div class="sidebar-content">
+<nav class="w-65 h-full"
+  [style.background-color]="'var(--dynamic-background-transparent, var(--ds-surface, #ffffff))'"
+  [style.backdrop-filter]="'blur(0.5rem)'">
+  <div class="flex justify-between items-center px-3 py-2 h-15 border-b"
+    [style.border-color]="'var(--dynamic-text-transparent, #dfe1e6)'">
+    <div class="flex gap-2 items-center">
       <app-letter-gradient-icon [$letter]="'t'" />
-      <div class="sidebar-info">
-        <span class="sidebar-title">Trello Workspace</span>
-        <span class="sidebar-subtitle">Free</span>
+      <div class="flex flex-col justify-between h-full">
+        <span class="font-semibold">Trello Workspace</span>
+        <span>Free</span>
       </div>
     </div>
 
-    <app-btn-base class="rounded-md overflow-hidden" ariaLabel="add board">
+    <app-btn-base ariaLabel="add board">
       <app-add-svg />
     </app-btn-base>
   </div>
 
-  <div class="sidebar-boards">
-    <div class="sidebar-boards-title">
+  <div>
+    <div class="font-semibold flex justify-between items-center pl-3">
       Your boards
-      <app-btn-base class="rounded-md overflow-hidden py-2 scale-90" ariaLabel="add board">
+      <app-btn-base ariaLabel="add board">
         <app-add-svg />
       </app-btn-base>
     </div>
 
-    <ul class="sidebar-boards-list">
+    <ul class="flex flex-col gap-[0.7rem]">
       <li>
         <a
           class="flex items-center gap-2 justify-between w-full px-3 py-1 hover:bg-black/5 active:bg-black/10 focus:bg-black/10"
@@ -37,10 +40,7 @@
             />
             <span class="truncate">My Trello board</span>
           </div>
-          <app-btn-base
-            class="rounded-md hover:scale-100 transition-transform overflow-hidden scale-90"
-            ariaLabel="add favorite"
-          >
+          <app-btn-base ariaLabel="add favorite">
             <app-star-icon />
           </app-btn-base>
         </a>

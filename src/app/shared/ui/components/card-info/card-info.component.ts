@@ -4,7 +4,6 @@ import { NgOptimizedImage } from '@angular/common';
 @Component({
     selector: 'app-card-info',
     templateUrl: './card-info.component.html',
-    styleUrls: ['./card-info.component.css'],
     standalone: true,
     imports: [NgOptimizedImage],
 })

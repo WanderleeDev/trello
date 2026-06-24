@@ -5,8 +5,7 @@ type BtnVariant = 'primary' | 'secondary' | 'tertiary' | 'danger' | 'base' | 'mi
 
 @Component({
     selector: 'app-btn-base',
-    templateUrl: './btn-base.component.html',
-    styleUrl: './btn-base.component.css',
+         templateUrl: './btn-base.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
 })

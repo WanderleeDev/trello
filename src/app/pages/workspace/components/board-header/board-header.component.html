@@ -1,28 +1,31 @@
-<header class="board-header">
-  <div class="board-header-content">
-    <h2 class="board-title">{{ boardName }}</h2>
-    <app-btn-base class="rounded-md overflow-hidden" ariaLabel="add favorite">
+<header class="flex justify-between items-center px-3 py-2 gap-2 h-15"
+  [style.background-color]="'var(--header-bg-glass)'"
+  [style.backdrop-filter]="'blur(0.5rem)'"
+  [style.color]="'var(--text-main-clr)'">
+  <div class="flex items-center gap-4">
+    <h2 class="text-xl font-bold">{{ boardName }}</h2>
+    <app-btn-base ariaLabel="add favorite">
       <app-star-icon />
     </app-btn-base>
   </div>
 
-  <div class="board-header-actions">
-    <app-btn-base class="rounded-md overflow-hidden" ariaLabel="options">
+  <div class="flex gap-2">
+    <app-btn-base ariaLabel="options">
       <app-rocket-svg />
     </app-btn-base>
 
-    <app-btn-base class="rounded-md overflow-hidden" ariaLabel="options">
+    <app-btn-base ariaLabel="options">
       <app-ray-svg />
     </app-btn-base>
 
-    <app-btn-base class="rounded-md overflow-hidden" ariaLabel="filter board">
+    <app-btn-base ariaLabel="filter board">
       <app-filter-svg />
       Filters
     </app-btn-base>
 
     <app-user [dataUser]="user" [isMinimal]="true" />
 
-    <app-btn-base class="rounded-md overflow-hidden" ariaLabel="options">
+    <app-btn-base ariaLabel="options">
       <app-dots />
     </app-btn-base>
   </div>

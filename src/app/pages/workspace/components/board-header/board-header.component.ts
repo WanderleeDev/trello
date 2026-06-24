@@ -10,8 +10,7 @@ import { DotsComponent } from '../../../../shared/icons/components/dots.componen
 
 @Component({
     selector: 'app-board-header',
-    templateUrl: './board-header.component.html',
-    styleUrls: ['./board-header.component.css'],
+         templateUrl: './board-header.component.html',
     standalone: true,
     imports: [BtnBaseComponent, StarIconComponent, RocketSvgComponent, RaySvgComponent, FilterSvgComponent, UserComponent, DotsComponent]
 })

@@ -4,7 +4,6 @@ import { AddSvgComponent } from '../../../../shared/icons/components/add-svg.com
 @Component({
     selector: 'app-add-list-button',
     templateUrl: './add-list-button.component.html',
-    styleUrls: ['./add-list-button.component.css'],
     standalone: true,
     imports: [AddSvgComponent]
 })

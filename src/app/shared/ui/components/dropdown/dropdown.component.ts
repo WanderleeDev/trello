@@ -4,8 +4,7 @@ import { OutsideClickDirective } from '../../../directives/outside-click.directi
 
 @Component({
     selector: 'app-dropdown',
-    templateUrl: './dropdown.component.html',
-    styleUrl: './dropdown.component.css',
+         templateUrl: './dropdown.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [BtnBaseComponent, OutsideClickDirective],

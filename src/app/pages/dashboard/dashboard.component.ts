@@ -12,14 +12,13 @@ import { RouterOutlet } from '@angular/router';
       <app-banner />
     </header>
 
-    <main class="board-body">
+    <main class="flex justify-center items-start w-[min(100%,70rem)] mx-auto mt-10">
       <app-sidebar />
-      <div class="board-projection">
+      <div class="flex-1 h-full">
         <router-outlet />
       </div>
     </main>
   `,
-    styleUrls: ['./dashboard.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [

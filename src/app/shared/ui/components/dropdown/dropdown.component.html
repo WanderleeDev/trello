@@ -13,9 +13,9 @@
 
 @if (isViewDropdown()) {
   <div
-    class="dropdown-body"
-    [class.right]="direction() === 'right'"
-    [class.left]="direction() === 'left'"
+    class="w-[max(19rem,100%)] absolute top-0 translate-y-12 max-h-44 overflow-y-auto overflow-x-hidden p-3 bg-modal rounded-lg shadow-card z-10"
+    [class.right-0]="direction() === 'right'"
+    [class.left-0]="direction() === 'left'"
     tabindex="-1"
     appOutsideClick
     (emitter)="clickOutside()"

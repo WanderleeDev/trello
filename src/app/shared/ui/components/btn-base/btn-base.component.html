@@ -1,9 +1,6 @@
 <button
-  class="btn"
-  [class.primary]="variant() === 'primary'"
-  [class.mixed]="variant() === 'mixed'"
-  [class.active]="activeStyle()"
-  [class.rounded]="rounded()"
+  class="flex items-center gap-2 px-[0.625rem] h-[2.28571em] capitalize bg-transparent w-full hover:bg-btn-hovered focus-visible:bg-btn-hovered active:bg-btn-pressed active:text-current"
+  [class.rounded-[0.2rem]]="rounded()"
   [type]="btnType()"
   [attr.aria-label]="ariaLabel()"
 >
