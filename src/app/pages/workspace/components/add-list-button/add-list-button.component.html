@@ -2,7 +2,7 @@
   @if (!isShow()) {
     <button
       type="button"
-      class="inline-flex gap-1 items-center w-full"
+      class="flex gap-1 items-center w-full"
       (click)="toggleShow()"
       [inert]="isShow()"
     >
@@ -37,7 +37,7 @@
         <app-btn-base btnType="submit" variant="primary">Añadir tarjeta</app-btn-base>
         <app-btn-base class="scale-95" btnType="button" (click)="toggleShow()">
           <span class="sr-only">close</span>
-          <span class="material-symbols-outlined">close</span>
+          <span class="material-symbols-outlined scale-90">close</span>
         </app-btn-base>
       </div>
     </form>

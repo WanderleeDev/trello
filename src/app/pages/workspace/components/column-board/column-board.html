@@ -1,0 +1,15 @@
+<section
+  class="flex flex-col min-w-65 h-fit max-w-xs bg-board-column rounded-xl shadow p-3 not-motion-reduce:starting:opacity-0 not-motion-reduce:starting:translate-y-5 not-motion-reduce:transition-all not-motion-reduce:duration-400 not-motion-reduce:ease-out"
+>
+  <header class="font-semibold mb-2 flex justify-between">
+    <h3 class="grow bg-red-200">
+      <button class="block w-full text-left" (click)="editableToggle()">
+        <span class="capitalize" [attr.contenteditable]="isEditable()"> {{title()}} </span>
+      </button>
+    </h3>
+    {{data().length}}
+  </header>
+
+  @for (card of data(); track card.id) { }
+  <app-add-list-button class="p-0 min-w-full shadow-none" (emitter)="addCard($event)" />
+</section>
