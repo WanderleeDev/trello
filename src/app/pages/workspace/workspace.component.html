@@ -3,30 +3,6 @@
   style="background-color: var(--bg-main)"
 >
   <app-nav />
-  <!-- <div class="grid grid-cols-[auto_1fr] z-10"> -->
-  <!-- <app-sidebar-board class="hidden lg:block" /> -->
 
-  <app-board cdkDropListGroup [lists]="list" (listDropped)="onListDropped($event)">
-    @for (li of list; track li.id) {
-      <app-board-list
-        [list]="li"
-        (addCardEvent)="addCard($event)"
-        (deleteListEvent)="deleteList($event)"
-        (cardDropped)="onCardDropped($event)"
-      >
-        <ng-container ngProjectAs="board-card">
-          @for (card of li.cards; track card.id) {
-            <app-board-card [card]="card" (click)="openDialog(card)" />
-          }
-          <app-btn-base class="rounded-lg overflow-hidden mt-2" (click)="addCard(li)">
-            <span class="material-symbols-outlined" style="font-size: 20px">add</span>
-            add card
-          </app-btn-base>
-        </ng-container>
-      </app-board-list>
-    }
-
-    <app-add-list-button ngProjectAs="add-list-btn" (addList)="addList()" />
-  </app-board>
-  <!-- </div> -->
+  <app-board />
 </main>
