@@ -1,16 +1,11 @@
 import { Component, input, signal } from '@angular/core';
 import { AddListButtonComponent } from '../add-list-button/add-list-button.component';
-
-type Card = {
-  id: string;
-  title: string;
-  description?: string;
-  image?: string;
-};
+import { BoardCardComponent } from '../board-card/board-card.component';
+import { Card } from '../../interfaces/board.model';
 
 @Component({
   selector: 'app-column-board',
-  imports: [AddListButtonComponent],
+  imports: [AddListButtonComponent, BoardCardComponent],
   templateUrl: './column-board.html',
   styles: `
     :host {

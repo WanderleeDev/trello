@@ -11,29 +11,7 @@
   </header>
 
   @for (card of data(); track card.id) {
-    <article class="bg-card rounded-xl shadow-card flex flex-col cursor-pointer hover:bg-btn-hovered transition-colors duration-200 group overflow-hidden">
-      @if (card.image) {
-        <img class="w-full h-24 object-cover" [src]="card.image" alt="" />
-      }
-
-      <div class="p-3 flex flex-col gap-1.5">
-        @if (card.description) {
-          <div class="h-1 w-10 rounded-full bg-active-fg"></div>
-        }
-
-        <h4 class="text-sm font-semibold leading-snug text-foreground">{{ card.title }}</h4>
-
-        @if (card.description) {
-          <p class="text-xs text-foreground/60 leading-relaxed line-clamp-2">{{ card.description }}</p>
-        }
-
-        <div class="flex items-center gap-2 mt-1 text-foreground/40" translate="no" aria-hidden="true">
-          <span class="material-symbols-outlined text-sm">description</span>
-          <span class="material-symbols-outlined text-sm">comment</span>
-          <span class="material-symbols-outlined text-sm">attachment</span>
-        </div>
-      </div>
-    </article>
+    <app-board-card [card]="card" />
   }
   <app-add-list-button class="p-0 min-w-full shadow-none" (emitter)="addCard($event)" />
 </section>

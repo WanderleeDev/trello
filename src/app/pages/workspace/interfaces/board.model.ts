@@ -1,7 +1,8 @@
 export interface Card {
   id: string;
   title: string;
-  description: string;
+  description?: string;
+  image?: string;
 }
 
 export interface List {
