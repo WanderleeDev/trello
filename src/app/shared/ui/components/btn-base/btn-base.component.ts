@@ -4,10 +4,9 @@ type BtnType = 'submit' | 'button' | 'reset';
 type BtnVariant = 'primary' | 'secondary' | 'tertiary' | 'danger' | 'base' | 'mixed';
 
 @Component({
-    selector: 'app-btn-base',
-         templateUrl: './btn-base.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
+  selector: 'app-btn-base',
+  templateUrl: './btn-base.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BtnBaseComponent {
   activeStyle = input<boolean>(false);
