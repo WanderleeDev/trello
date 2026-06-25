@@ -1,7 +1,45 @@
-<button
-  class="bg-board-column border-none rounded-2xl p-4 w-60 min-w-60 cursor-pointer hover:bg-btn-hovered transition-colors duration-200 flex items-center gap-2"
-  (click)="addList.emit()"
->
-  <span class="material-symbols-outlined" style="font-size: 20px">add</span>
-  Add another list
-</button>
+<div [class]="'p-3 min-w-65 max-w-xs bg-board-column rounded-xl shadow h-fit' | cn: class()">
+  @if (!isShow()) {
+    <button
+      type="button"
+      class="inline-flex gap-1 items-center w-full"
+      (click)="toggleShow()"
+      [inert]="isShow()"
+    >
+      <span class="material-symbols-outlined scale-90">add</span>
+      Añade otra lista
+    </button>
+  } @else {
+    <form
+      class="flex flex-col gap-2 w-full"
+      (submit)="onSubmit($event)"
+      [inert]="!isShow()"
+      autocomplete="off"
+      novalidate
+    >
+      <textarea
+        [formField]="form.title"
+        class="resize-none bg-modal rounded-md border-0 field-sizing-content"
+      ></textarea>
+
+      @if (form.title().touched() && form.title().invalid()) {
+        <div class="flex flex-col gap-1">
+          @for (error of form.title().errors(); track error) {
+            <p class="text-xs text-red-500 inline-flex items-center">
+              <span class="material-symbols-outlined scale-75">error</span>
+              {{ error.message }}
+            </p>
+          }
+        </div>
+      }
+
+      <div class="flex gap-1 items-center">
+        <app-btn-base btnType="submit" variant="primary">Añadir tarjeta</app-btn-base>
+        <app-btn-base class="scale-95" btnType="button" (click)="toggleShow()">
+          <span class="sr-only">close</span>
+          <span class="material-symbols-outlined">close</span>
+        </app-btn-base>
+      </div>
+    </form>
+  }
+</div>
