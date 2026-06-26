@@ -4,28 +4,8 @@ export const routes: Routes = [
   { path: '', redirectTo: 'auth', pathMatch: 'full' },
   {
     path: 'auth',
-    loadComponent: () =>
-      import('./modules/auth/presentation/layout/auth-layout.component').then(m => m.AuthLayoutComponent),
-    children: [
-      { path: '', redirectTo: 'sign-in', pathMatch: 'full' },
-      {
-        path: 'sign-in',
-        loadComponent: () =>
-          import('./modules/auth/presentation/views/login/login.component').then(m => m.LoginComponent),
-      },
-      {
-        path: 'sign-up',
-        loadComponent: () =>
-          import('./modules/auth/presentation/views/register/register.component').then(m => m.RegisterComponent),
-      },
-      {
-        path: 'account-recovery',
-        loadComponent: () =>
-          import('./modules/auth/presentation/views/account-recovery/account-recovery.component').then(
-            m => m.AccountRecoveryComponent,
-          ),
-      },
-    ],
+    loadChildren: () =>
+      import('./modules/auth/presentation/routes/auth.routes').then(m => m.authRoutes),
   },
   {
     path: 'dashboard',
