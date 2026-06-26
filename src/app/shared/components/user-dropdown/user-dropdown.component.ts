@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, inject, viewChild } from '@angular/
 import { Menu, MenuContent, MenuItem, MenuTrigger } from '@angular/aria/menu';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { UserComponent } from '../user/user.component';
-import { AuthStore } from '../../../../modules/auth/application/store/auth.store';
+import { AuthStore } from '../../../modules/auth/application/store/auth.store';
 import { Router } from '@angular/router';
 
 @Component({

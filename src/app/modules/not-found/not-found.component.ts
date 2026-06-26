@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { BasicImageComponent } from '../../shared/ui/components/basic-image/basic-image.component';
+import { BasicImageComponent } from '../../shared/components/basic-image/basic-image.component';
 
 @Component({
   selector: 'app-not-found',

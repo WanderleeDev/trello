@@ -2,12 +2,12 @@ import { ChangeDetectionStrategy, Component, inject, input, viewChild } from '@a
 import { Router } from '@angular/router';
 import { Menu, MenuContent, MenuItem, MenuTrigger } from '@angular/aria/menu';
 import { CardCommonComponent } from '../card-common/card-common.component';
-import { BoardTemplate } from '../../../mockup/templates';
+import { BoardTemplate } from '../../mockup/templates';
 import { OverlayModule } from '@angular/cdk/overlay';
 
 @Component({
-  selector: 'app-starred-dropdown',
-  templateUrl: './starred-dropdown.component.html',
+  selector: 'app-templates-dropdown',
+  templateUrl: './templates-dropdown.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     Menu,
@@ -18,7 +18,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
     CardCommonComponent,
   ],
 })
-export class StarredDropdownComponent {
+export class TemplatesDropdownComponent {
   private readonly router = inject(Router);
   protected formatMenu = viewChild<Menu<string>>('formatMenu');
   readonly dropdownData = input<BoardTemplate[]>([]);

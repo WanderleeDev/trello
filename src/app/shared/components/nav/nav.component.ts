@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { TrelloDynamicIconComponent } from '../../../icons/components/trello-dynamic-icon/trello-dynamic-icon.component';
+import { TrelloDynamicIconComponent } from '../../icons/components/trello-dynamic-icon/trello-dynamic-icon.component';
 import { BtnBaseComponent } from '../btn-base/btn-base.component';
 import { BtnToggleThemeComponent } from '../btn-toggle-theme/btn-toggle-theme.component';
 import { DotsDropdownComponent } from '../dots-dropdown/dots-dropdown.component';
@@ -11,7 +11,7 @@ import { StarredDropdownComponent } from '../starred-dropdown/starred-dropdown.c
 import { TemplatesDropdownComponent } from '../templates-dropdown/templates-dropdown.component';
 import { UserDropdownComponent } from '../user-dropdown/user-dropdown.component';
 import { WorkspaceDropdownComponent } from '../workspace-dropdown/workspace-dropdown.component';
-import { templates } from '../../../mockup/templates';
+import { templates } from '../../mockup/templates';
 
 @Component({
   selector: 'app-nav',

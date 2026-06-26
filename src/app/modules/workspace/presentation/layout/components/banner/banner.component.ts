@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { MatIconComponent } from '../../../../../../shared/ui/components/mat-icon/mat-icon.component';
-import { BtnBaseComponent } from '../../../../../../shared/ui/components/btn-base/btn-base.component';
+import { MatIconComponent } from '../../../../../../shared/components/mat-icon/mat-icon.component';
+import { BtnBaseComponent } from '../../../../../../shared/components/btn-base/btn-base.component';
 
 @Component({
   selector: 'app-banner',

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
-import { LinkCard } from '../../../../shared/interfaces/LinkCard.interface';
-import { OutsideClickDirective } from '../../../directives/outside-click.directive';
-import { LoaderIconComponent } from '../../../icons/components/loader-icon.component';
+import { LinkCard } from '../../../shared/interfaces/LinkCard.interface';
+import { OutsideClickDirective } from '../../directives/outside-click.directive';
+import { LoaderIconComponent } from '../../icons/components/loader-icon.component';
 
 @Component({
   selector: 'app-search-bar',
