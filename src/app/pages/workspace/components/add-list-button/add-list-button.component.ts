@@ -2,7 +2,6 @@ import { Component, input, output, signal } from '@angular/core';
 import { BtnBaseComponent } from '../../../../shared/ui/components/btn-base/btn-base.component';
 import { form, FormField, debounce, required, pattern, maxLength } from '@angular/forms/signals';
 import { CnPipe } from '../../../../shared/pipes/cn.pipe';
-import { OutsideClickDirective } from '../../../../shared/directives/outside-click.directive';
 
 type FormColumn = {
   title: string;
@@ -11,7 +10,7 @@ type FormColumn = {
 @Component({
   selector: 'app-add-list-button',
   templateUrl: './add-list-button.component.html',
-  imports: [BtnBaseComponent, FormField, CnPipe, OutsideClickDirective],
+  imports: [BtnBaseComponent, FormField, CnPipe],
 })
 export class AddListButtonComponent {
   readonly class = input('');
