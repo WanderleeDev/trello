@@ -16,10 +16,10 @@ import { BasicImageComponent } from '../../shared/ui/components/basic-image/basi
         <p>Something went wrong on this page</p>
         <p>Our team has been notified.</p>
       </div>
-      <a routerLink="/dashboard" class="text-blue-500 underline">Go to Dashboard</a>
+      <a routerLink="/dashboard" class="text-blue-500 underline">Go to Workspace</a>
     </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [BasicImageComponent, RouterLink],
 })
-export class NotFoundComponent {}
+export default class NotFoundComponent {}
