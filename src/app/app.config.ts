@@ -1,10 +1,11 @@
-import { ApplicationConfig } from '@angular/core';
+import { ApplicationConfig, ErrorHandler } from '@angular/core';
 import { provideRouter, withViewTransitions, withComponentInputBinding } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideThemeStack } from 'ngx-theme-stack';
 import { AuthRepository } from './modules/auth/domain/repositories/auth.repository';
 import { AuthHttpRepository } from './modules/auth/infrastructure/auth-http.repository';
+import { GlobalErrorHandler } from './core/error-handler/global-error-handler';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -20,5 +21,6 @@ export const appConfig: ApplicationConfig = {
       strategy: 'critters',
     }),
     { provide: AuthRepository, useClass: AuthHttpRepository },
+    { provide: ErrorHandler, useClass: GlobalErrorHandler },
   ],
 };

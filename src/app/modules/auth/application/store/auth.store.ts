@@ -26,32 +26,24 @@ export const AuthStore = signalStore(
   }),
   withMethods((store, loginUseCase = inject(LoginUseCase), logoutUseCase = inject(LogoutUseCase)) => ({
     async login(request: LoginRequest) {
-      try {
-        const user: AuthUser = await loginUseCase.execute(request);
-        patchState(store, {
-          isAuthenticated: true,
-          role: user.role,
-          username: user.username,
-          image: user.image,
-          accessToken: 'authenticated',
-        });
-      } catch (err) {
-        console.error('[AuthStore] login failed', err);
-      }
+      const user: AuthUser = await loginUseCase.execute(request);
+      patchState(store, {
+        isAuthenticated: true,
+        role: user.role,
+        username: user.username,
+        image: user.image,
+        accessToken: 'authenticated',
+      });
     },
     async logout() {
-      try {
-        await logoutUseCase.execute();
-        patchState(store, {
-          isAuthenticated: false,
-          role: 'guest',
-          username: null,
-          accessToken: null,
-          image: null,
-        });
-      } catch (err) {
-        console.error('[AuthStore] logout failed', err);
-      }
+      await logoutUseCase.execute();
+      patchState(store, {
+        isAuthenticated: false,
+        role: 'guest',
+        username: null,
+        accessToken: null,
+        image: null,
+      });
     },
   })),
 );
