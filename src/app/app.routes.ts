@@ -5,23 +5,23 @@ export const routes: Routes = [
   {
     path: 'auth',
     loadComponent: () =>
-      import('./modules/auth/layout/auth-layout.component').then(m => m.AuthLayoutComponent),
+      import('./modules/auth/presentation/layout/auth-layout.component').then(m => m.AuthLayoutComponent),
     children: [
       { path: '', redirectTo: 'sign-in', pathMatch: 'full' },
       {
         path: 'sign-in',
         loadComponent: () =>
-          import('./modules/auth/views/login/login.component').then(m => m.LoginComponent),
+          import('./modules/auth/presentation/views/login/login.component').then(m => m.LoginComponent),
       },
       {
         path: 'sign-up',
         loadComponent: () =>
-          import('./modules/auth/views/register/register.component').then(m => m.RegisterComponent),
+          import('./modules/auth/presentation/views/register/register.component').then(m => m.RegisterComponent),
       },
       {
         path: 'account-recovery',
         loadComponent: () =>
-          import('./modules/auth/views/account-recovery/account-recovery.component').then(
+          import('./modules/auth/presentation/views/account-recovery/account-recovery.component').then(
             m => m.AccountRecoveryComponent,
           ),
       },

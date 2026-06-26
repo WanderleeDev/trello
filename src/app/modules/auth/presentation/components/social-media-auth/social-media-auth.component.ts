@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { CustomBtnComponent } from '../../../../shared/ui/components/custom-btn/custom-btn.component';
-import { BasicImageComponent } from '../../../../shared/ui/components/basic-image/basic-image.component';
+import { CustomBtnComponent } from '../../../../../shared/ui/components/custom-btn/custom-btn.component';
+import { BasicImageComponent } from '../../../../../shared/ui/components/basic-image/basic-image.component';
 
 @Component({
     selector: 'app-social-media-auth',

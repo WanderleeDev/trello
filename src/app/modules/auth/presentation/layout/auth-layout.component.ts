@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BannerComponent } from '../components/banner/banner.component';
-import { BasicImageComponent } from '../../../shared/ui/components/basic-image/basic-image.component';
+import { BasicImageComponent } from '../../../../shared/ui/components/basic-image/basic-image.component';
 import { RouterOutlet } from '@angular/router';
 
 @Component({

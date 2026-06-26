@@ -1,22 +1,22 @@
 import { Component, inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
-import { TermsAndConditionsComponent } from '../terms-and-conditions/terms-and-conditions.component';
-import { CustomBtnComponent } from '../../../../shared/ui/components/custom-btn/custom-btn.component';
+import { CustomBtnComponent } from '../../../../../shared/ui/components/custom-btn/custom-btn.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
-    selector: 'app-form-register',
-    templateUrl: './form-register.component.html',
+    selector: 'app-form-recovery',
+    templateUrl: './form-recovery.component.html',
     standalone: true,
     imports: [
         ReactiveFormsModule,
-        TermsAndConditionsComponent,
         CustomBtnComponent,
+        RouterLink,
     ],
 })
-export class FormRegisterComponent {
+export class FormRecoveryComponent {
   private readonly _fb = inject(FormBuilder);
 
-  registerForm: FormGroup = this._fb.nonNullable.group({
+  recoveryForm: FormGroup = this._fb.nonNullable.group({
     email: [
       '',
       [
@@ -28,9 +28,9 @@ export class FormRegisterComponent {
   });
 
   public onSubmit(): void {
-    if (this.registerForm.invalid) return;
+    if (this.recoveryForm.invalid) return;
 
-    const { email } = this.registerForm.getRawValue();
+    const { email } = this.recoveryForm.value;
     console.log(email);
   }
 }
