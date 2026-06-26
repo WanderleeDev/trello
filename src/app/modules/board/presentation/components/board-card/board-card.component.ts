@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { LinkCard } from '../../../../shared/interfaces/LinkCard.interface';
+import { LinkCard } from '../../../../../shared/interfaces/LinkCard.interface';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({

@@ -1,4 +1,4 @@
-import { LinkCard } from '../../shared/interfaces/LinkCard.interface';
+import { LinkCard } from '../../../../shared/interfaces/LinkCard.interface';
 
 const starredBoards: LinkCard[] = [
   {

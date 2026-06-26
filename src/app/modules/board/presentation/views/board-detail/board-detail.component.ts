@@ -1,13 +1,13 @@
 import { Component, input } from '@angular/core';
-import { NavComponent } from '../../shared/ui/components/nav/nav.component';
+import { NavComponent } from '../../../../../shared/ui/components/nav/nav.component';
 import { BoardComponent } from './components/board/board.component';
 
 @Component({
-  selector: 'app-workspace',
-  templateUrl: './workspace.component.html',
+  selector: 'app-board-detail',
+  templateUrl: './board-detail.component.html',
   standalone: true,
   imports: [NavComponent, BoardComponent],
 })
-export class WorkspaceComponent {
+export default class BoardDetailComponent {
   readonly idBoard = input<string>();
 }

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { BasicImageComponent } from '../../../../shared/ui/components/basic-image/basic-image.component';
+import { BasicImageComponent } from '../../../../../shared/ui/components/basic-image/basic-image.component';
 
 @Component({
   selector: 'app-board-error',
