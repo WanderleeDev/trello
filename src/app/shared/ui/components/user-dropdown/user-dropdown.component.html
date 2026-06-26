@@ -36,6 +36,8 @@
       <div
         ngMenuItem
         value="profile"
+        (click)="navigate('profile')"
+        (keydown.enter)="navigate('profile')"
         class="flex items-center gap-2 p-2 rounded cursor-pointer text-sm hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg"
       >
         <span
@@ -48,17 +50,19 @@
       </div>
 
       <div
-        ngMenuItem
-        value="settings"
         class="flex items-center gap-2 p-2 rounded cursor-pointer text-sm hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg"
+        ngMenuItem
+        value="dashboard"
+        (click)="navigate('dashboard')"
+        (keydown.enter)="navigate('dashboard')"
       >
         <span
           class="material-symbols-outlined text-base opacity-75"
           translate="no"
           aria-hidden="true"
-          >settings</span
+          >dashboard</span
         >
-        <span class="flex-1">Settings</span>
+        <span class="flex-1">Dashboard</span>
       </div>
 
       <div class="my-1 border-t border-border-inverse opacity-25"></div>
@@ -66,12 +70,10 @@
       <div
         ngMenuItem
         value="logout"
+        (click)="logout()"
         class="flex items-center gap-2 p-2 rounded cursor-pointer text-sm text-danger hover:bg-danger-hover focus-visible:outline-2 focus-visible:outline-danger/50"
       >
-        <span
-          class="material-symbols-outlined text-base"
-          translate="no"
-          aria-hidden="true"
+        <span class="material-symbols-outlined text-base" translate="no" aria-hidden="true"
           >logout</span
         >
         <span class="flex-1">Log out</span>

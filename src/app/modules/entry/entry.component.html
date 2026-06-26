@@ -6,7 +6,7 @@
     description="Invite people to boards and cards, leave comments, add due dates, and we'll show the most important activity here."
   />
 
-  <div class="max-w-[19rem] flex flex-col gap-8">
+  <div class="max-w-76 flex flex-col gap-8">
     @for (item of data; track $index) {
       @if (item.boards.length > 0) {
         <article>
@@ -25,6 +25,8 @@
       }
     }
 
-    <app-btn-base class="contents" variant="primary"> <span class="material-symbols-outlined" style="font-size: 20px">add</span> Create a board </app-btn-base>
+    <app-btn-base class="contents" variant="primary">
+      <span class="material-symbols-outlined" style="font-size: 20px">add</span> Create a board
+    </app-btn-base>
   </div>
 </section>

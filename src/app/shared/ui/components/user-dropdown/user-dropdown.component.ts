@@ -3,6 +3,7 @@ import { Menu, MenuContent, MenuItem, MenuTrigger } from '@angular/aria/menu';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { UserComponent } from '../user/user.component';
 import { UserStore } from '../../../../store/user/user.store';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-dropdown',
@@ -13,5 +14,13 @@ import { UserStore } from '../../../../store/user/user.store';
 })
 export class UserDropdownComponent {
   protected readonly userStore = inject(UserStore);
+  readonly #router = inject(Router);
   protected formatMenu = viewChild<Menu<string>>('formatMenu');
+
+  protected navigate(route: string): void {
+    if (!route.trim()) return;
+    this.#router.navigateByUrl(route);
+  }
+
+  protected logout(): void {}
 }
