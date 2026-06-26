@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { LinkCard } from '../../../../shared/interfaces/LinkCard.interface';
 import { OutsideClickDirective } from '../../../directives/outside-click.directive';
-import { LinkCardComponent } from '../link-card/link-card.component';
 import { LoaderIconComponent } from '../../../icons/components/loader-icon.component';
 
 @Component({
