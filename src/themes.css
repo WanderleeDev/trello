@@ -38,6 +38,8 @@
   --btn-primary: #0c66e4;
   --btn-primary-hover: #0055cc;
   --btn-primary-text: #ffffff;
+  --danger-text: #ca3521;
+  --danger-bg-hover: #ca352114;
 }
 
 .dark {
@@ -73,6 +75,8 @@
   --btn-primary: #579dff;
   --btn-primary-hover: #85b8ff;
   --btn-primary-text: #1d2125;
+  --danger-text: #f87462;
+  --danger-bg-hover: #f8746214;
   --header-board-clr: #0000003d;
   --dynamic-text-transparent: hsla(211, 18%, 68%, 0.16);
   --dynamic-background-transparent: hsla(206, 13.7%, 10%, 0.9);

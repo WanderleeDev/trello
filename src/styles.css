@@ -29,6 +29,8 @@
   --color-btn-primary: var(--btn-primary);
   --color-btn-primary-hover: var(--btn-primary-hover);
   --color-btn-primary-text: var(--btn-primary-text);
+  --color-danger: var(--danger-text);
+  --color-danger-hover: var(--danger-bg-hover);
 }
 
 @layer base {
