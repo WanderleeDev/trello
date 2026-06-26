@@ -16,6 +16,9 @@
     "prestart": "pnpm run ngx-theme-stack:sync"
   },
   "packageManager": "pnpm@11.3.0",
+  "engines": {
+    "node": "24.x"
+  },
   "private": true,
   "dependencies": {
     "@angular/aria": "^22.0.2",
