@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
-import type { AuthRepository } from '../domain/repositories/auth.repository';
+import { AuthRepository } from '../domain/repositories/auth.repository';
 import type { AuthUser } from '../domain/models/auth-user.model';
 import type { LoginRequest } from '../domain/models/login-request.model';
 import { TokenStorageService } from './token-storage.service';
 
-@Injectable({ providedIn: 'root' })
-export class AuthHttpRepository implements AuthRepository {
-  constructor(private readonly tokenStorage: TokenStorageService) {}
+@Injectable()
+export class AuthHttpRepository extends AuthRepository {
+  constructor(private readonly tokenStorage: TokenStorageService) {
+    super();
+  }
 
   async login(request: LoginRequest): Promise<AuthUser> {
     // TODO: replace with real HTTP call when API is ready

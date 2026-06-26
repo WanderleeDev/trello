@@ -3,7 +3,7 @@ import { provideRouter, withViewTransitions, withComponentInputBinding } from '@
 import { provideHttpClient } from '@angular/common/http';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideThemeStack } from 'ngx-theme-stack';
-import { AUTH_REPOSITORY } from './modules/auth/infrastructure/auth.di';
+import { AuthRepository } from './modules/auth/domain/repositories/auth.repository';
 import { AuthHttpRepository } from './modules/auth/infrastructure/auth-http.repository';
 import { routes } from './app.routes';
 
@@ -19,6 +19,6 @@ export const appConfig: ApplicationConfig = {
       mode: 'class',
       strategy: 'critters',
     }),
-    { provide: AUTH_REPOSITORY, useClass: AuthHttpRepository },
+    { provide: AuthRepository, useClass: AuthHttpRepository },
   ],
 };
