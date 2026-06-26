@@ -19,4 +19,4 @@ import { FooterFormComponent } from '../../components/footer-form/footer-form.co
     standalone: true,
     imports: [FormRecoveryComponent, FooterFormComponent],
 })
-export class AccountRecoveryComponent {}
+export default class AccountRecoveryComponent {}

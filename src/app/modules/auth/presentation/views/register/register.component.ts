@@ -31,4 +31,4 @@ import { FooterFormComponent } from '../../components/footer-form/footer-form.co
         FooterFormComponent,
     ],
 })
-export class RegisterComponent {}
+export default class RegisterComponent {}

@@ -31,4 +31,4 @@ import { RouterOutlet } from '@angular/router';
         RouterOutlet,
     ],
 })
-export class AuthLayoutComponent {}
+export default class AuthLayoutComponent {}
