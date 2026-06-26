@@ -22,7 +22,7 @@ export interface Board {
         TitleCasePipe,
     ],
 })
-export class EntryComponent {
+export default class EntryComponent {
   image = 'https://trello.com/assets/e55b3540e5c1f06a51d7.svg';
   protected readonly data: Board[] = [
     {

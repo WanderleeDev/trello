@@ -14,7 +14,7 @@ interface FeatureItem {
     standalone: true,
     imports: [RouterLink],
 })
-export class FeatureTemplateComponent {
+export default class FeatureTemplateComponent {
   features: FeatureItem[] = [
     {
       icon: '🚀',

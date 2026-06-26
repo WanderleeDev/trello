@@ -6,6 +6,6 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
 })
-export class AllTemplatesForCategoryComponent {
+export default class AllTemplatesForCategoryComponent {
   readonly category = input.required<string>();
 }

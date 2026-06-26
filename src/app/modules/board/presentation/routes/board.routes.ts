@@ -17,37 +17,35 @@ export const boardRoutes: Routes = [
       {
         path: '',
         loadComponent: () =>
-          import('../../../templates/views/entry-page/entry-page.component').then(
-            m => m.EntryPageComponent,
-          ),
+          import('../../../templates/views/entry-page/entry-page.component'),
       },
       {
         path: 'features/:id',
         loadComponent: () =>
           import(
             '../../../templates/views/feature-template/feature-template.component'
-          ).then(m => m.FeatureTemplateComponent),
+          ),
       },
       {
         path: ':category',
         loadComponent: () =>
           import(
             '../../../templates/views/all-templates-for-category/all-templates-for-category.component'
-          ).then(m => m.AllTemplatesForCategoryComponent),
+          ),
       },
       {
         path: ':category/:id',
         loadComponent: () =>
           import(
             '../../../templates/views/simple-template/simple-template.component'
-          ).then(m => m.SimpleTemplateComponent),
+          ),
       },
     ],
   },
   {
     path: 'entry',
     loadComponent: () =>
-      import('../../../entry/entry.component').then(m => m.EntryComponent),
+      import('../../../entry/entry.component'),
   },
   {
     // Legacy redirect: /workspace/:idBoard → /workspace/board/:idBoard

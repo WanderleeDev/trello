@@ -22,7 +22,7 @@ import { CardTemplateInfoComponent } from '../../components/card-template-info/c
         CardTemplateInfoComponent,
     ],
 })
-export class EntryPageComponent {
+export default class EntryPageComponent {
   readonly #router = inject(Router);
 
   protected readonly templates = signal<TemplateCategory[]>(templatesMockup);
