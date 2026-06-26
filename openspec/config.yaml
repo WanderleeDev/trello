@@ -13,11 +13,11 @@ stack:
   ssr: true
 
 testing:
-  runner: karma
-  framework: jasmine
+  runner: vitest
+  framework: vitest
   strict_tdd: true
-  test_command: "ng test"
-  coverage: karma-coverage
+  test_command: "npx vitest"
+  coverage: vitest
 
 conventions:
   style: scss
