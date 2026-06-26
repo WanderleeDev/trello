@@ -1,5 +1,4 @@
-import { Component, inject } from '@angular/core';
-import { BoardStore } from '../../../../store/board/board.store';
+import { Component, inject, signal } from '@angular/core';
 import { UserStore } from '../../../../store/user/user.store';
 import { TrelloDynamicIconComponent } from '../../../icons/components/trello-dynamic-icon/trello-dynamic-icon.component';
 import { BtnBaseComponent } from '../btn-base/btn-base.component';
@@ -13,6 +12,7 @@ import { StarredDropdownComponent } from '../starred-dropdown/starred-dropdown.c
 import { TemplatesDropdownComponent } from '../templates-dropdown/templates-dropdown.component';
 import { UserDropdownComponent } from '../user-dropdown/user-dropdown.component';
 import { WorkspaceDropdownComponent } from '../workspace-dropdown/workspace-dropdown.component';
+import { templates } from '../../../mockup/templates';
 
 @Component({
   selector: 'app-nav',
@@ -33,6 +33,6 @@ import { WorkspaceDropdownComponent } from '../workspace-dropdown/workspace-drop
   ],
 })
 export class NavComponent {
-  protected readonly boardStore = inject(BoardStore);
   protected readonly userStore = inject(UserStore);
+  protected readonly templates = signal(templates);
 }
