@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, inject, viewChild } from '@angular/
 import { Menu, MenuContent, MenuItem, MenuTrigger } from '@angular/aria/menu';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { UserComponent } from '../user/user.component';
-import { UserStore } from '../../../../store/user/user.store';
+import { AuthStore } from '../../../../modules/auth/application/store/auth.store';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
   imports: [Menu, MenuTrigger, MenuItem, MenuContent, OverlayModule, UserComponent],
 })
 export class UserDropdownComponent {
-  protected readonly userStore = inject(UserStore);
+  protected readonly authStore = inject(AuthStore);
   readonly #router = inject(Router);
   protected formatMenu = viewChild<Menu<string>>('formatMenu');
 
@@ -22,5 +22,7 @@ export class UserDropdownComponent {
     this.#router.navigateByUrl(route);
   }
 
-  protected logout(): void {}
+  protected logout(): void {
+    this.authStore.logout();
+  }
 }

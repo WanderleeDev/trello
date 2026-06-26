@@ -1,5 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
-import { UserStore } from '../../../../store/user/user.store';
+import { Component, signal } from '@angular/core';
 import { TrelloDynamicIconComponent } from '../../../icons/components/trello-dynamic-icon/trello-dynamic-icon.component';
 import { BtnBaseComponent } from '../btn-base/btn-base.component';
 import { BtnToggleThemeComponent } from '../btn-toggle-theme/btn-toggle-theme.component';
@@ -33,6 +32,5 @@ import { templates } from '../../../mockup/templates';
   ],
 })
 export class NavComponent {
-  protected readonly userStore = inject(UserStore);
   protected readonly templates = signal(templates);
 }

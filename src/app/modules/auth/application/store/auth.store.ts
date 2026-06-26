@@ -12,6 +12,7 @@ export interface AuthState {
   accessToken: string | null;
   role: RoleUser;
   username: string | null;
+  email: string | null;
   image: string | null;
 }
 
@@ -21,6 +22,7 @@ export const AuthStore = signalStore(
     isAuthenticated: false,
     role: 'guest',
     username: null,
+    email: null,
     accessToken: null,
     image: null,
   }),
@@ -31,6 +33,7 @@ export const AuthStore = signalStore(
         isAuthenticated: true,
         role: user.role,
         username: user.username,
+        email: user.email,
         image: user.image,
         accessToken: 'authenticated',
       });
@@ -41,6 +44,7 @@ export const AuthStore = signalStore(
         isAuthenticated: false,
         role: 'guest',
         username: null,
+        email: null,
         accessToken: null,
         image: null,
       });
