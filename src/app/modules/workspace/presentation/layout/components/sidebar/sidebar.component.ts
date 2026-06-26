@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { MatIconComponent } from '../../../../shared/ui/components/mat-icon/mat-icon.component';
-import { LinkBtnComponent } from '../../../../shared/ui/components/link-btn/link-btn.component';
+import { MatIconComponent } from '../../../../../../shared/ui/components/mat-icon/mat-icon.component';
+import { LinkBtnComponent } from '../../../../../../shared/ui/components/link-btn/link-btn.component';
 import { AccordionComponent } from '../accordion/accordion.component';
-import { LetterGradientIconComponent } from '../../../../shared/icons/components/letter-gradient-icon.component';
+import { LetterGradientIconComponent } from '../../../../../../shared/icons/components/letter-gradient-icon.component';
 import { CardPremiumTryComponent } from '../card-premium-try/card-premium-try.component';
 
 @Component({
   selector: 'app-sidebar',
-   templateUrl: './sidebar.component.html',
-   standalone: true,
+  templateUrl: './sidebar.component.html',
+  standalone: true,
   imports: [
     LinkBtnComponent,
     MatIconComponent,
@@ -22,17 +22,17 @@ export class SidebarComponent {
     {
       icon: 'view_column',
       label: 'Boards',
-      link: '/dashboard',
+      link: '/workspace',
     },
     {
       icon: 'dashboard_customize',
       label: 'Templates',
-      link: '/dashboard/templates',
+      link: '/workspace/templates',
     },
     {
       icon: 'trending_up',
       label: 'Entry',
-      link: '/dashboard/entry',
+      link: '/workspace/entry',
     },
   ];
 
@@ -40,27 +40,27 @@ export class SidebarComponent {
     {
       icon: 'view_column',
       label: 'Boards',
-      link: '/dashboard/boards',
+      link: '/workspace/boards',
     },
     {
       icon: 'favorite',
       label: 'Highlights',
-      link: '/dashboard/highlights',
+      link: '/workspace/highlights',
     },
     {
       icon: 'grid_view',
       label: 'Views',
-      link: '/dashboard/home',
+      link: '/workspace/home',
     },
     {
       icon: 'group',
       label: 'Members',
-      link: '/dashboard/members',
+      link: '/workspace/members',
     },
     {
       icon: 'settings',
       label: 'Settings',
-      link: '/dashboard/settings',
+      link: '/workspace/settings',
     },
   ];
 }

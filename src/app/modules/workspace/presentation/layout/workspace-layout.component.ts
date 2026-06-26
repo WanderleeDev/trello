@@ -1,12 +1,12 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { NavComponent } from '../../shared/ui/components/nav/nav.component';
+import { NavComponent } from '../../../../shared/ui/components/nav/nav.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-    selector: 'app-dashboard',
-    template: `
+  selector: 'app-workspace-layout',
+  template: `
     <header class="board-header">
       <app-nav />
       <app-banner />
@@ -19,13 +19,13 @@ import { RouterOutlet } from '@angular/router';
       </div>
     </main>
   `,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-        NavComponent,
-        BannerComponent,
-        SidebarComponent,
-        RouterOutlet,
-    ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [
+    NavComponent,
+    BannerComponent,
+    SidebarComponent,
+    RouterOutlet,
+  ],
 })
-export class DashboardComponent {}
+export default class WorkspaceLayoutComponent {}
