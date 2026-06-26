@@ -1,0 +1,6 @@
+{
+  "nodeVersion": "24.x",
+  "env": {
+    "ENABLE_COREPACK": "1"
+  }
+}
