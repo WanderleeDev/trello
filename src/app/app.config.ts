@@ -5,6 +5,8 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { provideThemeStack } from 'ngx-theme-stack';
 import { AuthRepository } from './modules/auth/domain/repositories/auth.repository';
 import { AuthHttpRepository } from './modules/auth/infrastructure/auth-http.repository';
+import { BoardRepository } from './modules/board/domain';
+import { BoardMockRepository } from './modules/board/infrastructure';
 import { GlobalErrorHandler } from './core/error-handler/global-error-handler';
 import { routes } from './app.routes';
 
@@ -21,6 +23,7 @@ export const appConfig: ApplicationConfig = {
       strategy: 'critters',
     }),
     { provide: AuthRepository, useClass: AuthHttpRepository },
+    { provide: BoardRepository, useClass: BoardMockRepository },
     { provide: ErrorHandler, useClass: GlobalErrorHandler },
   ],
 };
