@@ -11,13 +11,13 @@ export const workspaceRoutes: Routes = [
     children: [
       {
         path: '',
-        loadComponent: () => import('../../../templates/views/entry-page/entry-page.component'),
+        loadComponent: () => import('../views/templates/entry-page/entry-page.component'),
       },
     ],
   },
   {
     path: 'entry',
-    loadComponent: () => import('../../../entry/entry.component'),
+    loadComponent: () => import('../views/entry/entry.component'),
   },
   {
     path: '**',

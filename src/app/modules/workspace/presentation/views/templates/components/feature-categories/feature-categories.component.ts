@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FeatureCategories } from '../../interfaces/template.interface';
 import { RouterLink } from '@angular/router';
 import { NgOptimizedImage, KeyValuePipe } from '@angular/common';
-import { SearchAndReplacePipe } from '../../../../shared/pipes/search-and-replace.pipe';
+import { SearchAndReplacePipe } from '../../../../../../../shared/pipes/search-and-replace.pipe';
 // import { FeatureCategories } from '../../interfaces/template.interface';
 
 @Component({
