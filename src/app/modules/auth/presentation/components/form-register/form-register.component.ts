@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { TermsAndConditionsComponent } from '../terms-and-conditions/terms-and-conditions.component';
-import { CustomBtnComponent } from '../../../../../shared/components/custom-btn/custom-btn.component';
+import { CustomBtnComponent } from '../../../../../shared/presentation/components/custom-btn/custom-btn.component';
 
 @Component({
     selector: 'app-form-register',

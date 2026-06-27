@@ -4,7 +4,7 @@ export const routes: Routes = [
   { path: '', redirectTo: 'auth', pathMatch: 'full' },
   {
     path: 'under-construction',
-    loadComponent: () => import('./shared/components/under-construction/under-construction.component'),
+    loadComponent: () =>       import('./shared/presentation/views/under-construction/under-construction.component'),
   },
   {
     path: 'auth',
@@ -22,6 +22,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    loadComponent: () => import('./modules/not-found/not-found.component'),
+    loadComponent: () =>       import('./shared/presentation/views/not-found/not-found.component'),
   },
 ];

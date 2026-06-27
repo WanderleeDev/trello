@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BasicImageComponent } from '../../../../../shared/components/basic-image/basic-image.component';
+import { BasicImageComponent } from '../../../../../shared/presentation/components/basic-image/basic-image.component';
 
 @Component({
     selector: 'app-footer-form',

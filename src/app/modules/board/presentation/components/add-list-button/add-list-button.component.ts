@@ -1,5 +1,5 @@
 import { Component, input, output, signal } from '@angular/core';
-import { BtnBaseComponent } from '../../../../../shared/components/btn-base/btn-base.component';
+import { BtnBaseComponent } from '../../../../../shared/presentation/components/btn-base/btn-base.component';
 import { form, FormField, debounce, required, pattern, maxLength } from '@angular/forms/signals';
 import { CnPipe } from '../../../../../shared/pipes/cn.pipe';
 

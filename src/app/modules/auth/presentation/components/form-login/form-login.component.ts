@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { AuthStore } from '../../../application/store/auth.store';
-import { CustomBtnComponent } from '../../../../../shared/components/custom-btn/custom-btn.component';
+import { CustomBtnComponent } from '../../../../../shared/presentation/components/custom-btn/custom-btn.component';
 
 @Component({
   selector: 'app-form-login',

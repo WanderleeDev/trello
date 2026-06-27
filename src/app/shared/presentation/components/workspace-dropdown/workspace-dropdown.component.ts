@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, inject, input, viewChild } from '@a
 import { Router } from '@angular/router';
 import { Menu, MenuContent, MenuItem, MenuTrigger } from '@angular/aria/menu';
 import { CardCommonComponent } from '../card-common/card-common.component';
-import { BoardTemplate } from '../../mockup/templates';
+import { BoardTemplate } from '../../../mockup/templates';
 import { OverlayModule } from '@angular/cdk/overlay';
 
 @Component({

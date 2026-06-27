@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
-import { CustomBtnComponent } from '../../../../../shared/components/custom-btn/custom-btn.component';
+import { CustomBtnComponent } from '../../../../../shared/presentation/components/custom-btn/custom-btn.component';
 import { RouterLink } from '@angular/router';
 
 @Component({

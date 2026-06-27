@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { LinkCard } from '../../shared/interfaces/LinkCard.interface';
-import { CardInfoComponent } from '../../shared/components/card-info/card-info.component';
+import { CardInfoComponent } from '../../shared/presentation/components/card-info/card-info.component';
 import { TitleCasePipe } from '@angular/common';
-import { BtnBaseComponent } from '../../shared/components/btn-base/btn-base.component';
-import { MatIconComponent } from '../../shared/components/mat-icon/mat-icon.component';
+import { BtnBaseComponent } from '../../shared/presentation/components/btn-base/btn-base.component';
+import { MatIconComponent } from '../../shared/presentation/components/mat-icon/mat-icon.component';
 
 export interface Board {
   title: string;

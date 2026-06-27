@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { NavComponent } from '../../../../shared/components/nav/nav.component';
+import { NavComponent } from '../../../../shared/presentation/components/nav/nav.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RouterOutlet } from '@angular/router';

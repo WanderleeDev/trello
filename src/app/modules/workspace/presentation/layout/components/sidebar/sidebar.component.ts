@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { MatIconComponent } from '../../../../../../shared/components/mat-icon/mat-icon.component';
-import { LinkBtnComponent } from '../../../../../../shared/components/link-btn/link-btn.component';
+import { MatIconComponent } from '../../../../../../shared/presentation/components/mat-icon/mat-icon.component';
+import { LinkBtnComponent } from '../../../../../../shared/presentation/components/link-btn/link-btn.component';
 import { AccordionComponent } from '../accordion/accordion.component';
 import { LetterGradientIconComponent } from '../../../../../../shared/icons/components/letter-gradient-icon.component';
 import { CardPremiumTryComponent } from '../card-premium-try/card-premium-try.component';

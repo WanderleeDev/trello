@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
-import { LetterGradientIconComponent } from '../../icons/components/letter-gradient-icon.component';
+import { LetterGradientIconComponent } from '../../../icons/components/letter-gradient-icon.component';
 
 export interface DataUser {
   username: string | null;

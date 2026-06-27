@@ -44,7 +44,7 @@ export const workspaceRoutes: Routes = [
   },
   {
     path: '**',
-    loadComponent: () => import('../../../not-found/not-found.component'),
+    loadComponent: () =>       import('../../../../shared/presentation/views/not-found/not-found.component'),
   },
 ];
 

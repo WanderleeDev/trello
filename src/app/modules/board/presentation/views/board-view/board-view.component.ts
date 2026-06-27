@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { NavComponent } from '../../../../../shared/components/nav/nav.component';
+import { NavComponent } from '../../../../../shared/presentation/components/nav/nav.component';
 import { BoardViewAreaComponent } from '../../components/board-view/board-view.component';
 
 @Component({
