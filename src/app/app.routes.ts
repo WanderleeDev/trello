@@ -4,7 +4,8 @@ export const routes: Routes = [
   { path: '', redirectTo: 'auth', pathMatch: 'full' },
   {
     path: 'under-construction',
-    loadComponent: () =>       import('./shared/presentation/views/under-construction/under-construction.component'),
+    loadComponent: () =>
+      import('./shared/presentation/views/under-construction/under-construction.component'),
   },
   {
     path: 'auth',
@@ -17,11 +18,12 @@ export const routes: Routes = [
     loadChildren: () => import('./modules/workspace/presentation/routes/workspace.routes'),
   },
   {
-    path: 'board/:idBoard',
-    loadComponent: () => import('./modules/board/presentation/views/board-view/board-view.component'),
+    path: 'board/:idBoard/:nameBoard',
+    loadComponent: () =>
+      import('./modules/board/presentation/views/board-view/board-view.component'),
   },
   {
     path: '**',
-    loadComponent: () =>       import('./shared/presentation/views/not-found/not-found.component'),
+    loadComponent: () => import('./shared/presentation/views/not-found/not-found.component'),
   },
 ];
