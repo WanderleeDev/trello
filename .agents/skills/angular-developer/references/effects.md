@@ -24,7 +24,7 @@ import { Component, signal, effect } from '@angular/core';
 
 @Component({...})
 export class Example {
-  protected readonly count = signal(0);
+  count = signal(0);
 
   constructor() {
     // Effect must be created in an injection context (e.g., a constructor)

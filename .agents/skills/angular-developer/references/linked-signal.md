@@ -13,11 +13,11 @@ import { Component, signal, linkedSignal } from '@angular/core';
 
 @Component({...})
 export class ShippingMethodPicker {
-  protected readonly shippingOptions = signal(['Ground', 'Air', 'Sea']);
+  shippingOptions = signal(['Ground', 'Air', 'Sea']);
 
   // Defaults to the first option.
   // If shippingOptions changes, selectedOption resets to the new first option.
-  protected readonly selectedOption = linkedSignal(() => this.shippingOptions()[0]);
+  selectedOption = linkedSignal(() => this.shippingOptions()[0]);
 
   changeShipping(index: number) {
     // We can still manually update this signal!
@@ -37,11 +37,11 @@ interface ShippingMethod { id: number; name: string; }
 
 @Component({...})
 export class ShippingMethodPicker {
-  protected readonly shippingOptions = signal<ShippingMethod[]>([
+  shippingOptions = signal<ShippingMethod[]>([
     {id: 0, name: 'Ground'}, {id: 1, name: 'Air'}, {id: 2, name: 'Sea'}
   ]);
 
-  protected readonly selectedOption = linkedSignal<ShippingMethod[], ShippingMethod>({
+  selectedOption = linkedSignal<ShippingMethod[], ShippingMethod>({
     source: this.shippingOptions,
     computation: (newOptions, previous) => {
       // If the newly loaded options still contain the user's previously

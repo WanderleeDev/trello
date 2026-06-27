@@ -155,6 +155,6 @@ import {trigger, state, style, animate, transition} from '@angular/animations';
   template: `<div [@openClose]="isOpen() ? 'open' : 'closed'">...</div>`,
 })
 export class OpenClose {
-  protected readonly isOpen = signal(true);
+  isOpen = signal(true);
 }
 ```

@@ -13,16 +13,18 @@ Angular components, directives, and services automatically participate in DI.
 
 ## Services
 
-A **service** is the most common way to share data and functionality across an application. It is a TypeScript class decorated with `@Service()`.
+A **service** is the most common way to share data and functionality across an application. It is a TypeScript class decorated with `@Injectable()`.
 
 ### Creating a Service
 
-Use the `@Service()` decorator to make the service a singleton available throughout the entire application. This is the recommended approach for most services.
+Use the `providedIn: 'root'` option in the `@Injectable` decorator to make the service a singleton available throughout the entire application. This is the recommended approach for most services.
 
 ```ts
-import {Service} from '@angular/core';
+import {Injectable} from '@angular/core';
 
-@Service()
+@Injectable({
+  providedIn: 'root', // Makes this a singleton available everywhere
+})
 export class AnalyticsLogger {
   trackEvent(category: string, value: string) {
     console.log('Analytics event logged:', {category, value});
@@ -57,8 +59,8 @@ import {AnalyticsLogger} from './analytics-logger.service';
 })
 export class Navbar {
   // Injecting dependencies using class field initializers
-  private readonly router = inject(Router);
-  private readonly analytics = inject(AnalyticsLogger);
+  private router = inject(Router);
+  private analytics = inject(AnalyticsLogger);
 
   navigateToDetail(event: Event) {
     event.preventDefault();
@@ -80,7 +82,7 @@ Valid places to call `inject()`:
 4.  **Factory functions** used in providers
 
 ```typescript
-import {Component, Directive, Service, inject, ElementRef} from '@angular/core';
+import {Component, Directive, Injectable, inject, ElementRef} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
 // 1. In a Component (Field Initializer & Constructor)
@@ -105,7 +107,7 @@ export class MyDirective {
 }
 
 // 3. In a Service
-@Service()
+@Injectable({providedIn: 'root'})
 export class MyService {
   private http = inject(HttpClient); // ✅ Field initializer
 }

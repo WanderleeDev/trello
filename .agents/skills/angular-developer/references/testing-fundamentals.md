@@ -24,10 +24,13 @@ describe('MyComponent', () => {
   let fixture: ComponentFixture<MyComponent>;
   let h1: HTMLElement;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
+  beforeEach(async () => {
+    // 1. Configure the test module
+    await TestBed.configureTestingModule({
+      imports: [MyComponent],
+    }).compileComponents();
 
-    // Create the component fixture
+    // 2. Create the component fixture
     fixture = TestBed.createComponent(MyComponent);
     component = fixture.componentInstance;
     h1 = fixture.nativeElement.querySelector('h1');
