@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
-import { Template } from '../../interfaces/template.interface';
+import { Template } from '../../views/template/interfaces/template.interface';
 import { NgOptimizedImage, DecimalPipe } from '@angular/common';
-import { TruncatePipe } from '../../../../../../../shared/pipes/truncate.pipe';
-import { QuantityFormatPipe } from '../../../../../../../shared/pipes/quantity-format.pipe';
+import { TruncatePipe } from '../../../../../shared/pipes/truncate.pipe';
+import { QuantityFormatPipe } from '../../../../../shared/pipes/quantity-format.pipe';
 
 @Component({
     selector: 'app-card-template-info',

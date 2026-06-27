@@ -7,11 +7,11 @@ export const workspaceRoutes: Routes = [
       import('../../../board/presentation/views/boards-listing/boards-listing.component'),
   },
   {
-    path: 'templates',
+    path: 'template',
     children: [
       {
         path: '',
-        loadComponent: () => import('../views/templates/entry-page/entry-page.component'),
+        loadComponent: () => import('../views/template/entry-page/entry-page.component'),
       },
     ],
   },

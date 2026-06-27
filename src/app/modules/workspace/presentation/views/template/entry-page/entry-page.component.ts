@@ -2,11 +2,10 @@ import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/cor
 import { Category, FeatureCategories, TemplateCategory } from '../interfaces/template.interface';
 import { templatesMockup } from '../template.mockup';
 import { Router, RouterLink } from '@angular/router';
-import { FeatureCategoriesComponent } from '../components/feature-categories/feature-categories.component';
-import { TemplateListContainerComponent } from '../components/template-list-container/template-list-container.component';
-import { BtnBaseComponent } from '../../../../../shared/presentation/components/btn-base/btn-base.component';
-import { NgOptimizedImage } from '@angular/common';
-import { CardTemplateInfoComponent } from '../components/card-template-info/card-template-info.component';
+import { FeatureCategoriesComponent } from '../../../components/feature-categories/feature-categories.component';
+import { TemplateListContainerComponent } from '../../../components/template-list-container/template-list-container.component';
+import { BtnBaseComponent } from '../../../../../../shared/presentation/components/btn-base/btn-base.component';
+import { CardTemplateInfoComponent } from '../../../components/card-template-info/card-template-info.component';
 
 @Component({
   selector: 'app-entry-page',
@@ -48,6 +47,6 @@ export default class EntryPageComponent {
   };
 
   public navigateTo(path: string): void {
-    this.#router.navigate([`workspace/templates/${path}`]);
+    this.#router.navigate([`workspace/template/${path}`]);
   }
 }
