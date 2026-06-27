@@ -15,19 +15,27 @@ export const workspaceRoutes: Routes = [
           import('../../../templates/views/entry-page/entry-page.component'),
       },
       {
+        // Placeholder — under-construction until implemented
         path: 'features/:id',
         loadComponent: () =>
-          import('../../../templates/views/feature-template/feature-template.component'),
+          import('../../../../shared/presentation/views/under-construction/under-construction.component'),
       },
       {
+        path: 'popular',
+        loadComponent: () =>
+          import('../../../../shared/presentation/views/under-construction/under-construction.component'),
+      },
+      {
+        // Placeholder — under-construction until implemented
         path: ':category',
         loadComponent: () =>
-          import('../../../templates/views/all-templates-for-category/all-templates-for-category.component'),
+          import('../../../../shared/presentation/views/under-construction/under-construction.component'),
       },
       {
+        // Placeholder — under-construction until implemented
         path: ':category/:id',
         loadComponent: () =>
-          import('../../../templates/views/simple-template/simple-template.component'),
+          import('../../../../shared/presentation/views/under-construction/under-construction.component'),
       },
     ],
   },
