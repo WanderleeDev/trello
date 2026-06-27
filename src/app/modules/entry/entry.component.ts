@@ -30,7 +30,7 @@ export default class EntryComponent {
       icon: 'star',
       boards: [
         {
-          id: 'entry-1',
+          id: 'd1e2f3a4-b5c6-7890-abcd-ef1234567890',
           name: 'Encriptador de texto - Alura Challenges ONE',
           path: '/boards/1',
           image: 'https://trello.com/assets/e55b3540e5c1f06a51d7.svg',
@@ -43,7 +43,7 @@ export default class EntryComponent {
       icon: 'schedule',
       boards: [
         {
-          id: 'entry-2',
+          id: 'e2f3a4b5-c6d7-8901-bcde-f12345678901',
           name: 'Encriptador de texto - Alura Challenges ONE',
           path: '/boards/1',
           image: 'https://trello.com/assets/e55b3540e5c1f06a51d7.svg',
