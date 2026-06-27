@@ -1,15 +1,15 @@
-import { booleanAttribute, Component, Input } from '@angular/core';
-import { NgClass } from '@angular/common';
+import { Component, input } from '@angular/core';
+import { CnPipe } from '../../../pipes/cn.pipe';
 
 @Component({
     selector: 'app-custom-btn',
     templateUrl: './custom-btn.component.html',
     styles: '',
     standalone: true,
-    imports: [NgClass],
+    imports: [CnPipe],
 })
 export class CustomBtnComponent {
-  @Input() customClass: string[] = [];
-  @Input({ required: true }) type: 'button' | 'menu' | 'submit' | 'reset' = 'button';
-  @Input({ transform: booleanAttribute }) disabled?: boolean = false;
+  readonly customClass = input<string[]>([]);
+  readonly type = input.required<'button' | 'menu' | 'submit' | 'reset'>();
+  readonly disabled = input<boolean>(false);
 }
