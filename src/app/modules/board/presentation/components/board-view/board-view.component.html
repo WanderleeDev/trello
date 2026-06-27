@@ -1,17 +1,23 @@
 <div
-  cdkDropList
-  cdkDropListOrientation="horizontal"
-  class="flex items-start gap-6 h-full overflow-x-auto p-4 bg-[url('https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x322/47f09f0e3910259568294477d0bdedac/photo-1576502200916-3808e07386a5.jpg')] bg-no-repeat bg-cover"
-  (cdkDropListDropped)="drop($event)"
+  class="flex flex-col bg-[url('https://trello-backgrounds.s3.amazonaws.com/SharedBackground/480x322/47f09f0e3910259568294477d0bdedac/photo-1576502200916-3808e07386a5.jpg')] bg-no-repeat bg-cover h-full"
 >
-  @for (number of numbers(); track number) {
-    <div [cdkDragData]="number" cdkDrag class="h-min">
-      <app-column-board title="column" />
-    </div>
-  }
+  <ng-content select="header" />
 
-  <app-add-list-button
-    class="not-motion-reduce:starting:opacity-0 not-motion-reduce:starting:translate-y-5 not-motion-reduce:transition-all not-motion-reduce:duration-400 not-motion-reduce:ease-out"
-    (emitter)="addNewColumn($event)"
-  />
+  <div
+    cdkDropList
+    cdkDropListOrientation="horizontal"
+    class="flex items-start gap-6 h-full overflow-x-auto p-4"
+    (cdkDropListDropped)="drop($event)"
+  >
+    @for (number of numbers(); track number) {
+      <div [cdkDragData]="number" cdkDrag class="h-min">
+        <app-column-board title="column" />
+      </div>
+    }
+
+    <app-add-list-button
+      class="not-motion-reduce:starting:opacity-0 not-motion-reduce:starting:translate-y-5 not-motion-reduce:transition-all not-motion-reduce:duration-400 not-motion-reduce:ease-out"
+      (emitter)="addNewColumn($event)"
+    />
+  </div>
 </div>

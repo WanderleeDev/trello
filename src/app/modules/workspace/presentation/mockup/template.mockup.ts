@@ -1,4 +1,4 @@
-import { TemplateCategory } from './interfaces/template.interface';
+import { TemplateCategory } from '../../domain/models/template.model';
 
 export const templatesMockup: TemplateCategory[] = [
   {

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
-import { Category, FeatureCategories, TemplateCategory } from '../../../domain/models/template.model';
+import { FeatureCategories, TemplateCategory } from '../../../domain/models/template.model';
 import { templatesMockup } from '../../mockup/template.mockup';
 import { Router, RouterLink } from '@angular/router';
 import { NgOptimizedImage } from '@angular/common';
@@ -7,6 +7,7 @@ import { FeatureCategoriesComponent } from '../../components/feature-categories/
 import { TemplateListContainerComponent } from '../../components/template-list-container/template-list-container.component';
 import { BtnBaseComponent } from '../../../../../shared/presentation/components/btn-base/btn-base.component';
 import { CardTemplateInfoComponent } from '../../components/card-template-info/card-template-info.component';
+import { Category } from '../../../domain/types/template.types';
 
 @Component({
   selector: 'app-template-view',
