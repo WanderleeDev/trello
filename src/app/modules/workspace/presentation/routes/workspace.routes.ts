@@ -11,74 +11,18 @@ export const workspaceRoutes: Routes = [
     children: [
       {
         path: '',
-        loadComponent: () =>
-          import('../../../templates/views/entry-page/entry-page.component'),
-      },
-      {
-        // Placeholder — under-construction until implemented
-        path: 'features/:id',
-        loadComponent: () =>
-          import('../../../../shared/presentation/views/under-construction/under-construction.component'),
-      },
-      {
-        path: 'popular',
-        loadComponent: () =>
-          import('../../../../shared/presentation/views/under-construction/under-construction.component'),
-      },
-      {
-        // Placeholder — under-construction until implemented
-        path: ':category',
-        loadComponent: () =>
-          import('../../../../shared/presentation/views/under-construction/under-construction.component'),
-      },
-      {
-        // Placeholder — under-construction until implemented
-        path: ':category/:id',
-        loadComponent: () =>
-          import('../../../../shared/presentation/views/under-construction/under-construction.component'),
+        loadComponent: () => import('../../../templates/views/entry-page/entry-page.component'),
       },
     ],
   },
   {
     path: 'entry',
-    loadComponent: () =>
-      import('../../../entry/entry.component'),
-  },
-  {
-    // Placeholder routes — redirect to under-construction until implemented
-    path: 'boards',
-    loadComponent: () =>
-      import('../../../../shared/presentation/views/under-construction/under-construction.component'),
-  },
-  {
-    path: 'highlights',
-    loadComponent: () =>
-      import('../../../../shared/presentation/views/under-construction/under-construction.component'),
-  },
-  {
-    path: 'views',
-    loadComponent: () =>
-      import('../../../../shared/presentation/views/under-construction/under-construction.component'),
-  },
-  {
-    path: 'members',
-    loadComponent: () =>
-      import('../../../../shared/presentation/views/under-construction/under-construction.component'),
-  },
-  {
-    path: 'settings',
-    loadComponent: () =>
-      import('../../../../shared/presentation/views/under-construction/under-construction.component'),
-  },
-  {
-    // Legacy redirect: /workspace/:idBoard → /board/:idBoard
-    path: ':idBoard',
-    redirectTo: '/board/:idBoard',
-    pathMatch: 'full',
+    loadComponent: () => import('../../../entry/entry.component'),
   },
   {
     path: '**',
-    loadComponent: () =>       import('../../../../shared/presentation/views/not-found/not-found.component'),
+    loadComponent: () =>
+      import('../../../../shared/presentation/views/under-construction/under-construction.component'),
   },
 ];
 

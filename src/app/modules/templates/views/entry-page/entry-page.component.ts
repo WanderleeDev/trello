@@ -9,18 +9,18 @@ import { NgOptimizedImage } from '@angular/common';
 import { CardTemplateInfoComponent } from '../../components/card-template-info/card-template-info.component';
 
 @Component({
-    selector: 'app-entry-page',
-    templateUrl: './entry-page.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [
-        FeatureCategoriesComponent,
-        TemplateListContainerComponent,
-        BtnBaseComponent,
-        NgOptimizedImage,
-        RouterLink,
-        CardTemplateInfoComponent,
-    ],
+  selector: 'app-entry-page',
+  templateUrl: './entry-page.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [
+    FeatureCategoriesComponent,
+    TemplateListContainerComponent,
+    BtnBaseComponent,
+    NgOptimizedImage,
+    RouterLink,
+    CardTemplateInfoComponent,
+  ],
 })
 export default class EntryPageComponent {
   readonly #router = inject(Router);
@@ -48,6 +48,6 @@ export default class EntryPageComponent {
   };
 
   public navigateTo(path: string): void {
-    this.#router.navigate([`home/templates/${path}`]);
+    this.#router.navigate([`workspace/templates/${path}`]);
   }
 }
