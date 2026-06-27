@@ -5,17 +5,9 @@ import { RouterLink } from '@angular/router';
 import { FooterFormComponent } from '../../components/footer-form/footer-form.component';
 
 @Component({
-    selector: 'app-login',
-    template: `
+  selector: 'app-login',
+  template: `
     <ng-container>
-      <button
-        type="button"
-        class="fixed bottom-4 right-4 z-50 h-12 w-12 rounded-full bg-red-500 text-white text-xl shadow-lg hover:bg-red-600 transition-colors"
-        (click)="throwError()"
-        title="Probar error toast"
-      >
-        !
-      </button>
       <app-form-login />
       <app-social-media-auth>
         <a routerLink="/auth/account-recovery" class="text-blue-500 hover:underline">
@@ -39,16 +31,6 @@ import { FooterFormComponent } from '../../components/footer-form/footer-form.co
       </app-footer-form>
     </ng-container>
   `,
-    standalone: true,
-    imports: [
-        FormLoginComponent,
-        SocialMediaAuthComponent,
-        RouterLink,
-        FooterFormComponent,
-    ],
+  imports: [FormLoginComponent, SocialMediaAuthComponent, RouterLink, FooterFormComponent],
 })
-export default class LoginComponent {
-  throwError(): void {
-    throw new Error('🔥 Error de prueba desde el login');
-  }
-}
+export default class LoginComponent {}

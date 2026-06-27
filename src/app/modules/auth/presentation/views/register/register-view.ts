@@ -5,8 +5,8 @@ import { RouterLink } from '@angular/router';
 import { FooterFormComponent } from '../../components/footer-form/footer-form.component';
 
 @Component({
-    selector: 'app-register',
-    template: `
+  selector: 'app-register',
+  template: `
     <ng-container>
       <app-form-register />
       <app-social-media-auth>
@@ -23,12 +23,6 @@ import { FooterFormComponent } from '../../components/footer-form/footer-form.co
       </app-footer-form>
     </ng-container>
   `,
-    standalone: true,
-    imports: [
-        FormRegisterComponent,
-        SocialMediaAuthComponent,
-        RouterLink,
-        FooterFormComponent,
-    ],
+  imports: [FormRegisterComponent, SocialMediaAuthComponent, RouterLink, FooterFormComponent],
 })
 export default class RegisterComponent {}

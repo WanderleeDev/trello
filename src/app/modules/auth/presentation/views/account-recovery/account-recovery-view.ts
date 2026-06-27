@@ -3,8 +3,8 @@ import { FormRecoveryComponent } from '../../components/form-recovery/form-recov
 import { FooterFormComponent } from '../../components/footer-form/footer-form.component';
 
 @Component({
-    selector: 'app-account-recovery',
-    template: `
+  selector: 'app-account-recovery',
+  template: `
     <ng-container>
       <app-form-recovery />
       <app-footer-form>
@@ -16,7 +16,6 @@ import { FooterFormComponent } from '../../components/footer-form/footer-form.co
       </app-footer-form>
     </ng-container>
   `,
-    standalone: true,
-    imports: [FormRecoveryComponent, FooterFormComponent],
+  imports: [FormRecoveryComponent, FooterFormComponent],
 })
 export default class AccountRecoveryComponent {}

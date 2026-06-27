@@ -19,7 +19,7 @@ import { Portal } from './shared/presentation/components/portal/portal';
           error: 'bg-red-600 text-white',
           success: 'bg-emerald-600 text-white',
           info: 'bg-[#0079BF] text-white',
-        }
+        },
       }"
     />
     <router-outlet />
