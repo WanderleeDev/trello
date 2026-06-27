@@ -37,6 +37,32 @@ export const workspaceRoutes: Routes = [
       import('../../../entry/entry.component'),
   },
   {
+    // Placeholder routes — redirect to under-construction until implemented
+    path: 'boards',
+    loadComponent: () =>
+      import('../../../../shared/presentation/views/under-construction/under-construction.component'),
+  },
+  {
+    path: 'highlights',
+    loadComponent: () =>
+      import('../../../../shared/presentation/views/under-construction/under-construction.component'),
+  },
+  {
+    path: 'views',
+    loadComponent: () =>
+      import('../../../../shared/presentation/views/under-construction/under-construction.component'),
+  },
+  {
+    path: 'members',
+    loadComponent: () =>
+      import('../../../../shared/presentation/views/under-construction/under-construction.component'),
+  },
+  {
+    path: 'settings',
+    loadComponent: () =>
+      import('../../../../shared/presentation/views/under-construction/under-construction.component'),
+  },
+  {
     // Legacy redirect: /workspace/:idBoard → /board/:idBoard
     path: ':idBoard',
     redirectTo: '/board/:idBoard',

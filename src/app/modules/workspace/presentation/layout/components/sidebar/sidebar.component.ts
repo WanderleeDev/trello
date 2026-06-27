@@ -40,27 +40,27 @@ export class SidebarComponent {
     {
       icon: 'view_column',
       label: 'Boards',
-      link: '/under-construction',
+      link: '/workspace/boards',
     },
     {
       icon: 'favorite',
       label: 'Highlights',
-      link: '/under-construction',
+      link: '/workspace/highlights',
     },
     {
       icon: 'grid_view',
       label: 'Views',
-      link: '/under-construction',
+      link: '/workspace/views',
     },
     {
       icon: 'group',
       label: 'Members',
-      link: '/under-construction',
+      link: '/workspace/members',
     },
     {
       icon: 'settings',
       label: 'Settings',
-      link: '/under-construction',
+      link: '/workspace/settings',
     },
   ];
 }
