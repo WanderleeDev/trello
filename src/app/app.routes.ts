@@ -20,7 +20,7 @@ export const routes: Routes = [
   {
     path: 'board/:idBoard/:nameBoard',
     loadComponent: () =>
-      import('./modules/board/presentation/views/board-view/board-view-view'),
+      import('./modules/board/presentation/views/board-view/board-view'),
   },
   {
     path: '**',

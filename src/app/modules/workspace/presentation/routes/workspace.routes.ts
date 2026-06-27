@@ -11,7 +11,7 @@ export const workspaceRoutes: Routes = [
     children: [
       {
         path: '',
-        loadComponent: () => import('../views/template-view/template-view-view'),
+        loadComponent: () => import('../views/template-view/template-view'),
       },
     ],
   },
