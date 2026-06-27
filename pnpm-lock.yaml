@@ -63,6 +63,9 @@ importers:
       express:
         specifier: ^5.2.1
         version: 5.2.1
+      ngx-sonner:
+        specifier: ^3.1.0
+        version: 3.1.0(@angular/common@22.0.3(@angular/core@22.0.3(@angular/compiler@22.0.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.3(@angular/compiler@22.0.3)(rxjs@7.8.2))
       rxjs:
         specifier: ~7.8.2
         version: 7.8.2
@@ -2887,6 +2890,12 @@ packages:
   negotiator@1.0.0:
     resolution: {integrity: sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg==}
     engines: {node: '>= 0.6'}
+
+  ngx-sonner@3.1.0:
+    resolution: {integrity: sha512-hN5GolhBeVs0gzPNZi2VPnbv/sM+3+aMGCvIjH33MC8LHz+QIiOUWGw3AbnCH/hQxy08AGwkWHVYy1acvXByQQ==}
+    peerDependencies:
+      '@angular/common': '>=19.0.0'
+      '@angular/core': '>=19.0.0'
 
   ngx-theme-stack@3.8.7:
     resolution: {integrity: sha512-uiBKg6a12+ZTkXa8cGhUNoGWrQ98tuPCsV0Eb+e3OJS/NwgFaQ8dVab8pebDXi1zFk/5y5sRcdPA+9eb0kmgDw==}
@@ -6291,6 +6300,12 @@ snapshots:
   natural-compare@1.4.0: {}
 
   negotiator@1.0.0: {}
+
+  ngx-sonner@3.1.0(@angular/common@22.0.3(@angular/core@22.0.3(@angular/compiler@22.0.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.3(@angular/compiler@22.0.3)(rxjs@7.8.2)):
+    dependencies:
+      '@angular/common': 22.0.3(@angular/core@22.0.3(@angular/compiler@22.0.3)(rxjs@7.8.2))(rxjs@7.8.2)
+      '@angular/core': 22.0.3(@angular/compiler@22.0.3)(rxjs@7.8.2)
+      tslib: 2.8.1
 
   ngx-theme-stack@3.8.7(@angular/common@22.0.3(@angular/core@22.0.3(@angular/compiler@22.0.3)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.3(@angular/compiler@22.0.3)(rxjs@7.8.2)):
     dependencies:
