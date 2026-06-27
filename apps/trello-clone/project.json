@@ -12,13 +12,23 @@
   "targets": {
     "build": {
       "executor": "@angular/build:application",
+      "defaultConfiguration": "production",
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/trello-clone",
         "index": "apps/trello-clone/src/index.html",
         "browser": "apps/trello-clone/src/main.ts",
         "tsConfig": "apps/trello-clone/tsconfig.app.json",
-        "assets": ["apps/trello-clone/src/favicon.ico", "apps/trello-clone/src/assets"],
-        "styles": ["apps/trello-clone/src/themes.css", "apps/trello-clone/src/styles.css"],
+        "assets": [
+          "apps/trello-clone/src/favicon.ico",
+          "apps/trello-clone/src/assets"
+        ],
+        "styles": [
+          "apps/trello-clone/src/themes.css",
+          "apps/trello-clone/src/styles.css"
+        ],
         "scripts": [],
         "server": "apps/trello-clone/src/main.server.ts",
         "prerender": true,
@@ -38,19 +48,23 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "optimization": {
+            "styles": {
+              "inlineCritical": true
+            }
+          }
         },
         "development": {
           "optimization": false,
           "extractLicenses": false,
           "sourceMap": true
         }
-      },
-      "defaultConfiguration": "production",
-      "outputs": ["{options.outputPath}"]
+      }
     },
     "serve": {
       "executor": "@angular/build:dev-server",
+      "defaultConfiguration": "development",
       "configurations": {
         "production": {
           "buildTarget": "trello-clone:build:production"
@@ -59,8 +73,7 @@
           "buildTarget": "trello-clone:build:development",
           "proxyConfig": "apps/trello-clone/proxy.conf.json"
         }
-      },
-      "defaultConfiguration": "development"
+      }
     },
     "extract-i18n": {
       "executor": "@angular/build:extract-i18n",
@@ -74,7 +87,10 @@
     "lint": {
       "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": ["apps/trello-clone/**/*.ts", "apps/trello-clone/**/*.html"]
+        "lintFilePatterns": [
+          "apps/trello-clone/**/*.ts",
+          "apps/trello-clone/**/*.html"
+        ]
       }
     }
   }
