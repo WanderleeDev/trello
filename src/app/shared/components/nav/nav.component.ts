@@ -12,6 +12,7 @@ import { TemplatesDropdownComponent } from '../templates-dropdown/templates-drop
 import { UserDropdownComponent } from '../user-dropdown/user-dropdown.component';
 import { WorkspaceDropdownComponent } from '../workspace-dropdown/workspace-dropdown.component';
 import { templates } from '../../mockup/templates';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -29,6 +30,7 @@ import { templates } from '../../mockup/templates';
     UserDropdownComponent,
     NotificationsDropdownComponent,
     HelpDropdownComponent,
+    RouterLink,
   ],
 })
 export class NavComponent {

@@ -3,6 +3,10 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   { path: '', redirectTo: 'auth', pathMatch: 'full' },
   {
+    path: 'under-construction',
+    loadComponent: () => import('./shared/components/under-construction/under-construction.component'),
+  },
+  {
     path: 'auth',
     loadChildren: () => import('./modules/auth/presentation/routes/auth.routes'),
   },
