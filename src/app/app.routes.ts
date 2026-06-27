@@ -8,8 +8,13 @@ export const routes: Routes = [
   },
   {
     path: 'workspace',
-    loadComponent: () => import('./modules/workspace/presentation/layout/workspace-layout.component'),
+    loadComponent: () =>
+      import('./modules/workspace/presentation/layout/workspace-layout.component'),
     loadChildren: () => import('./modules/workspace/presentation/routes/workspace.routes'),
+  },
+  {
+    path: 'board/:idBoard',
+    loadComponent: () => import('./modules/board/presentation/views/board-view/board-view.component'),
   },
   {
     path: '**',

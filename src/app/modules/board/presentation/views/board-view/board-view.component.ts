@@ -9,5 +9,5 @@ import { BoardViewAreaComponent } from '../../components/board-view/board-view.c
   imports: [NavComponent, BoardViewAreaComponent],
 })
 export default class BoardViewComponent {
-  readonly idBoard = input<string>();
+  readonly idBoard = input.required<string>();
 }

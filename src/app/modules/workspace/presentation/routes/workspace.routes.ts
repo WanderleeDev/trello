@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import boardRoutes from '../../../board/presentation/routes/board.routes';
 
 export const workspaceRoutes: Routes = [
   {
@@ -7,7 +6,6 @@ export const workspaceRoutes: Routes = [
     loadComponent: () =>
       import('../../../board/presentation/views/boards-listing/boards-listing.component'),
   },
-  ...boardRoutes,
   {
     path: 'templates',
     children: [
@@ -39,9 +37,9 @@ export const workspaceRoutes: Routes = [
       import('../../../entry/entry.component'),
   },
   {
-    // Legacy redirect: /workspace/:idBoard → /workspace/board/:idBoard
+    // Legacy redirect: /workspace/:idBoard → /board/:idBoard
     path: ':idBoard',
-    redirectTo: 'board/:idBoard',
+    redirectTo: '/board/:idBoard',
     pathMatch: 'full',
   },
   {
