@@ -20,7 +20,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
   ],
 })
 export class WorkspaceDropdownComponent {
-  private readonly router = inject(Router);
+  readonly #router = inject(Router);
   protected formatMenu = viewChild<Menu<string>>('formatMenu');
   readonly dropdownData = input<BoardTemplate[]>([
     {
@@ -40,4 +40,8 @@ export class WorkspaceDropdownComponent {
       tag: 'Sample Tag 2',
     },
   ]);
+
+  protected goUnderConstruction(): void {
+    this.#router.navigateByUrl('/under-construction');
+  }
 }

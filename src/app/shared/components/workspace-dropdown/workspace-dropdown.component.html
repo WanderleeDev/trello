@@ -35,6 +35,8 @@
         <div
           ngMenuItem
           [value]="item.name"
+          (click)="goUnderConstruction()"
+          (keydown.enter)="goUnderConstruction()"
           class="flex items-center gap-2 p-2 rounded cursor-pointer text-sm hover:bg-btn-hovered focus-visible:outline-2 focus-visible:outline-active-fg"
         >
           @if (item.image) {
