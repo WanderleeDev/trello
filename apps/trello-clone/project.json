@@ -19,7 +19,6 @@
         "tsConfig": "apps/trello-clone/tsconfig.app.json",
         "assets": ["apps/trello-clone/src/favicon.ico", "apps/trello-clone/src/assets"],
         "styles": ["apps/trello-clone/src/themes.css", "apps/trello-clone/src/styles.css"],
-        "proxyConfig": "apps/trello-clone/proxy.conf.json",
         "scripts": [],
         "server": "apps/trello-clone/src/main.server.ts",
         "prerender": true,
@@ -57,7 +56,8 @@
           "buildTarget": "trello-clone:build:production"
         },
         "development": {
-          "buildTarget": "trello-clone:build:development"
+          "buildTarget": "trello-clone:build:development",
+          "proxyConfig": "apps/trello-clone/proxy.conf.json"
         }
       },
       "defaultConfiguration": "development"
