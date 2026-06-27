@@ -1,3 +1,5 @@
+import type { AuthorType, Category, FeatureCategoriesType } from '../types/template.types';
+
 export interface TemplateCategory {
   name: string;
   templates: Template[];
@@ -22,19 +24,5 @@ export interface Author {
 export interface FeatureCategories extends Record<FeatureCategoriesType, string> {
   [key: string]: string;
 }
-
-export type Category =
-  | 'popular'
-  | 'business'
-  | 'design'
-  | 'education'
-  | 'engineering'
-  | 'marketing'
-  | 'project-management'
-  | 'remote';
-
-export type FeatureCategoriesType = Exclude<Category, 'popular'>;
-
-export type AuthorType = 'Trello Team' | 'Trello Engineering Team' | 'Atlassian' | string;
 
 export type CardInfo = Exclude<Template, 'category'>;

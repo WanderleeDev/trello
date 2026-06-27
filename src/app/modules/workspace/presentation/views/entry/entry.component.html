@@ -12,7 +12,7 @@
         <article>
           <h3 class="flex items-center gap-2 mb-2 pl-4 truncate">
             <app-mat-icon [name]="item.icon" [size]="20" />
-            {{ item.title | titlecase }}
+            {{ item.title }}
           </h3>
           <ul>
             @for (item of item.boards; track $index) {

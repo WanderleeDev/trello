@@ -11,15 +11,10 @@ export interface Board {
 }
 
 @Component({
-    selector: 'app-entry',
-    templateUrl: './entry.component.html',
-    standalone: true,
-    imports: [
-        CardInfoComponent,
-        MatIconComponent,
-        BtnBaseComponent,
-        TitleCasePipe,
-    ],
+  selector: 'app-entry',
+  templateUrl: './entry.component.html',
+  standalone: true,
+  imports: [CardInfoComponent, MatIconComponent, BtnBaseComponent],
 })
 export default class EntryComponent {
   image = 'https://trello.com/assets/e55b3540e5c1f06a51d7.svg';

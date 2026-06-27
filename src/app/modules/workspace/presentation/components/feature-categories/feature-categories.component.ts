@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FeatureCategories } from '../../views/template/interfaces/template.interface';
+import { FeatureCategories } from '../../../domain/models/template.model';
 import { RouterLink } from '@angular/router';
 import { NgOptimizedImage, KeyValuePipe } from '@angular/common';
 import { SearchAndReplacePipe } from '../../../../../shared/pipes/search-and-replace.pipe';

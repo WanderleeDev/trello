@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
-import { Template } from '../../views/template/interfaces/template.interface';
+import { Template } from '../../../domain/models/template.model';
 import { NgOptimizedImage, DecimalPipe } from '@angular/common';
 import { TruncatePipe } from '../../../../../shared/pipes/truncate.pipe';
 import { QuantityFormatPipe } from '../../../../../shared/pipes/quantity-format.pipe';

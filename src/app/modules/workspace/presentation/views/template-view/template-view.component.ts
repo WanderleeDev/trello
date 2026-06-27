@@ -1,15 +1,16 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
-import { Category, FeatureCategories, TemplateCategory } from '../interfaces/template.interface';
-import { templatesMockup } from '../template.mockup';
+import { Category, FeatureCategories, TemplateCategory } from '../../../domain/models/template.model';
+import { templatesMockup } from '../../mockup/template.mockup';
 import { Router, RouterLink } from '@angular/router';
-import { FeatureCategoriesComponent } from '../../../components/feature-categories/feature-categories.component';
-import { TemplateListContainerComponent } from '../../../components/template-list-container/template-list-container.component';
-import { BtnBaseComponent } from '../../../../../../shared/presentation/components/btn-base/btn-base.component';
-import { CardTemplateInfoComponent } from '../../../components/card-template-info/card-template-info.component';
+import { NgOptimizedImage } from '@angular/common';
+import { FeatureCategoriesComponent } from '../../components/feature-categories/feature-categories.component';
+import { TemplateListContainerComponent } from '../../components/template-list-container/template-list-container.component';
+import { BtnBaseComponent } from '../../../../../shared/presentation/components/btn-base/btn-base.component';
+import { CardTemplateInfoComponent } from '../../components/card-template-info/card-template-info.component';
 
 @Component({
-  selector: 'app-entry-page',
-  templateUrl: './entry-page.component.html',
+  selector: 'app-template-view',
+  templateUrl: './template-view.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [
@@ -21,7 +22,7 @@ import { CardTemplateInfoComponent } from '../../../components/card-template-inf
     CardTemplateInfoComponent,
   ],
 })
-export default class EntryPageComponent {
+export default class TemplateViewComponent {
   readonly #router = inject(Router);
 
   protected readonly templates = signal<TemplateCategory[]>(templatesMockup);
