@@ -1,0 +1,19 @@
+<figure
+  class="p-2 rounded-[0.3rem] relative flex justify-between flex-col h-24 w-50 overflow-hidden hover:[&_.card-image]:brightness-80 hover:[&_.card-image]:transition-[filter] hover:[&_.card-image]:duration-150 hover:[&_.card-extra-2]:block"
+>
+  <img
+    class="aspect-4/2 absolute inset-0 w-full h-full object-cover"
+    [ngSrc]="data().image!"
+    [alt]="data().name"
+    fill
+  />
+  <figcaption class="font-bold z-1 text-base text-white">{{ data().name }}</figcaption>
+  <div class="z-1 flex gap-2 justify-between items-baseline">
+    <span>
+      <ng-content select="extra-1" />
+    </span>
+    <span class="hidden">
+      <ng-content select="extra-2" />
+    </span>
+  </div>
+</figure>

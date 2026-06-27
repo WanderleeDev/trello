@@ -1,0 +1,81 @@
+{
+  "name": "trello-clone",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "generators": {
+    "@schematics/angular:component": {
+      "style": "css"
+    }
+  },
+  "sourceRoot": "apps/trello-clone/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@angular/build:application",
+      "options": {
+        "outputPath": "dist/apps/trello-clone",
+        "index": "apps/trello-clone/src/index.html",
+        "browser": "apps/trello-clone/src/main.ts",
+        "tsConfig": "apps/trello-clone/tsconfig.app.json",
+        "assets": ["apps/trello-clone/src/favicon.ico", "apps/trello-clone/src/assets"],
+        "styles": ["apps/trello-clone/src/themes.css", "apps/trello-clone/src/styles.css"],
+        "proxyConfig": "apps/trello-clone/proxy.conf.json",
+        "scripts": [],
+        "server": "apps/trello-clone/src/main.server.ts",
+        "prerender": true,
+        "ssr": false
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production",
+      "outputs": ["{options.outputPath}"]
+    },
+    "serve": {
+      "executor": "@angular/build:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "trello-clone:build:production"
+        },
+        "development": {
+          "buildTarget": "trello-clone:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular/build:extract-i18n",
+      "options": {
+        "buildTarget": "trello-clone:build"
+      }
+    },
+    "test": {
+      "executor": "@angular/build:unit-test"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/trello-clone/**/*.ts", "apps/trello-clone/**/*.html"]
+      }
+    }
+  }
+}
