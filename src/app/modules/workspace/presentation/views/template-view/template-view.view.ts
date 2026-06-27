@@ -10,7 +10,7 @@ import { CardTemplateInfoComponent } from '../../components/card-template-info/c
 
 @Component({
   selector: 'app-template-view',
-  templateUrl: './template-view.component.html',
+  templateUrl: './template-view.view.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [

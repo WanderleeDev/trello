@@ -9,7 +9,7 @@ import { LetterGradientIconComponent } from '../../../../../shared/icons/compone
 
 @Component({
     selector: 'app-boards-listing',
-    templateUrl: './boards-listing.component.html',
+    templateUrl: './boards-listing.view.html',
     standalone: true,
     imports: [
         BoardListContainerComponent,

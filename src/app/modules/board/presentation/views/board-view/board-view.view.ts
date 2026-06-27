@@ -4,7 +4,7 @@ import { BoardViewAreaComponent } from '../../components/board-view/board-view.c
 
 @Component({
   selector: 'app-board-view',
-  templateUrl: './board-view.component.html',
+  templateUrl: './board-view.view.html',
   standalone: true,
   imports: [NavComponent, BoardViewAreaComponent],
 })
