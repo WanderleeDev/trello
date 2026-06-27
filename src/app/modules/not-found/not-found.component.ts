@@ -16,7 +16,7 @@ import { BasicImageComponent } from '../../shared/components/basic-image/basic-i
         <p>Something went wrong on this page</p>
         <p>Our team has been notified.</p>
       </div>
-      <a routerLink="/dashboard" class="text-blue-500 underline">Go to Workspace</a>
+      <a routerLink="/workspace" class="text-blue-500 underline">Go to Workspace</a>
     </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
