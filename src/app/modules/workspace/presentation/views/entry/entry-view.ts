@@ -12,7 +12,7 @@ export interface Board {
 
 @Component({
   selector: 'app-entry',
-  templateUrl: './entry.view.html',
+  templateUrl: './entry-view.html',
   standalone: true,
   imports: [CardInfoComponent, MatIconComponent, BtnBaseComponent],
 })

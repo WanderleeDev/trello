@@ -5,7 +5,7 @@ export const routes: Routes = [
   {
     path: 'under-construction',
     loadComponent: () =>
-      import('./shared/presentation/views/under-construction/under-construction.view'),
+      import('./shared/presentation/views/under-construction/under-construction-view'),
   },
   {
     path: 'auth',
@@ -20,10 +20,10 @@ export const routes: Routes = [
   {
     path: 'board/:idBoard/:nameBoard',
     loadComponent: () =>
-      import('./modules/board/presentation/views/board-view/board-view.view'),
+      import('./modules/board/presentation/views/board-view/board-view-view'),
   },
   {
     path: '**',
-    loadComponent: () => import('./shared/presentation/views/not-found/not-found.view'),
+    loadComponent: () => import('./shared/presentation/views/not-found/not-found-view'),
   },
 ];
