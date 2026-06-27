@@ -10,15 +10,15 @@
         More templates
       </app-btn-base>
     </ng-container>
-    <img
-      class="rounded-md"
-      aria-hidden="true"
-      ngProjectAs="icon-title"
-      [ngSrc]="categoryIcons[category.category]"
-      alt="category.name"
-      width="24"
-      height="24"
-    />
+    <div class="relative size-6" aria-hidden="true" ngProjectAs="icon-title">
+      <img
+        class="rounded-md"
+        [ngSrc]="categoryIcons[category.category]"
+        alt="category.name"
+        fill
+        priority
+      />
+    </div>
     <ng-container ngProjectAs="list-content">
       @for (template of category.templates; track $index) {
         <a [routerLink]="[category.category, '464']">

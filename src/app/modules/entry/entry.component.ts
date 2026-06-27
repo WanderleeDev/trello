@@ -30,6 +30,7 @@ export default class EntryComponent {
       icon: 'star',
       boards: [
         {
+          id: 'entry-1',
           name: 'Encriptador de texto - Alura Challenges ONE',
           path: '/boards/1',
           image: 'https://trello.com/assets/e55b3540e5c1f06a51d7.svg',
@@ -42,6 +43,7 @@ export default class EntryComponent {
       icon: 'schedule',
       boards: [
         {
+          id: 'entry-2',
           name: 'Encriptador de texto - Alura Challenges ONE',
           path: '/boards/1',
           image: 'https://trello.com/assets/e55b3540e5c1f06a51d7.svg',
