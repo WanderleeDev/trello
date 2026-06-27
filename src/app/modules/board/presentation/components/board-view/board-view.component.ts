@@ -8,8 +8,8 @@ type ColumnProps = {
 };
 
 @Component({
-  selector: 'app-board',
-  templateUrl: './board.component.html',
+  selector: 'app-board-view-area',
+  templateUrl: './board-view.component.html',
   imports: [CdkDropList, CdkDrag, AddListButtonComponent, ColumnBoard],
   styles: `
     :host {
@@ -19,7 +19,7 @@ type ColumnProps = {
     }
   `,
 })
-export class BoardComponent {
+export class BoardViewAreaComponent {
   readonly boardName = input<string>('My Board');
   protected numbers = signal([1, 2, 3]);
 

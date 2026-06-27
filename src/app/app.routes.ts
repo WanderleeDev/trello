@@ -9,7 +9,7 @@ export const routes: Routes = [
   {
     path: 'workspace',
     loadComponent: () => import('./modules/workspace/presentation/layout/workspace-layout.component'),
-    loadChildren: () => import('./modules/board/presentation/routes/board.routes'),
+    loadChildren: () => import('./modules/workspace/presentation/routes/workspace.routes'),
   },
   {
     path: '**',

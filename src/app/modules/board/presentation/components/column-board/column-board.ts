@@ -1,12 +1,12 @@
 import { Component, input, linkedSignal, signal } from '@angular/core';
 import { AddListButtonComponent } from '../add-list-button/add-list-button.component';
-import { BoardCardComponent } from '../board-card/board-card.component';
+import { TaskCardComponent } from '../task-card/task-card.component';
 import { Card } from '../../interfaces/board.model';
 import { CdkDropList, CdkDrag, CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-column-board',
-  imports: [AddListButtonComponent, BoardCardComponent, CdkDropList, CdkDrag],
+  imports: [AddListButtonComponent, TaskCardComponent, CdkDropList, CdkDrag],
   templateUrl: './column-board.html',
 })
 export class ColumnBoard {

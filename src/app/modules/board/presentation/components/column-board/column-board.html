@@ -16,7 +16,7 @@
     (cdkDropListDropped)="drop($event)"
   >
     @for (card of cards(); track card.id) {
-    <app-board-card cdkDrag [card]="card" />
+    <app-task-card cdkDrag [card]="card" />
     }
   </div>
   <app-add-list-button class="p-0 min-w-full shadow-none" (emitter)="addCard($event)" />

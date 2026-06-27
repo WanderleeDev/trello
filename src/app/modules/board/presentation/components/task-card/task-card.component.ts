@@ -2,10 +2,10 @@ import { Component, input } from '@angular/core';
 import { Card } from '../../interfaces/board.model';
 
 @Component({
-  selector: 'app-board-card',
-  templateUrl: './board-card.component.html',
+  selector: 'app-task-card',
+  templateUrl: './task-card.component.html',
   standalone: true,
 })
-export class BoardCardComponent {
+export class TaskCardComponent {
   readonly card = input.required<Card>();
 }
