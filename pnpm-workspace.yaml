@@ -1,7 +1,7 @@
 allowBuilds:
   '@parcel/watcher': true
   '@prisma/engines': true
-  '@scarf/scarf': set this to true or false
+  '@scarf/scarf': true
   esbuild: true
   less: true
   lmdb: true
@@ -29,3 +29,4 @@ overrides:
   multer: ^2.2.0
   uuid: ^11.1.1
   js-yaml: ^4.1.2
+  '@hono/node-server': 1.19.13
