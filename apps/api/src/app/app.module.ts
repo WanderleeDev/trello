@@ -1,8 +1,12 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ConfigModule } from '@nestjs/config';
-import configuration from '../config/configuration';
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import configuration, { EnvSchema } from '../config/configuration';
+import { AuthModule } from '@thallesp/nestjs-better-auth';
+import { createAuth } from '../lib/auth';
+import { PrismaModule } from './prisma/prisma.module';
+import { PrismaService } from './prisma/prisma.service';
 
 @Module({
   imports: [
@@ -13,6 +17,13 @@ import configuration from '../config/configuration';
       validationOptions: {
         allowUnknown: false,
       },
+    }),
+    PrismaModule,
+    AuthModule.forRootAsync({
+      inject: [ConfigService, PrismaService],
+      useFactory: (config: ConfigService<EnvSchema>, prisma: PrismaService) => ({
+        auth: createAuth(config, prisma),
+      }),
     }),
   ],
   controllers: [AppController],
