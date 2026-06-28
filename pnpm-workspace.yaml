@@ -1,11 +1,14 @@
 allowBuilds:
   '@parcel/watcher': true
+  '@prisma/engines': true
+  '@scarf/scarf': set this to true or false
   esbuild: true
   less: true
   lmdb: true
   msgpackr-extract: true
   nice-napi: true
   nx: true
+  prisma: true
   unrs-resolver: true
 minimumReleaseAgeExclude:
   - '@typescript-eslint/eslint-plugin@8.62.0'
@@ -23,3 +26,6 @@ minimumReleaseAgeExclude:
 overrides:
   esbuild: ^0.28.1
   '@babel/core': ^7.29.1
+  multer: ^2.2.0
+  uuid: ^11.1.1
+  js-yaml: ^4.1.2
